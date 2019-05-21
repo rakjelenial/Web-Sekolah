@@ -3,7 +3,6 @@
 	<div class="card rounded-0 border border-secondary mb-3">
 		<div class="card-body">
 			<form>
-				<!-- <h6 class="page-title mb-3">Registrasi <?=__session('_student')?></h6> -->
 				<!-- <div class="form-group row mb-2">
 					<label for="is_transfer" class="col-sm-4 control-label">Jenis Pendaftaran <span style="color: red">*</span></label>
 					<div class="col-sm-8">
@@ -20,7 +19,7 @@
 
 				<!-- Khusus SMA/SMK/PT -->
 				<?php if (__session('major_count') > 0) { ?>
-				<h6 class="page-title mb-3">Registrasi <?=__session('_student')?></h6>
+				<h6 class="page-title mb-3">Registrasi Peserta Didik</h6>
 					<div class="form-group row mb-2">
 						<label for="first_choice_id" class="col-sm-4 control-label">Pilihan I (Satu) <span style="color: red">*</span></label>
 						<div class="col-sm-8">
@@ -97,14 +96,14 @@
 				</div>
 
 				<!-- Khusus SMP/Sederajat, SMA/Sederajat -->
-				<?php if (__session('school_level') == 2 || __session('school_level') == 3 || __session('school_level') == 4) { ?>
+				<?php //if (__session('school_level') == 2 || __session('school_level') == 3 || __session('school_level') == 4) { ?>
 					<div class="form-group row mb-2">
 						<label for="nisn" class="col-sm-4 control-label">NISN</label>
 						<div class="col-sm-8">
 							<input type="text" value="<?php echo set_value('nisn')?>" class="form-control form-control-sm rounded-0 border border-secondary" id="nisn" name="nisn" placeholder="Nomor Induk Sekolah Nasional">
 						</div>
 					</div>
-				<?php } ?>
+				<?php //} ?>
 
 				<!-- Khusus Selain SD -->
 				<?php if (__session('school_level') != 1) { ?>
@@ -137,6 +136,12 @@
 					<label for="religion_id" class="col-sm-4 control-label">Agama <span style="color: red">*</span></label>
 					<div class="col-sm-8">
 						<?=form_dropdown('religion_id', $religions, set_value('religion_id'), 'class="custom-select custom-select-sm rounded-0 border border-secondary" id="religion_id"')?>
+					</div>
+				</div>
+				<div class="form-group row mb-2">
+					<label for="prev_school_name" class="col-sm-4 control-label">Nama Sekolah Asal </label>
+					<div class="col-sm-8">
+						<input type="text" value="<?php echo set_value('prev_school_name')?>" class="form-control form-control-sm rounded-0 border border-secondary" id="prev_school_name" name="prev_school_name">
 					</div>
 				</div>
 				<div class="form-group row mb-2">
