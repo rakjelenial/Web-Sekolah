@@ -263,17 +263,17 @@ class Admission_form extends Public_Controller {
 	private function validation() {
 		$this->load->library('form_validation');
 		$val = $this->form_validation;
-		$val->set_rules('is_transfer', 'Jenis Pendaftaran', 'trim|required|in_list[true,false]');
+		// $val->set_rules('is_transfer', 'Jenis Pendaftaran', 'trim|required|in_list[true,false]');
 		if (__session('major_count') > 0) {
 			$val->set_rules('first_choice_id', 'Pilihan I (Satu)', 'trim|required|numeric');
 			$val->set_rules('second_choice_id', 'Pilihan II (Dua)', 'trim|required|numeric');
 		}
-		$val->set_rules('admission_type_id', 'Jalur Pendaftaran', 'trim|required|numeric');
+		// $val->set_rules('admission_type_id', 'Jalur Pendaftaran', 'trim|required|numeric');
 		$val->set_rules('prev_exam_number', 'Nomor Peserta Ujian', 'trim');
 		$val->set_rules('paud', 'PAUD', 'trim');
 		$val->set_rules('tk', 'TK', 'trim');
-		$val->set_rules('hobby', 'Hobi', 'trim');
-		$val->set_rules('ambition', 'Cita-cita', 'trim');
+		// $val->set_rules('hobby', 'Hobi', 'trim');
+		// $val->set_rules('ambition', 'Cita-cita', 'trim');
 		$val->set_rules('full_name', 'Nama Lengkap', 'trim|required');
 		$val->set_rules('gender', 'Jenis Kelamin', 'trim|required');
 		$val->set_rules('skhun', 'Nomor Seri SKHUN Sebelumnya', 'trim');
@@ -287,23 +287,23 @@ class Admission_form extends Public_Controller {
 		$val->set_rules('street_address', 'Alamat Jalan', 'trim|required');
 		$val->set_rules('rt', 'RT', 'trim');
 		$val->set_rules('rw', 'RW', 'trim');
-		$val->set_rules('sub_village', 'Nama Dusun', 'trim');
+		// $val->set_rules('sub_village', 'Nama Dusun', 'trim');
 		$val->set_rules('village', 'Nama Kelurahan / Desa', 'trim');
 		$val->set_rules('sub_district', 'Kecamatan', 'trim');
 		$val->set_rules('district', 'Kabupaten', 'trim|required');
 		$val->set_rules('postal_code', 'Kode Pos', 'trim|numeric');
 		$val->set_rules('residence_id', 'Tempat Tinggal', 'trim|numeric');
-		$val->set_rules('transportation_id', 'Moda Transportasi', 'trim|numeric');
-		$val->set_rules('phone', 'Nomor Telepon', 'trim');
+		// $val->set_rules('transportation_id', 'Moda Transportasi', 'trim|numeric');
+		// $val->set_rules('phone', 'Nomor Telepon', 'trim');
 		$val->set_rules('mobile_phone', 'Nomor HP', 'trim|required');
-		$val->set_rules('email', 'E-mail Pribadi', 'trim|valid_email|callback_email_exists');
-		$val->set_rules('sktm', 'No. Surat Keterangan Tidak Mampu (SKTM)', 'trim');
-		$val->set_rules('kks', 'No. Kartu Keluarga Sejahtera (KKS)', 'trim');
-		$val->set_rules('kps', 'No. Kartu Pra Sejahtera (KPS)', 'trim');
-		$val->set_rules('kip', 'No. Kartu Indonesia Pintar (KIP)', 'trim');
-		$val->set_rules('kis', 'No. Kartu Indonesia Sehat (KIS)', 'trim');
-		$val->set_rules('citizenship', 'Kewarganegaraan', 'trim|required|in_list[WNI,WNA]');
-		$val->set_rules('country', 'Nama Negara', 'trim');
+		// $val->set_rules('email', 'E-mail Pribadi', 'trim|valid_email|callback_email_exists');
+		// $val->set_rules('sktm', 'No. Surat Keterangan Tidak Mampu (SKTM)', 'trim');
+		// $val->set_rules('kks', 'No. Kartu Keluarga Sejahtera (KKS)', 'trim');
+		// $val->set_rules('kps', 'No. Kartu Pra Sejahtera (KPS)', 'trim');
+		// $val->set_rules('kip', 'No. Kartu Indonesia Pintar (KIP)', 'trim');
+		// $val->set_rules('kis', 'No. Kartu Indonesia Sehat (KIS)', 'trim');
+		// $val->set_rules('citizenship', 'Kewarganegaraan', 'trim|required|in_list[WNI,WNA]');
+		// $val->set_rules('country', 'Nama Negara', 'trim');
 
 		$val->set_rules('father_name', 'Nama Ayah Kandung', 'trim|required');
 		$val->set_rules('father_birth_year', 'Tahun Lahir Ayah', 'trim|numeric|required|min_length[4]|max_length[4]');
@@ -325,11 +325,11 @@ class Admission_form extends Public_Controller {
 		$val->set_rules('guardian_employment_id', 'Pekerjaan Wali', 'trim|numeric');
 		$val->set_rules('guardian_monthly_income_id', 'Penghasilan Bulanan Wali', 'trim|numeric');
 
-		$val->set_rules('mileage', 'Jarak Tempat Tinggal ke Sekolah', 'trim|numeric|min_length[1]|max_length[5]');
-		$val->set_rules('traveling_time', 'Waktu Tempuh ke Sekolah', 'trim|numeric|min_length[1]|max_length[5]');
-		$val->set_rules('height', 'Tinggi Badan', 'trim|numeric|min_length[2]|max_length[5]');
-		$val->set_rules('weight', 'Berat Badan', 'trim|numeric|min_length[2]|max_length[5]');
-		$val->set_rules('sibling_number', 'Jumlah Saudara Kandung', 'trim|numeric|max_length[2]');
+		// $val->set_rules('mileage', 'Jarak Tempat Tinggal ke Sekolah', 'trim|numeric|min_length[1]|max_length[5]');
+		// $val->set_rules('traveling_time', 'Waktu Tempuh ke Sekolah', 'trim|numeric|min_length[1]|max_length[5]');
+		// $val->set_rules('height', 'Tinggi Badan', 'trim|numeric|min_length[2]|max_length[5]');
+		// $val->set_rules('weight', 'Berat Badan', 'trim|numeric|min_length[2]|max_length[5]');
+		// $val->set_rules('sibling_number', 'Jumlah Saudara Kandung', 'trim|numeric|max_length[2]');
 
 		$val->set_rules('declaration', 'Pernyataan', 'trim|required|in_list[true]|callback_declaration_check');
 

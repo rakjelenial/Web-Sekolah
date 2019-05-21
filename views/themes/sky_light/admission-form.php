@@ -3,23 +3,24 @@
 	<div class="card rounded-0 border border-secondary mb-3">
 		<div class="card-body">
 			<form>
-				<h6 class="page-title mb-3">Registrasi <?=__session('_student')?></h6>
-				<div class="form-group row mb-2">
+				<!-- <h6 class="page-title mb-3">Registrasi <?=__session('_student')?></h6> -->
+				<!-- <div class="form-group row mb-2">
 					<label for="is_transfer" class="col-sm-4 control-label">Jenis Pendaftaran <span style="color: red">*</span></label>
 					<div class="col-sm-8">
 						<?=form_dropdown('is_transfer', ['' => 'Pilih :', 'false' => 'Baru', 'true' => 'Pindahan'], set_value('is_transfer'), 'class="custom-select custom-select-sm rounded-0 border border-secondary" id="is_transfer"')?>
 					</div>
-				</div>
+				</div> -->
 
-				<div class="form-group row mb-2">
+				<!-- <div class="form-group row mb-2">
 					<label for="admission_type_id" class="col-sm-4 control-label">Jalur Pendaftaran <span style="color: red">*</span></label>
 					<div class="col-sm-8">
 						<?=form_dropdown('admission_type_id', $admission_types, set_value('admission_type_id'), 'class="custom-select custom-select-sm rounded-0 border border-secondary" id="admission_type_id"')?>
 					</div>
-				</div>
+				</div> -->
 
 				<!-- Khusus SMA/SMK/PT -->
 				<?php if (__session('major_count') > 0) { ?>
+				<h6 class="page-title mb-3">Registrasi <?=__session('_student')?></h6>
 					<div class="form-group row mb-2">
 						<label for="first_choice_id" class="col-sm-4 control-label">Pilihan I (Satu) <span style="color: red">*</span></label>
 						<div class="col-sm-8">
@@ -67,18 +68,18 @@
 						</div>
 					</div>
 				<?php } ?>
-				<div class="form-group row mb-2">
+				<!-- <div class="form-group row mb-2">
 					<label for="hobby" class="col-sm-4 control-label">Hobi</label>
 					<div class="col-sm-8">
 						<input type="text" value="<?php echo set_value('hobby')?>" class="form-control form-control-sm rounded-0 border border-secondary" id="hobby" name="hobby">
 					</div>
-				</div>
-				<div class="form-group row mb-2">
+				</div> -->
+				<!-- <div class="form-group row mb-2">
 					<label for="ambition" class="col-sm-4 control-label">Cita-cita</label>
 					<div class="col-sm-8">
 						<input type="text" value="<?php echo set_value('ambition')?>" class="form-control form-control-sm rounded-0 border border-secondary" id="ambition" name="ambition">
 					</div>
-				</div>
+				</div> -->
 
 				<!-- Biodata -->
 				<h6 class="page-title mb-3">Data Pribadi</h6>
@@ -162,12 +163,12 @@
 						<input type="text" value="<?php echo set_value('rw')?>" class="form-control form-control-sm rounded-0 border border-secondary" id="rw" name="rw" placeholder="Rukun Warga">
 					</div>
 				</div>
-				<div class="form-group row mb-2">
+				<!-- <div class="form-group row mb-2">
 					<label for="sub_village" class="col-sm-4 control-label">Nama Dusun</label>
 					<div class="col-sm-8">
 						<input type="text" value="<?php echo set_value('sub_village')?>" class="form-control form-control-sm rounded-0 border border-secondary" id="sub_village" name="sub_village">
 					</div>
-				</div>
+				</div> -->
 				<div class="form-group row mb-2">
 					<label for="village" class="col-sm-4 control-label">Nama Kelurahan / Desa</label>
 					<div class="col-sm-8">
@@ -198,31 +199,31 @@
 						<?=form_dropdown('residence_id', $residences, set_value('residence_id'), 'class="form-control form-control-sm rounded-0 border border-secondary" id="residence_id"')?>
 					</div>
 				</div>
-				<div class="form-group row mb-2">
+				<!-- <div class="form-group row mb-2">
 					<label for="transportation_id" class="col-sm-4 control-label">Moda Transportasi</label>
 					<div class="col-sm-8">
 						<?=form_dropdown('transportation_id', $transportations, set_value('transportation_id'), 'class="custom-select custom-select-sm rounded-0 border border-secondary" id="transportation_id"')?>
 					</div>
-				</div>
+				</div> -->
 				<div class="form-group row mb-2">
 					<label for="mobile_phone" class="col-sm-4 control-label">Nomor HP <span style="color: red">*</span></label>
 					<div class="col-sm-8">
 						<input type="text" value="<?php echo set_value('mobile_phone')?>" class="form-control form-control-sm rounded-0 border border-secondary" id="mobile_phone" name="mobile_phone">
 					</div>
 				</div>
-				<div class="form-group row mb-2">
+				<!-- <div class="form-group row mb-2">
 					<label for="phone" class="col-sm-4 control-label">Nomor Telepon</label>
 					<div class="col-sm-8">
 						<input type="text" value="<?php echo set_value('phone')?>" class="form-control form-control-sm rounded-0 border border-secondary" id="phone" name="phone">
 					</div>
-				</div>
-				<div class="form-group row mb-2">
+				</div> -->
+				<!-- <div class="form-group row mb-2">
 					<label for="email" class="col-sm-4 control-label">E-mail Pribadi</label>
 					<div class="col-sm-8">
 						<input type="text" value="<?php echo set_value('email')?>" class="form-control form-control-sm rounded-0 border border-secondary" id="email" name="email">
 					</div>
-				</div>
-				<div class="form-group row mb-2">
+				</div> -->
+				<!-- <div class="form-group row mb-2">
 					<label for="sktm" class="col-sm-4 control-label">No. Surat Keterangan Tidak Mampu (SKTM)</label>
 					<div class="col-sm-8">
 						<input type="text" value="<?php echo set_value('sktm')?>" class="form-control form-control-sm rounded-0 border border-secondary" id="sktm" name="sktm">
@@ -274,7 +275,7 @@
 						<input type="file" id="photo" name="photo">
 						<small class="form-text text-muted">Foto harus JPG dan ukuran file maksimal 1 Mb</small>
 					</div>
-				</div>
+				</div> -->
 
 				<!-- Ayah -->
 				<h6 class="page-title mb-3">Data Ayah Kandung</h6>
@@ -388,7 +389,7 @@
 				</div>
 
 				<!-- Data Periodik -->
-				<h6 class="page-title mb-3">Data Periodik</h6>
+				<!-- <h6 class="page-title mb-3">Data Periodik</h6>
 				<div class="form-group row mb-2">
 					<label for="height" class="col-sm-4 control-label">Tinggi Badan (Cm)</label>
 					<div class="col-sm-8">
@@ -418,7 +419,7 @@
 					<div class="col-sm-8">
 						<input type="number" value="<?php echo set_value('sibling_number')?>" class="form-control form-control-sm rounded-0 border border-secondary" id="sibling_number" name="sibling_number">
 					</div>
-				</div>
+				</div> -->
 
 				<h6 class="page-title mb-3">Pernyataan dan Keamanan</h6>
 				<div class="form-group row mb-2">
