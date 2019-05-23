@@ -10,12 +10,12 @@
 					</div>
 				</div> -->
 
-				<!-- <div class="form-group row mb-2">
+				<div class="form-group row mb-2">
 					<label for="admission_type_id" class="col-sm-4 control-label">Jalur Pendaftaran <span style="color: red">*</span></label>
 					<div class="col-sm-8">
 						<?=form_dropdown('admission_type_id', $admission_types, set_value('admission_type_id'), 'class="custom-select custom-select-sm rounded-0 border border-secondary" id="admission_type_id"')?>
 					</div>
-				</div> -->
+				</div>
 
 				<!-- Khusus SMA/SMK/PT -->
 				<?php if (__session('major_count') > 0) { ?>

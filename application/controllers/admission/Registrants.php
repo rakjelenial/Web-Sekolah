@@ -136,6 +136,7 @@ class Registrants extends Admin_Controller {
 			'birth_place' => $this->input->post('birth_place', true),
 			'birth_date' => $this->input->post('birth_date', true),
 			'religion_id' => (int) $this->input->post('religion_id', true),
+			'prev_school_name' => $this->input->post('prev_school_name', true),
 			'special_need_id' => (int) $this->input->post('special_need_id', true),
 			'street_address' => $this->input->post('street_address', true),
 			'rt' => $this->input->post('rt', true),
@@ -194,7 +195,7 @@ class Registrants extends Admin_Controller {
 			$val->set_rules('second_choice_id', 'Pilihan II', 'trim|required');
 		}
 		$val->set_rules('full_name', 'Nama Lengkap', 'trim|required');
-		$val->set_rules('email', 'Email', 'trim|required|valid_email|callback_email_exists[' . $id . ']');
+		//$val->set_rules('email', 'Email', 'trim|required|valid_email|callback_email_exists[' . $id . ']');
 		$val->set_rules('father_birth_year', 'Tahun Lahir Ayah', 'trim|numeric|min_length[4]|max_length[4]');
 		$val->set_rules('mother_birth_year', 'Tahun Lahir Ibu', 'trim|numeric|min_length[4]|max_length[4]');
 		$val->set_rules('guardian_birth_year', 'Tahun Lahir Wali', 'trim|numeric|min_length[4]|max_length[4]');

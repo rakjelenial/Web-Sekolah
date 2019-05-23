@@ -56,7 +56,7 @@ class Admission_form extends Public_Controller {
 		$this->vars['educations'] = ['' => 'Pilih :'] + get_options('educations', FALSE);
 		$this->vars['employments'] = ['' => 'Pilih :'] + get_options('employments', FALSE);
 		$this->vars['monthly_incomes'] = ['' => 'Pilih :'] + get_options('monthly_incomes', FALSE);
-		$this->vars['admission_types'] = ['' => 'Pilih :'] + get_options('admission_types', FALSE);
+		$this->vars['admission_types'] = /*['' => 'Pilih :'] + */get_options('admission_types', FALSE);
 		$this->vars['majors'] = ['' => 'Pilih :'] + $this->m_majors->dropdown();
 		$this->vars['content'] = 'themes/'.theme_folder().'/admission-form';
 		$this->load->view('themes/'.theme_folder().'/index', $this->vars);
