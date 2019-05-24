@@ -84,7 +84,7 @@
 			<?php } ?>
 		<?php } ?>
 
-		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
+		<!-- <?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('reference', __session('user_privileges'))) { ?>
 				<li class="treeview <?=isset($reference) ? 'active':'';?>">
 					<a href="#">
@@ -96,7 +96,7 @@
 					</ul>
 				</li>
 			<?php } ?>
-		<?php } ?>
+		<?php } ?> -->
 
 		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('academic', __session('user_privileges'))) { ?>
@@ -119,7 +119,7 @@
 								<li <?=isset($residences) ? 'class="active"':'';?>><a href="<?=site_url('academic/residences');?>"><i class="fa fa-sign-out"></i> Tempat Tinggal</a></li>
 							</ul>
 						</li>
-						<li class="treeview <?=isset($academic_chart) ? 'active':'';?>">
+						<!-- <li class="treeview <?=isset($academic_chart) ? 'active':'';?>">
 							<a href="#"><i class="fa fa-sign-out"></i> Grafik <i class="fa fa-angle-left pull-right"></i></a>
 							<ul class="treeview-menu">
 								<li <?=isset($by_class_groups) ? 'class="active"':'';?>><a href="<?=site_url('academic/by_class_groups');?>"><i class="fa fa-sign-out"></i> Kelas</a></li>
@@ -141,7 +141,7 @@
 								<li <?=isset($class_group_settings) ? 'class="active"':'';?>><a href="<?=site_url('academic/class_group_settings');?>"><i class="fa fa-sign-out"></i> <?=__session('school_level') >= 5 ? 'Dosen Wali' : 'Wali Kelas' ?> </a></li>
 							</ul>
 						</li>
-						<li <?=isset($student_groups) ? 'class="active"':'';?>><a href="<?=site_url('academic/student_groups');?>"><i class="fa fa-sign-out"></i> Rombongan Belajar</a></li>
+						<li <?=isset($student_groups) ? 'class="active"':'';?>><a href="<?=site_url('academic/student_groups');?>"><i class="fa fa-sign-out"></i> Rombongan Belajar</a></li> -->
 					</ul>
 				</li>
 			<?php } ?>
@@ -263,7 +263,7 @@
 			<?php } ?>
 		<?php } ?>
 
-		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
+		<!-- <?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('settings', __session('user_privileges'))) { ?>
 				<li class="treeview <?=isset($settings) ? 'active':'';?>">
 					<a href="#">
@@ -281,9 +281,9 @@
 					</ul>
 				</li>
 			<?php } ?>
-		<?php } ?>
+		<?php } ?> -->
 
-		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
+		<!-- <?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('maintenance', __session('user_privileges'))) { ?>
 				<li class="treeview">
 					<a href="#">
@@ -295,7 +295,7 @@
 					</ul>
 				</li>
 			<?php } ?>
-		<?php } ?>
+		<?php } ?> -->
 
 		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<li class="profile-menu">
