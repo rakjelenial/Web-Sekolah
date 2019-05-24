@@ -147,7 +147,7 @@
 			<?php } ?>
 		<?php } ?>
 
-		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
+		<!-- <?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('employees', __session('user_privileges'))) { ?>
 				<li class="treeview <?=isset($employees) ? 'active':'';?>">
 					<a href="#">
@@ -171,7 +171,7 @@
 					</ul>
 				</li>
 			<?php } ?>
-		<?php } ?>
+		<?php } ?> -->
 
 		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('admission', __session('user_privileges'))) { ?>
@@ -193,7 +193,7 @@
 			<?php } ?>
 		<?php } ?>
 
-		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
+		<!-- <?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('plugins', __session('user_privileges'))) { ?>
 				<li class="treeview <?=isset($plugins) ? 'active':'';?>">
 					<a href="#">
@@ -211,7 +211,7 @@
 					</ul>
 				</li>
 			<?php } ?>
-		<?php } ?>
+		<?php } ?> -->
 
 		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('media', __session('user_privileges'))) { ?>
@@ -229,7 +229,7 @@
 			<?php } ?>
 		<?php } ?>
 
-		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
+		<!-- <?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('appearance', __session('user_privileges'))) { ?>
 				<li class="treeview <?=isset($appearance) ? 'active':'';?>">
 					<a href="#">
@@ -241,7 +241,7 @@
 					</ul>
 				</li>
 			<?php } ?>
-		<?php } ?>
+		<?php } ?> -->
 
 		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('users', __session('user_privileges'))) { ?>
