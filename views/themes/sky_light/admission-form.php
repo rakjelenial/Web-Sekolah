@@ -10,12 +10,12 @@
 					</div>
 				</div> -->
 
-				<div class="form-group row mb-2">
+				<!-- <div class="form-group row mb-2">
 					<label for="admission_type_id" class="col-sm-4 control-label">Jalur Pendaftaran <span style="color: red">*</span></label>
 					<div class="col-sm-8">
 						<?=form_dropdown('admission_type_id', $admission_types, set_value('admission_type_id'), 'class="custom-select custom-select-sm rounded-0 border border-secondary" id="admission_type_id"')?>
 					</div>
-				</div>
+				</div> -->
 
 				<!-- Khusus SMA/SMK/PT -->
 				<?php if (__session('major_count') > 0) { ?>
@@ -281,6 +281,32 @@
 						<small class="form-text text-muted">Foto harus JPG dan ukuran file maksimal 1 Mb</small>
 					</div>
 				</div> -->
+				<h6 class="page-title mb-3">Nilai Ujian Nasional</h6>
+				<label class="badge" for=""><span style="color: red">*</span>Gunakan Titik(.) untuk memisahkan nilai koma. Misal: 80.75</label>
+				<div class="form-group row mb-2">
+					<label for="bhs_indo" class="col-sm-4 control-label">Bahasa Indonesia<span style="color: red">*</span></label>
+					<div class="col-sm-8">
+						<input type="text" value="<?php echo set_value('bhs_indo')?>" class="form-control form-control-sm rounded-0 border border-secondary" id="bhs_indo" name="bhs_indo">
+					</div>
+				</div>
+				<div class="form-group row mb-2">
+					<label for="bhs_inggris" class="col-sm-4 control-label">Bahasa Inggris<span style="color: red">*</span></label>
+					<div class="col-sm-8">
+						<input type="text" value="<?php echo set_value('bhs_inggris')?>" class="form-control form-control-sm rounded-0 border border-secondary" id="bhs_inggris" name="bhs_inggris">
+					</div>
+				</div>
+				<div class="form-group row mb-2">
+					<label for="mtk" class="col-sm-4 control-label">Matematika<span style="color: red">*</span></label>
+					<div class="col-sm-8">
+						<input type="text" value="" class="form-control form-control-sm rounded-0 border border-secondary" id="mtk" name="mtk">
+					</div>
+				</div>
+				<div class="form-group row mb-2">
+					<label for="ipa" class="col-sm-4 control-label">IPA<span style="color: red">*</span></label>
+					<div class="col-sm-8">
+						<input type="text" value="<?php echo set_value('ipa')?>" class="form-control form-control-sm rounded-0 border border-secondary" id="ipa" name="ipa">
+					</div>
+				</div>
 
 				<!-- Ayah -->
 				<h6 class="page-title mb-3">Data Ayah Kandung</h6>

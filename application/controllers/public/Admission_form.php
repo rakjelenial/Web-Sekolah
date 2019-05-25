@@ -62,6 +62,13 @@ class Admission_form extends Public_Controller {
 		$this->load->view('themes/'.theme_folder().'/index', $this->vars);
 	}
 
+	public function registration_number_for_peserta($number)
+	{
+		$this->vars['number'] = $number;
+		$this->vars['content'] = 'number_student_registration';
+		$this->load->view('themes/'.theme_folder().'/index', $this->vars);
+	}
+
 	/**
 	  * Save
 	  */
@@ -117,6 +124,8 @@ class Admission_form extends Public_Controller {
 				$file_name = 'formulir-penerimaan-'. (__session('school_level') >= 5 ? 'mahasiswa' : 'peserta-didik').'-baru-tahun-'.__session('admission_year');
 				$file_name .= '-'.$fill_data['birth_date'].'-'.$fill_data['registration_number'].'.pdf';
 				$this->vars['file_name'] = $file_name;
+
+				$this->vars['no_registrasi'] = $fill_data['registration_number'];
 				if ( ! $query && $has_uploaded ) @unlink(FCPATH.'media_library/students/'.$upload['file_name']);
 			} else {
 				$this->vars['status'] = 'error';
@@ -252,6 +261,11 @@ class Admission_form extends Public_Controller {
 		$data['traveling_time'] = $this->input->post('traveling_time', true) ? $this->input->post('traveling_time', true) : NULL;
 		$data['height'] = $this->input->post('height', true) ? $this->input->post('height', true) : NULL;
 		$data['weight'] = $this->input->post('weight', true) ? $this->input->post('weight', true) : NULL;
+
+		$data['bhs_indo'] = $this->input->post('bhs_indo', true) ? $this->input->post('bhs_indo', true) : NULL;
+		$data['bhs_inggris'] = $this->input->post('bhs_inggris', true) ? $this->input->post('bhs_inggris', true) : NULL;
+		$data['mtk'] = $this->input->post('mtk', true) ? $this->input->post('mtk', true) : NULL;
+		$data['ipa'] = $this->input->post('ipa', true) ? $this->input->post('ipa', true) : NULL;
 		$data['sibling_number'] = $this->input->post('sibling_number', true) ? (int) $this->input->post('sibling_number', true) : 0;
 		return $data;
 	}
@@ -330,6 +344,10 @@ class Admission_form extends Public_Controller {
 		// $val->set_rules('height', 'Tinggi Badan', 'trim|numeric|min_length[2]|max_length[5]');
 		// $val->set_rules('weight', 'Berat Badan', 'trim|numeric|min_length[2]|max_length[5]');
 		// $val->set_rules('sibling_number', 'Jumlah Saudara Kandung', 'trim|numeric|max_length[2]');
+		$val->set_rules('bhs_indo', 'Nilai Bahasa Indonesia', 'trim|numeric|min_length[2]|max_length[6]');
+		$val->set_rules('bhs_inggris', 'Nilai Bahasa Inggris', 'trim|numeric|min_length[2]|max_length[6]');
+		$val->set_rules('mtk', 'Nilai Matematika', 'trim|numeric|min_length[2]|max_length[6]');
+		$val->set_rules('ipa', 'Nilai IPA', 'trim|numeric|min_length[2]|max_length[6]');
 
 		$val->set_rules('declaration', 'Pernyataan', 'trim|required|in_list[true]|callback_declaration_check');
 

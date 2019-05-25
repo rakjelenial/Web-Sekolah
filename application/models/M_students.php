@@ -224,6 +224,10 @@ class M_students extends CI_Model {
 				, x10.option_name AS transportation
 				, x1.phone
 				, x1.mobile_phone
+				, x1.bhs_indo
+				, x1.bhs_inggris
+				, x1.mtk
+				, x1.ipa
 				, x1.email
 				, x1.sktm
 				, x1.kks
