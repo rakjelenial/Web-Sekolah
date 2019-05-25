@@ -91,6 +91,7 @@ class Admission_form extends Public_Controller {
 
 			if ($this->validation()) {
 				$fill_data = $this->fill_data();
+				$fill_data_account = $this->fill_data_account();
 				// Upload File
 				$has_uploaded = false;
 				if ( ! empty($_FILES['photo']['name']) ) {
@@ -111,6 +112,9 @@ class Admission_form extends Public_Controller {
 
 				$query = $this->model->insert($this->table, $fill_data);
 				if ( $query ) {
+					// insert into table `participants_account`
+					$this->model->insert("participants_account", $fill_data_account);
+
 					$result = $this->m_registrants->find_registrant($fill_data['birth_date'], $fill_data['registration_number']);
 					$this->load->library('admission');
 					$this->admission->create_pdf($result);
@@ -267,6 +271,21 @@ class Admission_form extends Public_Controller {
 		$data['mtk'] = $this->input->post('mtk', true) ? $this->input->post('mtk', true) : NULL;
 		$data['ipa'] = $this->input->post('ipa', true) ? $this->input->post('ipa', true) : NULL;
 		$data['sibling_number'] = $this->input->post('sibling_number', true) ? (int) $this->input->post('sibling_number', true) : 0;
+		return $data;
+	}
+
+	/**
+	 * Fill Data Account
+	 * @return Array
+	 */
+	private function fill_data_account() {
+		$data = [];
+		// Wajib diisi :
+		$data['name'] = $this->input->post('full_name', true);
+		$data['nisn'] = $this->input->post('nisn', true) ? $this->input->post('nisn', true) : NULL;
+		$data['username'] = $this->m_registrants->registration_number();
+		$data['password'] = rand(1000, 9999);
+
 		return $data;
 	}
 
