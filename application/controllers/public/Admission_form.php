@@ -299,7 +299,7 @@ class Admission_form extends Public_Controller {
 		// $val->set_rules('is_transfer', 'Jenis Pendaftaran', 'trim|required|in_list[true,false]');
 		if (__session('major_count') > 0) {
 			$val->set_rules('first_choice_id', 'Pilihan I (Satu)', 'trim|required|numeric');
-			$val->set_rules('second_choice_id', 'Pilihan II (Dua)', 'trim|required|numeric');
+			// $val->set_rules('second_choice_id', 'Pilihan II (Dua)', 'trim|required|numeric');
 		}
 		// $val->set_rules('admission_type_id', 'Jalur Pendaftaran', 'trim|required|numeric');
 		$val->set_rules('prev_exam_number', 'Nomor Peserta Ujian', 'trim');

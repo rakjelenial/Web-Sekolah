@@ -75,8 +75,8 @@ var grid_fields = [
 	{ header:'Nama Lengkap', renderer:'full_name' },
 	{ header:'Tanggal Lahir', renderer:'birth_date' },
 	{ header:'Tanggal Daftar', renderer:'created_at' },
-	{ header:'Jalur Pendaftaran', renderer:'admission_type' },
-	{ header:'Gelombang Pendaftaran', renderer:'phase_name' },
+	// { header:'Jalur Pendaftaran', renderer:'admission_type' },
+	// { header:'Gelombang Pendaftaran', renderer:'phase_name' },
 	{
 		header:'Daftar Ulang ?',
 		renderer: function( row ) {
@@ -89,7 +89,7 @@ var grid_fields = [
 if (_MAJOR_COUNT > 0) {
 	grid_fields.push(
 		{ header:'Pilihan I', renderer:'first_choice' },
-		{ header:'Pilihan II', renderer:'second_choice' }
+		// { header:'Pilihan II', renderer:'second_choice' }
 	);
 }
 new GridBuilder( _grid , {
@@ -105,12 +105,12 @@ var form_fields = [];
 if (_MAJOR_COUNT > 0) {
 	form_fields.push(
 		{ label:'Pilihan I', name:'first_choice_id', type:'select', datasource:DS.Majors },
-		{ label:'Pilihan II', name:'second_choice_id', type:'select', datasource:DS.Majors }
+		// { label:'Pilihan II', name:'second_choice_id', type:'select', datasource:DS.Majors }
 	);
 }
 form_fields.push(
 	//{ label:'Jenis Pendaftaran', name:'is_transfer', type:'select', datasource:{false: 'Baru', true:'Pindahan'} },
-	{ label:'Jalur Pendaftaran', name:'admission_type_id', type:'select', datasource:DS.AdmissionTypes },
+	// { label:'Jalur Pendaftaran', name:'admission_type_id', type:'select', datasource:DS.AdmissionTypes },
 	// { label:'Nomor Peserta UN Sebelumnya', name:'prev_exam_number' },
 	// { label:'Apakah pernah PAUD', name:'paud', type:'select', datasource:{false: 'Tidak', true:'Ya'} },
 	// { label:'Apakah pernah TK', name:'tk', type:'select', datasource:{false: 'Tidak', true:'Ya'} },
@@ -218,7 +218,7 @@ function admission_reports() {
 		birth_place: 'Tempat Lahir',
 		birth_date: 'Tanggal Lahir',
 		first_choice: 'Pilihan 1',
-		second_choice: 'Pilihan 2',
+		// second_choice: 'Pilihan 2',
 		created_at: 'Tanggal Pendaftaran',
 		// admission_exam_number: 'Nomor Ujian Tes Tulis',
 		// prev_exam_number: 'Nomor Ujian Sebelumnya',

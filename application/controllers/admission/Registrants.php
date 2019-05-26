@@ -192,7 +192,7 @@ class Registrants extends Admin_Controller {
 		$val = $this->form_validation;
 		if (__session('major_count') > 0) {
 			$val->set_rules('first_choice_id', 'Pilihan I', 'trim|required');
-			$val->set_rules('second_choice_id', 'Pilihan II', 'trim|required');
+			// $val->set_rules('second_choice_id', 'Pilihan II', 'trim|required');
 		}
 		$val->set_rules('full_name', 'Nama Lengkap', 'trim|required');
 		//$val->set_rules('email', 'Email', 'trim|required|valid_email|callback_email_exists[' . $id . ']');

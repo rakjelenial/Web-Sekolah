@@ -26,12 +26,12 @@
 							<?=form_dropdown('first_choice_id', $majors, set_value('first_choice_id'), 'class="custom-select custom-select-sm rounded-0 border border-secondary" id="first_choice_id" onchange="check_options(1)" onblur="check_options(1)" onmouseup="check_options(1)"')?>
 						</div>
 					</div>
-					<div class="form-group row mb-2">
+					<!-- <div class="form-group row mb-2">
 						<label for="second_choice_id" class="col-sm-4 control-label">Pilihan II (Dua) <span style="color: red">*</span></label>
 						<div class="col-sm-8">
 							<?=form_dropdown('second_choice_id', $majors, set_value('second_choice_id'), 'class="custom-select custom-select-sm rounded-0 border border-secondary" id="second_choice_id" onchange="check_options(2)" onblur="check_options(2)" onmouseup="check_options(2)"')?>
 						</div>
-					</div>
+					</div> -->
 				<?php } ?>
 
 				<!-- Khusus SMP/Sederajat dan SMA/Sederajat -->
