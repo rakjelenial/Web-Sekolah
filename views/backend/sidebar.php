@@ -229,7 +229,7 @@
 			<?php } ?>
 		<?php } ?>
 
-		<!-- <?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
+		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('appearance', __session('user_privileges'))) { ?>
 				<li class="treeview <?=isset($appearance) ? 'active':'';?>">
 					<a href="#">
@@ -241,7 +241,7 @@
 					</ul>
 				</li>
 			<?php } ?>
-		<?php } ?> -->
+		<?php } ?>
 
 		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('users', __session('user_privileges'))) { ?>
@@ -263,7 +263,7 @@
 			<?php } ?>
 		<?php } ?>
 
-		<!-- <?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
+		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('settings', __session('user_privileges'))) { ?>
 				<li class="treeview <?=isset($settings) ? 'active':'';?>">
 					<a href="#">
@@ -281,7 +281,7 @@
 					</ul>
 				</li>
 			<?php } ?>
-		<?php } ?> -->
+		<?php } ?>
 
 		<!-- <?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('maintenance', __session('user_privileges'))) { ?>
