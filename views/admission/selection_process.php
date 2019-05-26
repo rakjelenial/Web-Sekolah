@@ -270,12 +270,12 @@ function save2excel() {
 									<?=form_dropdown('admission_year_id', $admission_year_dropdown, '', 'class="form-control select2" id="admission_year_id"');?>
 								</div>
 							</div>
-							<div class="form-group">
+							<!-- <div class="form-group">
 								<label for="admission_type_id" class="col-sm-4 control-label">Jalur Pendaftaran</label>
 								<div class="col-md-8">
 									<?=form_dropdown('admission_type_id', $admission_type_dropdown, '', 'class="form-control select2" id="admission_type_id"');?>
 								</div>
-							</div>
+							</div> -->
 							<?php if (__session('major_count') > 0) { ?>
 								<div class="form-group">
 									<label for="major_id" class="col-sm-4 control-label"><?=__session('_major')?></label>

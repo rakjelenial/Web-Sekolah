@@ -52,7 +52,7 @@ class M_admission_selection_process extends CI_Model {
 		$this->db->where('x1.is_prospective_student', 'true');
 		$this->db->where('x1.re_registration', 'true');
 		$this->db->where('x1.selection_result IS NULL');
-		$this->db->where('x1.admission_type_id', $admission_type_id);
+		// $this->db->where('x1.admission_type_id', $admission_type_id);
 		$this->db->where('LEFT(x1.registration_number, 4) = ', $admission_year);
 		if (__session('major_count') > 0) {
 			$this->db->where('x1.first_choice_id', $major_id);
