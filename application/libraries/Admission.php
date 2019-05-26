@@ -135,6 +135,8 @@ class Admission extends TCPDF {
 		$content = str_replace('[DISTRICT]', $result['district'], $content);
 		$content = str_replace('[POSTAL_CODE]', $result['postal_code'], $content);
 		$content = str_replace('[EMAIL]', $result['email'], $content);
+		$content = str_replace('[USERNAME]', $result['username'], $content);
+		$content = str_replace('[PASSWORD]', $result['password'], $content);
 		$content = str_replace('[FOOTER_DATE]', $result['district'].', '. indo_date(substr($result['created_at'], 0, 10)), $content);
 		$content = str_replace('[FOOTER_FULL_NAME]', $result['full_name'], $content);
 		$file_name = 'formulir-penerimaan-'. ($this->CI->session->school_level >= 5 ? 'mahasiswa' : 'peserta-didik').'-baru-tahun-'.$this->CI->session->admission_year;

@@ -256,12 +256,15 @@ class M_registrants extends CI_Model {
 		  , x1.village
 		  , x1.postal_code
 		  , x1.email
+		  , x7.username
+		  , x7.password
 		");
 		$this->db->join('majors x2', 'x1.first_choice_id = x2.id', 'LEFT');
 		$this->db->join('majors x3', 'x1.second_choice_id = x3.id', 'LEFT');
 		$this->db->join('options x4', 'x1.religion_id = x4.id', 'LEFT');
 		$this->db->join('options x5', 'x1.special_need_id = x5.id', 'LEFT');
 		$this->db->join('options x6', 'x1.admission_type_id = x6.id', 'LEFT');
+		$this->db->join('participants_account x7', 'x1.registration_number = x7.username', 'LEFT');
 		$this->db->where('x1.birth_date', $birth_date);
 		$this->db->where('x1.registration_number', $registration_number);
 		return $this->db->get(self::$table.' x1')->row_array();
