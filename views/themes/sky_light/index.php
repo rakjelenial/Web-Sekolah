@@ -2,6 +2,17 @@
 <html lang="en">
 <head>
 	<title><?=isset($page_title) ? $page_title . ' | ' : ''?><?=__session('school_name')?></title>
+
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-2586125774271995",
+              enable_page_level_ads: true
+         });
+    </script>
+
+
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -68,7 +79,7 @@
 	<?php } ?>
 	<script src="<?=base_url('assets/js/frontend.min.js')?>"></script>
 </head>
-<body>
+<body oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;' ondragstart='return false' onselectstart='return false' style='-moz-user-select: none; cursor: default;'>
 	<header>
 		<div class="container-fluid top-bar">
 			<div class="container">
@@ -177,7 +188,8 @@
 		<div class="container-fluid primary-footer">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4 col-xs-12 text-md-left mb-2 mt-2">
+					<!-- <div class="col-md-4 col-xs-12 text-md-left mb-2 mt-2"> -->
+					<div class="col-md-6 col-xs-12 text-md-left mb-2 mt-2">
 						<h6 class="page-title">Hubungi Kami</h6>
 						<p><?=__session('school_name')?> &sdot; <?=__session('tagline')?></p>
 						<dl class="row">
@@ -189,7 +201,8 @@
 							<dd class="col-lg-8 col-md-8 col-sm-12"><?=__session('email')?></dd>
 						</dl>
 					</div>
-					<div class="col-md-4 col-xs-12 text-md-left mb-2 mt-2">
+					<!-- <div class="col-md-4 col-xs-12 text-md-left mb-2 mt-2"> -->
+					<div class="col-md-6 col-xs-12 text-md-left mb-2 mt-2">
 						<h6 class="page-title">Tags</h6>
 						<div class="tag-content-block tag">
 							<?php $query = get_tags(10); if ($query->num_rows() > 0) { ?>
@@ -199,7 +212,7 @@
 							<?php } ?>
 						</div>
 					</div>
-					<div class="col-md-4 col-xs-12 text-md-left mb-2 mt-2">
+					<!-- <div class="col-md-4 col-xs-12 text-md-left mb-2 mt-2">
 						<h6 class="page-title">Ikuti Kami</h6>
 						<ul class="list-unstyled">
 							<?php if (NULL !== __session('facebook') && __session('facebook')) { ?>
@@ -215,7 +228,7 @@
 								<li class="float-left"><a href="<?=__session('youtube')?>" title="Instagram"><i class="fa fa-youtube social-icon youtube" aria-hidden="true"></i></a></li>
 							<?php } ?>
 						</ul>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -225,8 +238,8 @@
 					<div class="col-md-6 col-xs-12 text-md-left text-center">
 						<?=copyright(2019, base_url(), __session('school_name'))?>
 					</div>
-					<div class="col-md-6 col-xs-12 text-md-right text-center">
-						Powered by <a href="http://sekolahku.web.id">sekolahku.web.id</a>
+					<div class="col-md-6 col-xs-12 text-md-right text-center" style="color: #0F6FC7; text-decoration: none">
+						Powered by <a href="http://sekolahku.web.id" style="color: #0F6FC7; text-decoration: none">sekolahku.web.id</a>
 					</div>
 				</div>
 			</div>

@@ -165,7 +165,7 @@
 
 			<footer class="main-footer">
 				<div class="pull-right hidden-xs">
-					<p>Powered by <a href="<?=$this->config->item('website');?>" target="_blank"><?=$this->config->item('apps');?> <?=$this->config->item('version');?></a></p>
+					<p style="color: #FFFFFF">Powered by <a href="<?=$this->config->item('website');?>" target="_blank" style="color: #FFFFFF; text-decoration: none"><?=$this->config->item('apps');?> <?=$this->config->item('version');?></a></p>
 				</div>
 				<p>Copyright &copy; <?=date('Y');?> <?=__session('school_name')?>. All rights reserved.</p>
 			</footer>
