@@ -303,8 +303,8 @@ class Admission_form extends Public_Controller {
 		}
 		// $val->set_rules('admission_type_id', 'Jalur Pendaftaran', 'trim|required|numeric');
 		$val->set_rules('prev_exam_number', 'Nomor Peserta Ujian', 'trim');
-		$val->set_rules('paud', 'PAUD', 'trim');
-		$val->set_rules('tk', 'TK', 'trim');
+		// $val->set_rules('paud', 'PAUD', 'trim');
+		// $val->set_rules('tk', 'TK', 'trim');
 		// $val->set_rules('hobby', 'Hobi', 'trim');
 		// $val->set_rules('ambition', 'Cita-cita', 'trim');
 		$val->set_rules('full_name', 'Nama Lengkap', 'trim|required');

@@ -86,7 +86,7 @@
 						<ul class="list-inline float-right top-right">
 							<li class="list-inline-item pl-3 pr-0"><i class="fa fa-envelope"></i> </i> <?=__session('email');?></li>
 							<li class="list-inline-item pl-3 pr-0"><i class="fa fa-phone"></i> <?=__session('phone');?></li>
-							<li class="list-inline-item pl-3 pr-0"><a href="<?=site_url('feed')?>"><i class="fa fa-rss"></i> RSS</a></li>
+							<!-- <li class="list-inline-item pl-3 pr-0"><a href="<?=site_url('feed')?>"><i class="fa fa-rss"></i> RSS</a></li> -->
 							<li class="list-inline-item pl-3 pr-0"><a href="#search_form"><i class="fa fa-search"></i> Pencarian</a></li>
 						</ul>
 					</div>
