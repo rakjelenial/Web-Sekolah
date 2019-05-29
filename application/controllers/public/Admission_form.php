@@ -316,7 +316,7 @@ class Admission_form extends Public_Controller {
 		$val->set_rules('birth_place', 'Tempat Lahir', 'trim|required');
 		$val->set_rules('birth_date', 'Tanggal Lahir', 'trim|required');
 		$val->set_rules('religion_id', 'Agama', 'trim|required|numeric');
-		$val->set_rules('special_need_id', 'Kebutuhan Khusus', 'trim|numeric');
+		// $val->set_rules('special_need_id', 'Kebutuhan Khusus', 'trim|numeric');
 		$val->set_rules('street_address', 'Alamat Jalan', 'trim|required');
 		$val->set_rules('rt', 'RT', 'trim');
 		$val->set_rules('rw', 'RW', 'trim');
@@ -343,14 +343,14 @@ class Admission_form extends Public_Controller {
 		$val->set_rules('father_education_id', 'Pendidikan Ayah', 'trim|numeric');
 		$val->set_rules('father_employment_id', 'Pekerjaan Ayah', 'trim|numeric');
 		$val->set_rules('father_monthly_income_id', 'Penghasilan Bulanan Ayah', 'trim|numeric');
-		$val->set_rules('father_special_need_id', 'Kebutuhan Khusus Ayah', 'trim|numeric');
+		// $val->set_rules('father_special_need_id', 'Kebutuhan Khusus Ayah', 'trim|numeric');
 
 		$val->set_rules('mother_name', 'Nama Ibu Kandung', 'trim|required');
 		$val->set_rules('mother_birth_year', 'Tahun Lahir Ibu', 'trim|numeric|min_length[4]|max_length[4]');
 		$val->set_rules('mother_education_id', 'Pendidikan Ibu', 'trim|numeric');
 		$val->set_rules('mother_employment_id', 'Pekerjaan Ibu', 'trim|numeric');
 		$val->set_rules('mother_monthly_income_id', 'Penghasilan Bulanan Ibu', 'trim|numeric');
-		$val->set_rules('mother_special_need_id', 'Kebutuhan Khusus Ibu', 'trim|numeric');
+		// $val->set_rules('mother_special_need_id', 'Kebutuhan Khusus Ibu', 'trim|numeric');
 
 		$val->set_rules('guardian_name', 'Nama Wali', 'trim');
 		$val->set_rules('guardian_birth_year', 'Tahun Lahir Wali', 'trim|numeric|min_length[4]|max_length[4]');

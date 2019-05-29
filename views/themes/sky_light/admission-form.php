@@ -144,12 +144,12 @@
 						<input type="text" value="<?php echo set_value('prev_school_name')?>" class="form-control form-control-sm rounded-0 border border-secondary" id="prev_school_name" name="prev_school_name">
 					</div>
 				</div>
-				<div class="form-group row mb-2">
+				<!-- <div class="form-group row mb-2">
 					<label for="special_need_id" class="col-sm-4 control-label">Kebutuhan Khusus</label>
 					<div class="col-sm-8">
 						<?=form_dropdown('special_need_id', $special_needs, set_value('special_need_id'), 'class="custom-select custom-select-sm rounded-0 border border-secondary" id="special_need_id"')?>
 					</div>
-				</div>
+				</div> -->
 				<div class="form-group row mb-2">
 					<label for="street_address" class="col-sm-4 control-label">Alamat Jalan <span style="color: red">*</span></label>
 					<div class="col-sm-8">
@@ -340,12 +340,12 @@
 						<?=form_dropdown('father_monthly_income_id', $monthly_incomes, set_value('father_monthly_income_id'), 'class="custom-select custom-select-sm rounded-0 border border-secondary" id="father_monthly_income_id"')?>
 					</div>
 				</div>
-				<div class="form-group row mb-2">
+				<!-- <div class="form-group row mb-2">
 					<label for="father_special_need_id" class="col-sm-4 control-label">Kebutuhan Khusus</label>
 					<div class="col-sm-8">
 						<?=form_dropdown('father_special_need_id', $special_needs, set_value('father_special_need_id'), 'class="custom-select custom-select-sm rounded-0 border border-secondary" id="father_special_need_id"')?>
 					</div>
-				</div>
+				</div> -->
 
 				<!-- Ibu -->
 				<h6 class="page-title mb-3">Data Ibu Kandung</h6>
@@ -379,12 +379,12 @@
 						<?=form_dropdown('mother_monthly_income_id', $monthly_incomes, set_value('mother_monthly_income_id'), 'class="custom-select custom-select-sm rounded-0 border border-secondary" id="mother_monthly_income_id"')?>
 					</div>
 				</div>
-				<div class="form-group row mb-2">
+				<!-- <div class="form-group row mb-2">
 					<label for="mother_special_need_id" class="col-sm-4 control-label">Kebutuhan Khusus</label>
 					<div class="col-sm-8">
 						<?=form_dropdown('mother_special_need_id', $special_needs, set_value('mother_special_need_id'), 'class="custom-select custom-select-sm rounded-0 border border-secondary" id="mother_special_need_id"')?>
 					</div>
-				</div>
+				</div> -->
 
 				<!-- Wali -->
 				<h6 class="page-title mb-3">Data Wali</h6>
