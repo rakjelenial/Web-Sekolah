@@ -79,7 +79,7 @@
 	<?php } ?>
 	<script src="<?=base_url('assets/js/frontend.min.js')?>"></script>
 </head>
-<body oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;' ondragstart='return false' onselectstart='return false' style='-moz-user-select: none; cursor: default;'>
+<body oncontextmenu='return false;' onselectstart='return false;' style='-moz-user-select: none; cursor: default;'>
 	<header>
 		<div class="container-fluid top-bar">
 			<div class="container">
