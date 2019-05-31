@@ -179,6 +179,10 @@ class Registrants extends Admin_Controller {
 			'traveling_time' => $this->input->post('traveling_time', true),
 			'height' => $this->input->post('height', true),
 			'weight' => $this->input->post('weight', true),
+			'bhs_indo' => $this->input->post('bhs_indo', true),
+			'bhs_inggris' => $this->input->post('bhs_inggris', true),
+			'mtk' => $this->input->post('mtk', true),
+			'ipa' => $this->input->post('ipa', true),
 			'sibling_number' => $this->input->post('sibling_number', true)
 		];
 	}
