@@ -182,10 +182,10 @@
 					<ul class="treeview-menu">
 						<li <?=isset($admission_settings) ? 'class="active"':'';?>><a href="<?=site_url('admission/admission_settings');?>"><i class="fa fa-sign-out"></i> Pengaturan</a></li>
 						<li <?=isset($registrants) ? 'class="active"':'';?>><a href="<?=site_url('admission/registrants');?>"><i class="fa fa-sign-out"></i> Calon <?=__session('_student')?> Baru</a></li>
-						<li <?=isset($admission_phases) ? 'class="active"':'';?>><a href="<?=site_url('admission/admission_phases');?>"><i class="fa fa-sign-out"></i> Gelombang Pendaftaran</a></li>
-						<li <?=isset($admission_quotas) ? 'class="active"':'';?>><a href="<?=site_url('admission/admission_quotas');?>"><i class="fa fa-sign-out"></i> Kuota Penerimaan</a></li>
-						<li <?=isset($admission_types) ? 'class="active"':'';?>><a href="<?=site_url('admission/admission_types');?>"><i class="fa fa-sign-out"></i> Jalur Pendaftaran</a></li>
-						<li <?=isset($selection_process) ? 'class="active"':'';?>><a href="<?=site_url('admission/selection_process');?>"><i class="fa fa-sign-out"></i> Proses Seleksi</a></li>
+						<!-- <li <?=isset($admission_phases) ? 'class="active"':'';?>><a href="<?=site_url('admission/admission_phases');?>"><i class="fa fa-sign-out"></i> Gelombang Pendaftaran</a></li> -->
+						<!-- <li <?=isset($admission_quotas) ? 'class="active"':'';?>><a href="<?=site_url('admission/admission_quotas');?>"><i class="fa fa-sign-out"></i> Kuota Penerimaan</a></li> -->
+						<!-- <li <?=isset($admission_types) ? 'class="active"':'';?>><a href="<?=site_url('admission/admission_types');?>"><i class="fa fa-sign-out"></i> Jalur Pendaftaran</a></li> -->
+						<!-- <li <?=isset($selection_process) ? 'class="active"':'';?>><a href="<?=site_url('admission/selection_process');?>"><i class="fa fa-sign-out"></i> Proses Seleksi</a></li> -->
 						<li <?=isset($registrants_approved) ? 'class="active"':'';?>><a href="<?=site_url('admission/registrants_approved');?>"><i class="fa fa-sign-out"></i> Pendaftar Diterima</a></li>
 						<li <?=isset($registrants_unapproved) ? 'class="active"':'';?>><a href="<?=site_url('admission/registrants_unapproved');?>"><i class="fa fa-sign-out"></i> Pendaftar Tidak Diterima</a></li>
 					</ul>
