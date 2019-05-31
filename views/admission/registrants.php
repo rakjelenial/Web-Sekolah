@@ -226,7 +226,7 @@ function admission_reports() {
 		// phase_name: 'Gelombang Pendaftaran',
 		// admission_type: 'Jalur Pendaftaran',
 		// is_transfer: 'Pindahan ?',
-		achievement: 'Prestasi',
+		// achievement: 'Prestasi',
 		re_registration: 'Daftar Ulang ?',
 		start_date: 'Tanggal Masuk',
 		nisn: 'NISN',
