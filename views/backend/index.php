@@ -85,14 +85,14 @@
 				</a>
 				<div class="collapse navbar-collapse pull-right" id="navbar-collapse">
 					<ul class="nav navbar-nav">
-						<li class="dropdown">
+						<!-- <li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-question-circle-o"></i> BANTUAN <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="https://www.sekolahku.web.id" target="_blank"><i class="fa fa-globe"></i> Situs Resmi</a></li>
 								<li><a href="https://www.facebook.com/groups/cmssekolahku" target="_blank"><i class="fa fa-facebook"></i> Forum Diskusi</a></li>
 								<li><a href="#" data-toggle="modal" data-target="#cms-info"><i class="fa fa-info-circle"></i> Tentang</a></li>
 							</ul>
-						</li>
+						</li> -->
 						<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 							<li <?=isset($user_profile) ? 'class="active"' : '';?>><a href="<?=site_url('profile');?>"><i class="fa fa-edit"></i> UBAH PROFIL</a></li>
 						<?php } ?>

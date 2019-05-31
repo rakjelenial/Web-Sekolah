@@ -21,7 +21,7 @@
 				<?php if (__session('major_count') > 0) { ?>
 				<h6 class="page-title mb-3">Registrasi Peserta Didik</h6>
 					<div class="form-group row mb-2">
-						<label for="first_choice_id" class="col-sm-4 control-label">Pilihan I (Satu) <span style="color: red">*</span></label>
+						<label for="first_choice_id" class="col-sm-4 control-label">Pilih Jurusan <span style="color: red">*</span></label>
 						<div class="col-sm-8">
 							<?=form_dropdown('first_choice_id', $majors, set_value('first_choice_id'), 'class="custom-select custom-select-sm rounded-0 border border-secondary" id="first_choice_id" onchange="check_options(1)" onblur="check_options(1)" onmouseup="check_options(1)"')?>
 						</div>
@@ -98,7 +98,7 @@
 				<!-- Khusus SMP/Sederajat, SMA/Sederajat -->
 				<?php //if (__session('school_level') == 2 || __session('school_level') == 3 || __session('school_level') == 4) { ?>
 					<div class="form-group row mb-2">
-						<label for="nisn" class="col-sm-4 control-label">NISN</label>
+						<label for="nisn" class="col-sm-4 control-label">NISN <span style="color: red">*</span></label>
 						<div class="col-sm-8">
 							<input type="text" value="<?php echo set_value('nisn')?>" class="form-control form-control-sm rounded-0 border border-secondary" id="nisn" name="nisn" placeholder="Nomor Induk Sekolah Nasional">
 						</div>
@@ -139,7 +139,7 @@
 					</div>
 				</div>
 				<div class="form-group row mb-2">
-					<label for="prev_school_name" class="col-sm-4 control-label">Nama Sekolah Asal </label>
+					<label for="prev_school_name" class="col-sm-4 control-label">Nama Sekolah Asal <span style="color: red">*</span></label>
 					<div class="col-sm-8">
 						<input type="text" value="<?php echo set_value('prev_school_name')?>" class="form-control form-control-sm rounded-0 border border-secondary" id="prev_school_name" name="prev_school_name">
 					</div>
@@ -319,7 +319,7 @@
 				<div class="form-group row mb-2">
 					<label for="father_birth_year" class="col-sm-4 control-label">Tahun Lahir <span style="color: red">*</span></label>
 					<div class="col-sm-8">
-						<input type="text" value="<?php echo set_value('father_birth_year')?>" class="form-control form-control-sm rounded-0 border border-secondary" id="father_birth_year" name="father_birth_year" placeholder="Tahun Lahir Ayah Kandung. contoh : 1965">
+						<input type="number" value="<?php echo set_value('father_birth_year')?>" class="form-control form-control-sm rounded-0 border border-secondary" id="father_birth_year" name="father_birth_year" placeholder="Tahun Lahir Ayah Kandung. contoh : 1965">
 					</div>
 				</div>
 				<div class="form-group row mb-2">
@@ -356,9 +356,9 @@
 					</div>
 				</div>
 				<div class="form-group row mb-2">
-					<label for="mother_birth_year" class="col-sm-4 control-label">Tahun Lahir</label>
+					<label for="mother_birth_year" class="col-sm-4 control-label">Tahun Lahir <span style="color: red">*</span></label>
 					<div class="col-sm-8">
-						<input type="text" value="<?php echo set_value('mother_birth_year')?>" class="form-control form-control-sm rounded-0 border border-secondary" id="mother_birth_year" name="mother_birth_year" placeholder="Tahun Lahir Ibu Kandung. contoh : 1965">
+						<input type="number" value="<?php echo set_value('mother_birth_year')?>" class="form-control form-control-sm rounded-0 border border-secondary" id="mother_birth_year" name="mother_birth_year" placeholder="Tahun Lahir Ibu Kandung. contoh : 1965">
 					</div>
 				</div>
 				<div class="form-group row mb-2">
@@ -395,9 +395,9 @@
 					</div>
 				</div>
 				<div class="form-group row mb-2">
-					<label for="guardian_birth_year" class="col-sm-4 control-label">Tahun Lahir</label>
+					<label for="guardian_birth_year" class="col-sm-4 control-label">Tahun Lahir </label>
 					<div class="col-sm-8">
-						<input type="text" value="<?php echo set_value('guardian_birth_year')?>" class="form-control form-control-sm rounded-0 border border-secondary" id="guardian_birth_year" name="guardian_birth_year" placeholder="Tahun Lahir Wali. contoh : 1965">
+						<input type="number" value="<?php echo set_value('guardian_birth_year')?>" class="form-control form-control-sm rounded-0 border border-secondary" id="guardian_birth_year" name="guardian_birth_year" placeholder="Tahun Lahir Wali. contoh : 1965">
 					</div>
 				</div>
 				<div class="form-group row mb-2">
