@@ -24,10 +24,11 @@
             <ul class="nav nav-tabs">
                <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true">REGISTRASI <?=strtoupper(__session('_student'))?></a></li>
                <li class=""><a href="#tab_2" data-toggle="tab" aria-expanded="false">DATA PRIBADI</a></li>
+               <li class=""><a href="#tab_9" data-toggle="tab" aria-expanded="false">NILAI UN</a></li>
                <li class=""><a href="#tab_3" data-toggle="tab" aria-expanded="false">DATA AYAH KANDUNG</a></li>
                <li class=""><a href="#tab_4" data-toggle="tab" aria-expanded="false">DATA IBU KANDUNG</a></li>
                <li class=""><a href="#tab_5" data-toggle="tab" aria-expanded="false">DATA WALI</a></li>
-               <li class=""><a href="#tab_6" data-toggle="tab" aria-expanded="false">DATA PERIODIK</a></li>
+               <!-- <li class=""><a href="#tab_6" data-toggle="tab" aria-expanded="false">DATA PERIODIK</a></li> -->
                <?php if ($scholarships && $scholarships->num_rows() > 0) { ?>
                   <li class=""><a href="#tab_7" data-toggle="tab" aria-expanded="false">BEASISWA</a></li>
                <?php } ?>
@@ -54,26 +55,26 @@
                               </div>
                            </div>
 
-                           <div class="form-group">
+                           <!-- <div class="form-group">
                               <label class="col-sm-4 control-label">Jenis Pendaftaran</label>
                               <div class="col-sm-8">
                                  <p class="form-control-static"><?=$student->is_transfer?></p>
                               </div>
-                           </div>
+                           </div> -->
 
-                           <div class="form-group">
+                           <!-- <div class="form-group">
                               <label class="col-sm-4 control-label">Jalur Pendaftaran</label>
                               <div class="col-sm-8">
                                  <p class="form-control-static"><?=$student->admission_type?></p>
                               </div>
-                           </div>
+                           </div> -->
 
-                           <div class="form-group">
+                           <!-- <div class="form-group">
                               <label class="col-sm-4 control-label">Gelombang Pendaftaran</label>
                               <div class="col-sm-8">
                                  <p class="form-control-static"><?=$student->phase_name?></p>
                               </div>
-                           </div>
+                           </div> -->
 
                            <?php if (__session('major_count') > 0) { ?>
                               <div class="form-group">
@@ -83,29 +84,29 @@
                                  </div>
                               </div>
 
-                              <div class="form-group">
+                              <!-- <div class="form-group">
                                  <label class="col-sm-4 control-label">Pilihan II</label>
                                  <div class="col-sm-8">
                                     <p class="form-control-static"><?=$student->second_choice?></p>
                                  </div>
-                              </div>
+                              </div> -->
                            <?php } ?>
 
-                           <div class="form-group">
+                           <!-- <div class="form-group">
                               <label class="col-sm-4 control-label">Prestasi yang Pernah Diraih</label>
                               <div class="col-sm-8">
                                  <p class="form-control-static"><?=$student->achievement?></p>
                               </div>
-                           </div>
+                           </div> -->
 
                         <?php } ?>
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                            <label class="col-sm-4 control-label">Nomor Induk Siswa</label>
                            <div class="col-sm-8">
                               <p class="form-control-static"><?=$student->identity_number?></p>
                            </div>
-                        </div>
+                        </div> -->
 
                         <div class="form-group">
                            <label class="col-sm-4 control-label">Nomor Induk Siswa Nasional / NISN</label>
@@ -121,47 +122,47 @@
                            </div>
                         </div>
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                            <label class="col-sm-4 control-label">Alamat Sekolah Asal</label>
                            <div class="col-sm-8">
                               <p class="form-control-static"><?=$student->prev_school_address?></p>
                            </div>
-                        </div>
+                        </div> -->
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                            <label class="col-sm-4 control-label">Nomor Ujian Nasional Sebelumnya</label>
                            <div class="col-sm-8">
                               <p class="form-control-static"><?=$student->prev_exam_number?></p>
                            </div>
-                        </div>
+                        </div> -->
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                            <label class="col-sm-4 control-label">Apakah Pernah PAUD ?</label>
                            <div class="col-sm-8">
                               <p class="form-control-static"><?=$student->paud?></p>
                            </div>
-                        </div>
+                        </div> -->
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                            <label class="col-sm-4 control-label">Apakah Pernah TK ?</label>
                            <div class="col-sm-8">
                               <p class="form-control-static"><?=$student->tk?></p>
                            </div>
-                        </div>
+                        </div> -->
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                            <label class="col-sm-4 control-label">Nomor Seri SKHUN Sebelumnya</label>
                            <div class="col-sm-8">
                               <p class="form-control-static"><?=$student->skhun?></p>
                            </div>
-                        </div>
+                        </div> -->
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                            <label class="col-sm-4 control-label">Nomor Seri Ijazah Sebelumnya</label>
                            <div class="col-sm-8">
                               <p class="form-control-static"><?=$student->prev_diploma_number?></p>
                            </div>
-                        </div>
+                        </div> -->
 
                         <?php if ($this->uri->segment(2) == 'alumni') { ?>
                            <div class="form-group">
@@ -229,12 +230,12 @@
                            </div>
                         </div>
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                            <label class="col-sm-4 control-label">Kebutuhan Khusus</label>
                            <div class="col-sm-8">
                               <p class="form-control-static"><?=$student->special_need?></p>
                            </div>
-                        </div>
+                        </div> -->
 
                         <div class="form-group">
                            <label class="col-sm-4 control-label">Alamat Jalan</label>
@@ -257,12 +258,12 @@
                            </div>
                         </div>
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                            <label class="col-sm-4 control-label">Nama Dusun</label>
                            <div class="col-sm-8">
                               <p class="form-control-static"><?=$student->sub_village?></p>
                            </div>
-                        </div>
+                        </div> -->
 
                         <div class="form-group">
                            <label class="col-sm-4 control-label">Nama Kelurahan / Desa</label>
@@ -299,12 +300,12 @@
                            </div>
                         </div>
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                            <label class="col-sm-4 control-label">Moda Transportasi</label>
                            <div class="col-sm-8">
                               <p class="form-control-static"><?=$student->transportation?></p>
                            </div>
-                        </div>
+                        </div> -->
 
                         <div class="form-group">
                            <label class="col-sm-4 control-label">Nomor Handphone</label>
@@ -313,7 +314,7 @@
                            </div>
                         </div>
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                            <label class="col-sm-4 control-label">Nomor Telepon</label>
                            <div class="col-sm-8">
                               <p class="form-control-static"><?=$student->phone?></p>
@@ -325,9 +326,9 @@
                            <div class="col-sm-8">
                               <p class="form-control-static"><?=$student->email?></p>
                            </div>
-                        </div>
+                        </div> -->
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                            <label class="col-sm-4 control-label">Nomor Kartu Indonesia Sehat (KIS)</label>
                            <div class="col-sm-8">
                               <p class="form-control-static"><?=$student->kis?></p>
@@ -388,6 +389,41 @@
                            <div class="col-sm-8">
                               <p class="form-control-static"><?=$student->ambition?></p>
                            </div>
+                        </div> -->
+
+                     </div>
+                  </form>
+               </div>
+               <div class="tab-pane" id="tab_9">
+                  <form class="form-horizontal">
+                     <div class="box-body">
+                           
+                        <div class="form-group">
+                           <label class="col-sm-4 control-label">Bahasa Indonesia</label>
+                           <div class="col-sm-8">
+                              <p class="form-control-static"><?=$student->bhs_indo?></p>
+                           </div>
+                        </div>
+
+                        <div class="form-group">
+                           <label class="col-sm-4 control-label">Bahasa Inggris</label>
+                           <div class="col-sm-8">
+                              <p class="form-control-static"><?=$student->bhs_inggris?></p>
+                           </div>
+                        </div>
+
+                        <div class="form-group">
+                           <label class="col-sm-4 control-label">Matematika</label>
+                           <div class="col-sm-8">
+                              <p class="form-control-static"><?=$student->mtk?></p>
+                           </div>
+                        </div>
+
+                        <div class="form-group">
+                           <label class="col-sm-4 control-label">IPA</label>
+                           <div class="col-sm-8">
+                              <p class="form-control-static"><?=$student->ipa?></p>
+                           </div>
                         </div>
 
                      </div>
@@ -432,12 +468,12 @@
                            </div>
                         </div>
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                            <label class="col-sm-4 control-label">Kebutuhan Khusus Ayah</label>
                            <div class="col-sm-8">
                               <p class="form-control-static"><?=$student->father_special_need?></p>
                            </div>
-                        </div>
+                        </div> -->
 
                      </div>
                   </form>
@@ -481,12 +517,12 @@
                            </div>
                         </div>
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                            <label class="col-sm-4 control-label">Kebutuhan Khusus Ibu</label>
                            <div class="col-sm-8">
                               <p class="form-control-static"><?=$student->mother_special_need?></p>
                            </div>
-                        </div>
+                        </div> -->
 
                      </div>
                   </form>

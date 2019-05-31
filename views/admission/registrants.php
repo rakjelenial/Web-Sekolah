@@ -253,7 +253,7 @@ function admission_reports() {
 		transportation: 'Alat Transportasi',
 		// phone: 'Telepon',
 		mobile_phone: 'Handphone',
-		bhs_Indo: 'Bahasa Indonesia',
+		bhs_indo: 'Bahasa Indonesia',
 		bhs_inggris: 'Bahasa Inggris',
 		mtk: 'Matematika',
 		ipa: 'IPA',
