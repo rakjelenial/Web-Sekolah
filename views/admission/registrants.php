@@ -42,7 +42,8 @@ var grid_fields = [
 	{
 		header: '<i class="fa fa-print"></i>',
 		renderer: function( row ) {
-			return A('print_registration_form(' + row.id + ', event)', 'Cetak Formulir Pendaftaran', '<i class="fa fa-print"></i>');
+			// return A('print_registration_form(' + row.id + ', event)', 'Cetak Formulir Pendaftaran', '<i class="fa fa-print"></i>');
+			return A('print_reg_in_web(' + row.id + ')', 'Cetak Formulir Pendaftaran', '<i class="fa fa-print"></i>');
 		},
 		exclude_excel: true,
 		sorting: false
@@ -198,6 +199,11 @@ function print_registration_form( id ) {
 	}).fail(function(xhr) {
 		console.log(xhr);
 	});
+}
+
+// cetak Formulir Pendaftran lewat website
+function print_reg_in_web( id ) {
+	window.open(_BASE_URL + 'admission/registrants/print_reg_in_web/' + id,'_self');
 }
 
 function preview(image) {

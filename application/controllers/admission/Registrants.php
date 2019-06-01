@@ -324,6 +324,20 @@ class Registrants extends Admin_Controller {
 	}
 
 	/**
+	 * print_reg_in_web
+	 * @return Void
+	 */
+	public function print_reg_in_web($id)
+	{
+		$query = $this->model->RowObject($this->pk, $id, $this->table);
+		$this->load->model('m_registrants');
+		$this->vars['data'] = $this->m_registrants->find_registrant($query->birth_date, $query->registration_number);
+		
+		// $this->vars['content'] = 'admission/pdf_reg_in_web';
+		$this->load->view('admission/pdf_reg_in_web', $this->vars);
+	}
+
+	/**
 	 * Admission Reports
 	 * @return Object
 	 */
