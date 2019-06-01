@@ -16,6 +16,7 @@
                <!-- <img class="profile-user-img img-responsive" <?=(isset($photo) && $photo) ? ('src="'.$photo.'"') : '' ?> alt="User profile picture"> -->
                <h3 class="profile-username text-center"><?=$student->full_name?></h3>
                <p class="text-muted text-center"><?=$student->street_address?></p>
+               <a href="<?=base_url('admission/registrants/print_reg_in_web/'.$student->id)?>" class="btn btn-success btn-block">Print</a>
             </div>
          </div>
       </div>
