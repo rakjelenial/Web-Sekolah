@@ -13,7 +13,7 @@
       <div class="col-md-2">
          <div class="box box-primary">
             <div class="box-body box-profile">
-               <img class="profile-user-img img-responsive" <?=(isset($photo) && $photo) ? ('src="'.$photo.'"') : '' ?> alt="User profile picture">
+               <!-- <img class="profile-user-img img-responsive" <?=(isset($photo) && $photo) ? ('src="'.$photo.'"') : '' ?> alt="User profile picture"> -->
                <h3 class="profile-username text-center"><?=$student->full_name?></h3>
                <p class="text-muted text-center"><?=$student->street_address?></p>
             </div>
