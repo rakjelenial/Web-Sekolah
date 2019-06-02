@@ -56,7 +56,7 @@
         </tbody>
     </table>
     <h3><?=$CI->session->_student.' Baru Tahun '.$CI->session->admission_year?></h3>
-    <table width="100%" border="0" cellpadding="3" cellspacing="0" style="border-bottom:1px dashed #a5a5a5; padding-bottom: 30px; margin-bottom: 20px">
+    <table width="100%" border="0" cellpadding="3" cellspacing="0">
         <tbody>
         <tr>
             <td colspan="3" align="left"><h3>Registrasi <?=$CI->session->school_level >= 5 ? 'Calon Mahasiswa' : 'Calon Peserta Didik'?></h3></td>
@@ -103,6 +103,21 @@
         </tr>
         </tbody>
     </table>
+    <table width="100%" cellpadding="3" cellspacing="0" border="0" style="border-bottom:1px dashed #a5a5a5; padding-bottom: 30px; margin-bottom: 20px">
+        <tbody>
+        <!-- <tr>
+            <td align="left">Saya yang bertandatangan dibawah ini menyatakan bahwa data yang tertera diatas adalah yang sebenarnya.</td>
+        </tr> -->
+        <tr><td></td></tr>
+        <tr align="left">
+            <td align="right">
+                <p><?=/*$data['district'].*/'Kotabaru, '. indo_date(substr($data['created_at'], 0, 10))?></p>
+                <br><br><br><br>
+                <p><?=$CI->session->user_name?></p>
+        </td>
+        </tr>
+        </tbody>
+    </table>
     <table width="100%" border="0" cellpadding="3" cellspacing="0" style="border-bottom:1px dashed #a5a5a5; padding-bottom:30px; margin-bottom: 20px;">
         <tbody>
         <tr>
@@ -140,27 +155,12 @@
         </tr>
         </tbody>
     </table>
-    <table width="100%" cellpadding="3" cellspacing="0" border="0">
-        <tbody>
-        <tr>
-            <td align="left">Saya yang bertandatangan dibawah ini menyatakan bahwa data yang tertera diatas adalah yang sebenarnya.</td>
-        </tr>
-        <tr><td></td></tr>
-        <tr align="left">
-            <td align="right">
-                <p><?=$data['district'].', '. indo_date(substr($data['created_at'], 0, 10))?></p>
-                <br><br><br><br>
-                <p><?=$data['full_name']?></p>
-        </td>
-        </tr>
-        </tbody>
-    </table>
 </div>
 <script>
 var restorepage = document.body.innerHTML;
 var printcontent = document.getElementById('cetak').innerHTML;
 document.body.innerHTML = printcontent;
-window.print();
+// window.print();
 document.body.innerHTML = restorepage;
 
 function printContent(el){
