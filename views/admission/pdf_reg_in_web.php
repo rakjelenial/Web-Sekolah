@@ -113,7 +113,7 @@
             <td align="right">
                 <p><?=/*$data['district'].*/'Kotabaru, '. indo_date(substr($data['created_at'], 0, 10))?></p>
                 <br><br><br><br>
-                <p><?=$CI->session->user_name?></p>
+                <p><?=__session('user_full_name');?></p>
         </td>
         </tr>
         </tbody>

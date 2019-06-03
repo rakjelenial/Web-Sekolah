@@ -332,8 +332,10 @@ class Registrants extends Admin_Controller {
 		$query = $this->model->RowObject($this->pk, $id, $this->table);
 		$this->load->model('m_registrants');
 		$this->vars['data'] = $this->m_registrants->find_registrant($query->birth_date, $query->registration_number);
+		$this->vars['CI'] = &get_instance();
 		
-		// $this->vars['content'] = 'admission/pdf_reg_in_web';
+		// $this->vars['CI']->session->user_name;
+		echo  __session('user_full_name');
 		$this->load->view('admission/pdf_reg_in_web', $this->vars);
 	}
 
