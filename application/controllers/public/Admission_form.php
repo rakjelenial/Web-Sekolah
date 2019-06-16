@@ -284,7 +284,8 @@ class Admission_form extends Public_Controller {
 		$data['name'] = $this->input->post('full_name', true);
 		$data['nisn'] = $this->input->post('nisn', true) ? $this->input->post('nisn', true) : NULL;
 		$data['username'] = $this->m_registrants->registration_number();
-		$data['password'] = rand(1000, 9999);
+		// $data['password'] = rand(1000, 9999);
+		$data['password'] = $this->m_registrants->password_number();
 
 		return $data;
 	}

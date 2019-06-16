@@ -187,6 +187,30 @@ class M_registrants extends CI_Model {
 	}
 
 	/**
+	 * Generate Password Number
+	 * @return Boolean
+	 */
+	public function password_number()
+	{
+		$admission_year = $this->admission_year;
+		$query = $this->db->query("
+			SELECT MAX(RIGHT(registration_number, 6)) AS max_number
+			FROM students
+			WHERE is_prospective_student='true'
+			AND LEFT(registration_number, 4) = ?
+		", [$admission_year]);
+		$reg_number = "1";
+		if ($query->num_rows() === 1) {
+			$data = $query->row();
+			$number = ((int) $data->max_number) + 1;
+			$pass_number = $admission_year + $number;
+		}else{
+			$pass_number = $admission_year + $reg_number;
+		}
+		return $pass_number;
+	}
+
+	/**
 	 * Selection Result
 	 * @param String $registration_number
 	 * @param String $birth_date
