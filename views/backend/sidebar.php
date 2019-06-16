@@ -84,7 +84,7 @@
 			<?php } ?>
 		<?php } ?>
 
-		<!-- <?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
+		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('reference', __session('user_privileges'))) { ?>
 				<li class="treeview <?=isset($reference) ? 'active':'';?>">
 					<a href="#">
@@ -96,7 +96,7 @@
 					</ul>
 				</li>
 			<?php } ?>
-		<?php } ?> -->
+		<?php } ?>
 
 		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('academic', __session('user_privileges'))) { ?>
@@ -108,18 +108,18 @@
 						<li class="treeview <?=isset($academic_references) ? 'active':'';?>">
 							<a href="#"><i class="fa fa-sign-out"></i> Data Induk <i class="fa fa-angle-left pull-right"></i></a>
 							<ul class="treeview-menu">
-								<!-- <li <?=isset($alumni) ? 'class="active"':'';?>><a href="<?=site_url('academic/alumni');?>"><i class="fa fa-sign-out"></i> Alumni</a></li> -->
+								<li <?=isset($alumni) ? 'class="active"':'';?>><a href="<?=site_url('academic/alumni');?>"><i class="fa fa-sign-out"></i> Alumni</a></li>
 								<li <?=isset($majors) ? 'class="active"':'';?>><a href="<?=site_url('academic/majors');?>"><i class="fa fa-sign-out"></i> <?=__session('_major')?></a></li>
-								<!-- <li <?=isset($class_groups) ? 'class="active"':'';?>><a href="<?=site_url('academic/class_groups');?>"><i class="fa fa-sign-out"></i> Kelas</a></li> -->
+								<li <?=isset($class_groups) ? 'class="active"':'';?>><a href="<?=site_url('academic/class_groups');?>"><i class="fa fa-sign-out"></i> Kelas</a></li>
 								<li <?=isset($transportations) ? 'class="active"':'';?>><a href="<?=site_url('academic/transportations');?>"><i class="fa fa-sign-out"></i> Moda Transportasi</a></li>
 								<li <?=isset($monthly_incomes) ? 'class="active"':'';?>><a href="<?=site_url('academic/monthly_incomes');?>"><i class="fa fa-sign-out"></i> Penghasilan Bulanan</a></li>
-								<!-- <li <?=isset($students) ? 'class="active"':'';?>><a href="<?=site_url('academic/students');?>"><i class="fa fa-sign-out"></i> <?=__session('_student')?></a></li> -->
-								<!-- <li <?=isset($student_status) ? 'class="active"':'';?>><a href="<?=site_url('academic/student_status');?>"><i class="fa fa-sign-out"></i> Status <?=__session('_student')?></a></li> -->
+								<li <?=isset($students) ? 'class="active"':'';?>><a href="<?=site_url('academic/students');?>"><i class="fa fa-sign-out"></i> <?=__session('_student')?></a></li>
+								<li <?=isset($student_status) ? 'class="active"':'';?>><a href="<?=site_url('academic/student_status');?>"><i class="fa fa-sign-out"></i> Status <?=__session('_student')?></a></li>
 								<li <?=isset($academic_years) ? 'class="active"':'';?>><a href="<?=site_url('academic/academic_years');?>"><i class="fa fa-sign-out"></i> <?=__session('_academic_year')?></a></li>
 								<li <?=isset($residences) ? 'class="active"':'';?>><a href="<?=site_url('academic/residences');?>"><i class="fa fa-sign-out"></i> Tempat Tinggal</a></li>
 							</ul>
 						</li>
-						<!-- <li class="treeview <?=isset($academic_chart) ? 'active':'';?>">
+						<li class="treeview <?=isset($academic_chart) ? 'active':'';?>">
 							<a href="#"><i class="fa fa-sign-out"></i> Grafik <i class="fa fa-angle-left pull-right"></i></a>
 							<ul class="treeview-menu">
 								<li <?=isset($by_class_groups) ? 'class="active"':'';?>><a href="<?=site_url('academic/by_class_groups');?>"><i class="fa fa-sign-out"></i> Kelas</a></li>
@@ -141,13 +141,13 @@
 								<li <?=isset($class_group_settings) ? 'class="active"':'';?>><a href="<?=site_url('academic/class_group_settings');?>"><i class="fa fa-sign-out"></i> <?=__session('school_level') >= 5 ? 'Dosen Wali' : 'Wali Kelas' ?> </a></li>
 							</ul>
 						</li>
-						<li <?=isset($student_groups) ? 'class="active"':'';?>><a href="<?=site_url('academic/student_groups');?>"><i class="fa fa-sign-out"></i> Rombongan Belajar</a></li> -->
+						<li <?=isset($student_groups) ? 'class="active"':'';?>><a href="<?=site_url('academic/student_groups');?>"><i class="fa fa-sign-out"></i> Rombongan Belajar</a></li>
 					</ul>
 				</li>
 			<?php } ?>
 		<?php } ?>
 
-		<!-- <?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
+		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('employees', __session('user_privileges'))) { ?>
 				<li class="treeview <?=isset($employees) ? 'active':'';?>">
 					<a href="#">
@@ -171,7 +171,7 @@
 					</ul>
 				</li>
 			<?php } ?>
-		<?php } ?> -->
+		<?php } ?>
 
 		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('admission', __session('user_privileges'))) { ?>
@@ -182,10 +182,10 @@
 					<ul class="treeview-menu">
 						<li <?=isset($admission_settings) ? 'class="active"':'';?>><a href="<?=site_url('admission/admission_settings');?>"><i class="fa fa-sign-out"></i> Pengaturan</a></li>
 						<li <?=isset($registrants) ? 'class="active"':'';?>><a href="<?=site_url('admission/registrants');?>"><i class="fa fa-sign-out"></i> Calon <?=__session('_student')?> Baru</a></li>
-						<!-- <li <?=isset($admission_phases) ? 'class="active"':'';?>><a href="<?=site_url('admission/admission_phases');?>"><i class="fa fa-sign-out"></i> Gelombang Pendaftaran</a></li> -->
-						<!-- <li <?=isset($admission_quotas) ? 'class="active"':'';?>><a href="<?=site_url('admission/admission_quotas');?>"><i class="fa fa-sign-out"></i> Kuota Penerimaan</a></li> -->
-						<!-- <li <?=isset($admission_types) ? 'class="active"':'';?>><a href="<?=site_url('admission/admission_types');?>"><i class="fa fa-sign-out"></i> Jalur Pendaftaran</a></li> -->
-						<!-- <li <?=isset($selection_process) ? 'class="active"':'';?>><a href="<?=site_url('admission/selection_process');?>"><i class="fa fa-sign-out"></i> Proses Seleksi</a></li> -->
+						<li <?=isset($admission_phases) ? 'class="active"':'';?>><a href="<?=site_url('admission/admission_phases');?>"><i class="fa fa-sign-out"></i> Gelombang Pendaftaran</a></li>
+						<li <?=isset($admission_quotas) ? 'class="active"':'';?>><a href="<?=site_url('admission/admission_quotas');?>"><i class="fa fa-sign-out"></i> Kuota Penerimaan</a></li>
+						<li <?=isset($admission_types) ? 'class="active"':'';?>><a href="<?=site_url('admission/admission_types');?>"><i class="fa fa-sign-out"></i> Jalur Pendaftaran</a></li>
+						<li <?=isset($selection_process) ? 'class="active"':'';?>><a href="<?=site_url('admission/selection_process');?>"><i class="fa fa-sign-out"></i> Proses Seleksi</a></li>
 						<li <?=isset($registrants_approved) ? 'class="active"':'';?>><a href="<?=site_url('admission/registrants_approved');?>"><i class="fa fa-sign-out"></i> Pendaftar Diterima</a></li>
 						<li <?=isset($registrants_unapproved) ? 'class="active"':'';?>><a href="<?=site_url('admission/registrants_unapproved');?>"><i class="fa fa-sign-out"></i> Pendaftar Tidak Diterima</a></li>
 					</ul>
@@ -193,7 +193,7 @@
 			<?php } ?>
 		<?php } ?>
 
-		<!-- <?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
+		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('plugins', __session('user_privileges'))) { ?>
 				<li class="treeview <?=isset($plugins) ? 'active':'';?>">
 					<a href="#">
@@ -211,11 +211,11 @@
 					</ul>
 				</li>
 			<?php } ?>
-		<?php } ?> -->
+		<?php } ?>
 
 		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('media', __session('user_privileges'))) { ?>
-				<!-- <li class="treeview <?=isset($media) ? 'active':'';?>">
+				<li class="treeview <?=isset($media) ? 'active':'';?>">
 					<a href="#">
 						<i class="fa fa-upload"></i> <span>MEDIA</span> <i class="fa fa-angle-left pull-right"></i>
 					</a>
@@ -225,13 +225,13 @@
 						<li <?=isset($albums) ? 'class="active"':'';?>><a href="<?=site_url('media/albums');?>"><i class="fa fa-sign-out"></i> Album Foto</a></li>
 						<li <?=isset($videos) ? 'class="active"':'';?>><a href="<?=site_url('media/videos');?>"><i class="fa fa-sign-out"></i> Video</a></li>
 					</ul>
-				</li> -->
+				</li>
 			<?php } ?>
 		<?php } ?>
 
 		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('appearance', __session('user_privileges'))) { ?>
-				<!-- <li class="treeview <?=isset($appearance) ? 'active':'';?>">
+				<li class="treeview <?=isset($appearance) ? 'active':'';?>">
 					<a href="#">
 						<i class="fa fa-paint-brush"></i> <span>TAMPILAN</span> <i class="fa fa-angle-left pull-right"></i>
 					</a>
@@ -239,13 +239,13 @@
 						<li <?=isset($menus) ? 'class="active"':'';?>><a href="<?=site_url('appearance/menus');?>"><i class="fa fa-sign-out"></i> Menu</a></li>
 						<li <?=isset($themes) ? 'class="active"':'';?>><a href="<?=site_url('appearance/themes');?>"><i class="fa fa-sign-out"></i> Tema</a></li>
 					</ul>
-				</li> -->
+				</li>
 			<?php } ?>
 		<?php } ?>
 
 		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('users', __session('user_privileges'))) { ?>
-				<!-- <li class="treeview <?=isset($users) ? 'active':'';?>">
+				<li class="treeview <?=isset($users) ? 'active':'';?>">
 					<a href="#">
 						<i class="fa fa-users"></i> <span>PENGGUNA</span> <i class="fa fa-angle-left pull-right"></i>
 					</a>
@@ -259,13 +259,13 @@
 						<li <?=isset($user_groups) ? 'class="active"':'';?>><a href="<?=site_url('users/user_groups');?>"><i class="fa fa-sign-out"></i> Grup Pengguna</a></li>
 						<li <?=isset($user_privileges) ? 'class="active"':'';?>><a href="<?=site_url('users/user_privileges');?>"><i class="fa fa-sign-out"></i> Hak Akses</a></li>
 					</ul>
-				</li> -->
+				</li>
 			<?php } ?>
 		<?php } ?>
 
 		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('settings', __session('user_privileges'))) { ?>
-				<!-- <li class="treeview <?=isset($settings) ? 'active':'';?>">
+				<li class="treeview <?=isset($settings) ? 'active':'';?>">
 					<a href="#">
 						<i class="fa fa-wrench"></i> <span>PENGATURAN</span> <i class="fa fa-angle-left pull-right"></i>
 					</a>
@@ -279,11 +279,11 @@
 						<li <?=isset($school_profile_settings) ? 'class="active"':'';?>><a href="<?=site_url('settings/school_profile');?>"><i class="fa fa-sign-out"></i> Profil <?=__session('school_level') >= 5 ? 'Kampus' : 'Sekolah'?></a></li>
 						<li <?=isset($general_settings) ? 'class="active"':'';?>><a href="<?=site_url('settings/general');?>"><i class="fa fa-sign-out"></i> Umum</a></li>
 					</ul>
-				</li> -->
+				</li>
 			<?php } ?>
 		<?php } ?>
 
-		<!-- <?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
+		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<?php if (in_array('maintenance', __session('user_privileges'))) { ?>
 				<li class="treeview">
 					<a href="#">
@@ -295,7 +295,7 @@
 					</ul>
 				</li>
 			<?php } ?>
-		<?php } ?> -->
+		<?php } ?>
 
 		<?php if (__session('user_type') === 'super_user' || __session('user_type') === 'administrator') { ?>
 			<li class="profile-menu">
