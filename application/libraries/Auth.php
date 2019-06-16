@@ -53,6 +53,7 @@ class Auth {
 					$session_data = [
 						'user_id' => $data->id,
 						'user_name' => $data->user_name,
+						'user_full_name' => $data->user_full_name,
 						'user_type' => $data->user_type,
 						'user_profile_id' => $data->user_profile_id,
 						'has_login' => true,

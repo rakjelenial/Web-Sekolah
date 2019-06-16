@@ -47,6 +47,7 @@ class M_users extends CI_Model {
 			->select('id
 				, user_name
 				, user_password
+				, user_full_name
 				, user_type
 				, user_group_id
 				, user_profile_id
