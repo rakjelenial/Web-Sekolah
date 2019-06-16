@@ -329,6 +329,10 @@ class Registrants extends Admin_Controller {
 	 */
 	public function print_reg_in_web($id)
 	{
+		// verifikasi(daftar ulang) menjadi true
+		$fill_data['re_registration'] = true;
+		$this->vars['verifikasi'] = $this->model->update($id, $this->table, $fill_data) ? 'success' : 'error';
+		
 		$query = $this->model->RowObject($this->pk, $id, $this->table);
 		$this->load->model('m_registrants');
 		$this->vars['data'] = $this->m_registrants->find_registrant($query->birth_date, $query->registration_number);

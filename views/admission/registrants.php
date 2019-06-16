@@ -34,7 +34,7 @@ var grid_fields = [
 	{
 		header: '<i class="fa fa-check-square-o"></i>',
 		renderer: function( row ) {
-			return A(_form2 + '.OnEdit(' + row.id + ')', 'Daftar Ulang ?', '<i class="fa fa-check-square-o"></i>');
+			return A(_form2 + '.OnEdit(' + row.id + ')', /*'Daftar Ulang ?'*/ 'Verifikasi ?', '<i class="fa fa-check-square-o"></i>');
 		},
 		exclude_excel: true,
 		sorting: false
@@ -79,7 +79,8 @@ var grid_fields = [
 	// { header:'Jalur Pendaftaran', renderer:'admission_type' },
 	// { header:'Gelombang Pendaftaran', renderer:'phase_name' },
 	{
-		header:'Daftar Ulang ?',
+		// header:'Daftar Ulang ?',
+		header:'Verifikasi ?',
 		renderer: function( row ) {
 			var re_registration = row.re_registration;
 			return re_registration == 'true' ? '<i class="fa fa-check-square-o"></i>' : '<i class="fa fa-warning"></i>';
@@ -111,7 +112,7 @@ if (_MAJOR_COUNT > 0) {
 }
 form_fields.push(
 	//{ label:'Jenis Pendaftaran', name:'is_transfer', type:'select', datasource:{false: 'Baru', true:'Pindahan'} },
-	// { label:'Jalur Pendaftaran', name:'admission_type_id', type:'select', datasource:DS.AdmissionTypes },
+	{ label:'Jalur Pendaftaran', name:'admission_type_id', type:'select', datasource:DS.AdmissionTypes },
 	// { label:'Nomor Peserta UN Sebelumnya', name:'prev_exam_number' },
 	// { label:'Apakah pernah PAUD', name:'paud', type:'select', datasource:{false: 'Tidak', true:'Ya'} },
 	// { label:'Apakah pernah TK', name:'tk', type:'select', datasource:{false: 'Tidak', true:'Ya'} },
@@ -183,7 +184,7 @@ new FormBuilder( _form , {
 new FormBuilder( _form2 , {
 	controller:'admission/registrants',
 	fields: [
-		{ label:'Daftar Ulang ?', name:'re_registration', type:'select', datasource:DS.TrueFalse }
+		{ label:/*'Daftar Ulang ?'*/'Verifikasi ?', name:'re_registration', type:'select', datasource:DS.TrueFalse }
 	],
 	save_action: 'verified'
 });
