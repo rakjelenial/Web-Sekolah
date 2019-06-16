@@ -160,7 +160,7 @@
 var restorepage = document.body.innerHTML;
 var printcontent = document.getElementById('cetak').innerHTML;
 document.body.innerHTML = printcontent;
-// window.print();
+window.print();
 document.body.innerHTML = restorepage;
 
 function printContent(el){
