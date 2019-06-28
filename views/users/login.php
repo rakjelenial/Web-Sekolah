@@ -53,15 +53,15 @@
          user_name: $('#user_name').val(),
          user_password: $('#user_password').val()
       };
-      _H.Loading( true );
+      // _H.Loading( true );
       $.post(_BASE_URL + 'login/process', values, function(response) {
-         _H.Loading( false );
+         // _H.Loading( false );
          var res = _H.StrToObject( response );
          _H.Notify(res.status, _H.Message(res.message));
          if (res.status == 'success') {
-            setInterval(function() {
+            // setInterval(function() {
                window.location = _BASE_URL + 'dashboard';
-            }, 2000);
+            // }, 2000);
          } else {
             $('#user_name, #user_password').val('');
             if ( res.ip_banned ) {
