@@ -69,6 +69,7 @@ $route['hasil-pencarian'] = 'public/search';
 $route['under-construction'] = 'public/under_construction';
 $route['login'] = 'login';
 $route['login/(:any)'] = 'login/process';
+$route['login/(:any)'] = 'login/new_process';
 $route['logout'] = 'logout';
 $route['lost-password'] = 'lost_password';
 $route['lost-password/process'] = 'lost_password/process';

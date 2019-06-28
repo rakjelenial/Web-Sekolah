@@ -44,8 +44,8 @@ class Auth {
 	 * @return Boolean
 	 */
 	public function logged_in($user_name, $user_password, $ip_address) {
-		$ip_banned = $this->ip_banned($ip_address);
-		if ( ! $ip_banned ) {
+		// $ip_banned = $this->ip_banned($ip_address);
+		// if ( ! $ip_banned ) {
 			$query = $this->CI->m_users->logged_in($user_name);
 			if ($query->num_rows() === 1) {
 				$data = $query->row();
@@ -76,8 +76,8 @@ class Auth {
 			}
 			$this->increase_login_attempts($ip_address);
 			return false;
-		}
-		return false;
+		// }
+		// return false;
 	}
 
 	/**
@@ -119,26 +119,26 @@ class Auth {
 		}
 	}
 
-	/**
-	 * check if user has ban by ip address
-	 * @param String $ip_address
-	 * @return Boolean
-	 */
-	public function ip_banned($ip_address) {
-		$max_attempts = 3;
-		$banned_time = 600; // 600 || Banned at 10 minutes
-		$query = $this->CI->m_users->get_attempts($ip_address);
-		if (is_object($query) && $query->counter >= $max_attempts) {
-			$datetime = strtotime($query->updated_at);
-			$time_diff = time() - $datetime;
-			if ($time_diff >= $banned_time) {
-				$this->reset_attempts($ip_address);
-				return false;
-			}
-			return true;
-		}
-		return false;
-	}
+	// /**
+	//  * check if user has ban by ip address
+	//  * @param String $ip_address
+	//  * @return Boolean
+	//  */
+	// public function ip_banned($ip_address) {
+	// 	$max_attempts = 3;
+	// 	$banned_time = 600; // 600 || Banned at 10 minutes
+	// 	$query = $this->CI->m_users->get_attempts($ip_address);
+	// 	if (is_object($query) && $query->counter >= $max_attempts) {
+	// 		$datetime = strtotime($query->updated_at);
+	// 		$time_diff = time() - $datetime;
+	// 		if ($time_diff >= $banned_time) {
+	// 			$this->reset_attempts($ip_address);
+	// 			return false;
+	// 		}
+	// 		return true;
+	// 	}
+	// 	return false;
+	// }
 
 	/**
 	 * Increase Login Attempts

@@ -32,8 +32,8 @@ class Login extends CI_Controller {
 	 */
 	public function index() {
 		$this->vars['page_title'] = 'Login to Our Site';
-		$this->vars['ip_banned'] = $this->auth->ip_banned(get_ip_address());
-		$this->vars['login_info'] = $this->vars['ip_banned'] ? 'The login page has been blocked for 10 minutes' : 'Enter your username and password to log on';
+		// $this->vars['ip_banned'] = $this->auth->ip_banned(get_ip_address());
+		// $this->vars['login_info'] = $this->vars['ip_banned'] ? 'The login page has been blocked for 10 minutes' : 'Enter your username and password to log on';
 		$this->load->view('users/login', $this->vars);
 	}
 
@@ -63,6 +63,34 @@ class Login extends CI_Controller {
 			exit;
 		}
 	}
+
+	/**
+	 * Login Process yang baru (custom)
+	 * @return Object
+	 */
+	public function new_process() {
+		if ($this->validation()) {
+			$user_name = $this->input->post('user_name', TRUE);
+			$user_password = $this->input->post('user_password', TRUE);
+			$ip_address = get_ip_address();
+			$logged_in = $this->auth->logged_in($user_name, $user_password, $ip_address) ? 'success' : 'error';
+			$this->vars['status'] = $logged_in;
+			$this->vars['message'] = $logged_in == 'success' ? 'logged_in' : 'not_logged_in';
+			// $this->vars['ip_banned'] = $this->auth->ip_banned($ip_address);
+		} else {
+			$this->vars['status'] = 'error';
+			$this->vars['message'] = validation_errors();
+			$this->vars['ip_banned'] = FALSE;
+		}
+
+		if ($logged_in == 'success') {
+			redirect(base_url('dashboard'));
+		}else {
+			$this->load->view('users/login', $this->vars);
+		}
+	}
+
+	
 
 	/**
 	 * Validation Form
