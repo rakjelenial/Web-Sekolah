@@ -47,6 +47,7 @@
    </script>
    <script src="<?=base_url('assets/js/login.min.js');?>"></script>
    <script type="text/javascript">
+<<<<<<< HEAD
    // function login() {
    //    $('#submit, #user_name, #user_password').attr('disabled', 'disabled');
    //    var values = {
@@ -74,6 +75,35 @@
    //       }
    //    });
    // }
+=======
+   function login() {
+      $('#submit, #user_name, #user_password').attr('disabled', 'disabled');
+      var values = {
+         user_name: $('#user_name').val(),
+         user_password: $('#user_password').val()
+      };
+      // _H.Loading( true );
+      $.post(_BASE_URL + 'login/process', values, function(response) {
+         // _H.Loading( false );
+         var res = _H.StrToObject( response );
+         _H.Notify(res.status, _H.Message(res.message));
+         if (res.status == 'success') {
+            // setInterval(function() {
+               window.location = _BASE_URL + 'dashboard';
+            // }, 2000);
+         } else {
+            $('#user_name, #user_password').val('');
+            if ( res.ip_banned ) {
+               $('#submit, #user_name, #user_password').attr('disabled', 'disabled');
+               $('#login-info').text('The login page has been blocked for 10 minutes');
+               $('#login-info').addClass('text-danger');
+            } else {
+               $('#submit, #user_name, #user_password').removeAttr('disabled');
+            }
+         }
+      });
+   }
+>>>>>>> 2a1cd616dbabc464e9111486cf7b70829994f39d
    </script>
 </head>
 <body class="text-center">
