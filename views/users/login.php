@@ -45,9 +45,8 @@
    <script type="text/javascript">
    const _BASE_URL = '<?=base_url();?>', _CURRENT_URL = '<?=current_url();?>';
    </script>
-   <script src="<?=base_url('assets/js/login.min.js');?>"></script>
+   <!-- <script src="<?=base_url('assets/js/login.min.js');?>"></script> -->
    <script type="text/javascript">
-<<<<<<< HEAD
    // function login() {
    //    $('#submit, #user_name, #user_password').attr('disabled', 'disabled');
    //    var values = {
@@ -75,35 +74,6 @@
    //       }
    //    });
    // }
-=======
-   function login() {
-      $('#submit, #user_name, #user_password').attr('disabled', 'disabled');
-      var values = {
-         user_name: $('#user_name').val(),
-         user_password: $('#user_password').val()
-      };
-      // _H.Loading( true );
-      $.post(_BASE_URL + 'login/process', values, function(response) {
-         // _H.Loading( false );
-         var res = _H.StrToObject( response );
-         _H.Notify(res.status, _H.Message(res.message));
-         if (res.status == 'success') {
-            // setInterval(function() {
-               window.location = _BASE_URL + 'dashboard';
-            // }, 2000);
-         } else {
-            $('#user_name, #user_password').val('');
-            if ( res.ip_banned ) {
-               $('#submit, #user_name, #user_password').attr('disabled', 'disabled');
-               $('#login-info').text('The login page has been blocked for 10 minutes');
-               $('#login-info').addClass('text-danger');
-            } else {
-               $('#submit, #user_name, #user_password').removeAttr('disabled');
-            }
-         }
-      });
-   }
->>>>>>> 2a1cd616dbabc464e9111486cf7b70829994f39d
    </script>
 </head>
 <body class="text-center">
@@ -115,10 +85,10 @@
       if (isset($status)) { echo "<div class=\"alert alert-danger\">".$message."</div>"; }
       ?>
       <label for="user_name" class="sr-only">Email Address</label>
-      <input <?=$ip_banned ? 'disabled="disabled"' : '';?> autofocus autocomplete="off" type="text" id="user_name" name="user_name" placeholder="Username..." class="form-control rounded-0 border border-secondary border-bottom-0">
+      <input autofocus autocomplete="off" type="text" id="user_name" name="user_name" placeholder="Username..." class="form-control rounded-0 border border-secondary border-bottom-0">
       <label for="user_password" class="sr-only">Password</label>
-      <input <?=$ip_banned ? 'disabled="disabled"' : '';?> type="password" id="user_password" name="user_password" placeholder="Password..." class="form-control rounded-0 border border-secondary">
-      <!-- <button <?=$ip_banned ? 'disabled="disabled"' : '';?> onclick="login(); return false;" class="btn btn-lg btn-primary btn-block rounded-0" id="submit">Sign in</button> -->
+      <input type="password" id="user_password" name="user_password" placeholder="Password..." class="form-control rounded-0 border border-secondary">
+      <!-- <button onclick="login(); return false;" class="btn btn-lg btn-primary btn-block rounded-0" id="submit">Sign in</button> -->
       <button type="submit" class="btn btn-lg btn-primary btn-block rounded-0" name="submit">Sign in</button>
       <p class="pt-3 text-muted">
          <a href="<?=site_url('lost-password')?>">Lost Password ?</a> | Back to <a href="<?=base_url()?>"><?=__session('school_name')?></a>

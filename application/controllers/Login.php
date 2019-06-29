@@ -24,6 +24,10 @@ class Login extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		if ($this->auth->hasLogin()) redirect('dashboard', 'refresh');
+		$this->load->model([
+			'm_users',
+			'm_user_privileges'
+		]);
 	}
 
 	/**
@@ -69,19 +73,35 @@ class Login extends CI_Controller {
 	 * @return Object
 	 */
 	public function new_process() {
-		if ($this->validation()) {
-			$user_name = $this->input->post('user_name', TRUE);
-			$user_password = $this->input->post('user_password', TRUE);
-			$ip_address = get_ip_address();
-			$logged_in = $this->auth->logged_in($user_name, $user_password, $ip_address) ? 'success' : 'error';
-			$this->vars['status'] = $logged_in;
-			$this->vars['message'] = $logged_in == 'success' ? 'logged_in' : 'not_logged_in';
-			// $this->vars['ip_banned'] = $this->auth->ip_banned($ip_address);
-		} else {
-			$this->vars['status'] = 'error';
-			$this->vars['message'] = validation_errors();
-			$this->vars['ip_banned'] = FALSE;
+		$user_name = $this->input->post('user_name', TRUE);
+		$user_password = $this->input->post('user_password', TRUE);
+		$ip_address = get_ip_address();
+		// $logged_in = $this->auth->logged_in($user_name, $user_password, $ip_address) ? 'success' : 'error';
+		$query = $this->m_users->logged_in($user_name);
+		if ($query->num_rows() === 1) {
+			$data = $query->row();
+			if (password_verify($user_password, $data->user_password)) {
+				$session_data = [
+					'user_id' => $data->id,
+					'user_name' => $data->user_name,
+					'user_full_name' => $data->user_full_name,
+					'user_type' => $data->user_type,
+					'user_profile_id' => $data->user_profile_id,
+					'has_login' => true,
+					'user_privileges' => $this->m_user_privileges->get_user_privileges($data->user_group_id, $data->user_type)
+				];
+				$this->session->set_userdata($session_data);
+				// $this->last_logged_in($data->id);
+				// $this->reset_attempts($ip_address);
+				$logged_in = 'success';
+			}else{
+				$logged_in = 'error';
+			}
+		}else{
+			$logged_in = 'error';
 		}
+		$this->vars['status'] = $logged_in;
+		$this->vars['message'] = $logged_in == 'success' ? 'logged_in' : 'not_logged_in';
 
 		if ($logged_in == 'success') {
 			redirect(base_url('dashboard'));
