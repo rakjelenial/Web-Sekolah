@@ -227,16 +227,19 @@ class M_registrants extends CI_Model {
 				$response['status'] = 'info';
 				$response['message'] = 'Proses seleksi belum dimulai';
 			}
-			if ($result->selection_result === 'unapproved') {
+			
+			if ($result->selection_result === 'unapproved' OR is_null($result->selection_result)) {
 				$response['status'] = 'warning';
 				$response['message'] = 'Anda Tidak Lolos Seleksi Penerimaan Peserta Didik Baru '.__session('school_name');
 			} else {
-				$response['status'] = 'success';
-				if (__session('major_count') > 0) {
+				if (__session('major_count') > 0 AND !empty($result->selection_result)) {
+					$response['status'] = 'success';
 					$majors = $this->model->RowObject('id', $result->selection_result, 'majors');
-					$response['message'] = 'Anda Lolos Seleksi Penerimaan Peserta Didik Baru dan diterima di ' . __session('_major') . ' ' . $majors->major_name . ' ' . __session('school_name');
+					$response['message'] = '<p>Anda dengan nomor registrasi '.$registration_number.'</p><p>Lolos Seleksi Penerimaan Peserta Didik Baru dan diterima di ' . __session('_major') . ' <span class="bg-warning">' . $majors->major_name . '</span> ' . __session('school_name').'</p>';
 				} else {
-					$response['message'] = 'Anda Lolos Seleksi Penerimaan Peserta Didik Baru '.__session('school_name');
+					$response['status'] = 'warning';
+					// $response['message'] = 'Anda Lolos Seleksi Penerimaan Peserta Didik Baru '.__session('school_name');
+					$response['message'] = 'Pengumuman kelulusan belum diaktifkan, Silahkan cek sesuai dengan jadwal yang sudah di informasikan';
 				}
 			}
 		} else {
