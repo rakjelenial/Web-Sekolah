@@ -94,6 +94,27 @@ class Admission_selection_results extends Public_Controller {
 		}
    }
 
+   public function pengumuman()
+   {
+	if ($this->validation()) {
+		$birth_date = $this->input->post('birth_date', true);
+		$registration_number = $this->input->post('registration_number', true);
+		if (_isValidDate($birth_date) && strlen($registration_number) == 10 && ctype_digit((string) $registration_number)) {
+			$query = $this->m_registrants->selection_result($registration_number, $birth_date);
+			$this->vars['status'] = $query['status'];
+			$this->vars['message'] = $query['message'];
+		} else {
+			$this->vars['status'] = 'error';
+			$this->vars['message'] = 'Format data yang anda masukan tidak benar.';
+		}
+	} else {
+		$this->vars['status'] = 'validation_errors';
+		$this->vars['message'] = validation_errors();
+	}
+	$this->vars['content'] = 'pengumuman';
+	$this->load->view('themes/'.theme_folder().'/index', $this->vars);
+   }
+
    /**
 	 * Validations Form
 	 * @return Boolean

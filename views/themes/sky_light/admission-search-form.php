@@ -2,6 +2,7 @@
 	<h5 class="page-title mb-3"><?=$page_title?></h5>
 	<div class="card rounded-0 border border-secondary mb-3">
 		<div class="card-body">
+		<form action="<?= base_url('pengumuman') ?>" method="post">
 			<div class="form-group row mb-2">
 				<label for="registration_number" class="col-sm-3 control-label">Nomor Pendaftaran <span style="color: red">*</span></label>
 				<div class="col-sm-9">
@@ -31,10 +32,12 @@
 		<div class="card-footer">
 			<div class="form-group row mb-0">
 				<div class="offset-sm-3 col-sm-9">
-					<button type="button" onclick="<?=$onclick?>; return false;" class="btn action-button rounded-0"><i class="fa fa-send"></i> <?=$button?></button>
+					<!-- <button type="button" onclick="<?=$onclick?>; return false;" class="btn action-button rounded-0"><i class="fa fa-send"></i> <?=$button?></button> -->
+					<button type="submit" class="btn action-button rounded-0"><i class="fa fa-send"></i> <?=$button?></button>
 				</div>
 			</div>
 		</div>
+	</form>
 	</div>
 </div>
 
