@@ -9,7 +9,7 @@
 					<input type="text" class="form-control form-control-sm rounded-0 border border-secondary" id="registration_number" name="registration_number">
 				</div>
 			</div>
-			<div class="form-group row mb-2">
+			<!-- <div class="form-group row mb-2">
 				<label for="birth_date" class="col-sm-3 control-label">Tanggal Lahir <span style="color: red">*</span></label>
 				<div class="col-sm-9">
 					<div class="input-group">
@@ -19,7 +19,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<?php if (NULL !== __session('recaptcha_status') && __session('recaptcha_status') == 'enable') { ?>
 				<div class="form-group row mb-2">
 					<label class="col-sm-3 control-label"></label>

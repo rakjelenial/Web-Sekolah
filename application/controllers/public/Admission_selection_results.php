@@ -42,8 +42,9 @@ class Admission_selection_results extends Public_Controller {
 		}
 
 		$this->vars['recaptcha_site_key'] = __session('recaptcha_site_key');
-		$this->vars['page_title'] = 'Hasil Seleksi Penerimaan '. (__session('school_level') >= 5 ? 'Mahasiswa' : 'Peserta Didik').' Baru Tahun '.__session('admission_year');
-		$this->vars['button'] = 'Lihat Hasil Seleksi';
+		// $this->vars['page_title'] = 'Hasil Seleksi Penerimaan '. (__session('school_level') >= 5 ? 'Mahasiswa' : 'Peserta Didik').' Baru Tahun '.__session('admission_year');
+		$this->vars['page_title'] = 'Status Penerimaan '. (__session('school_level') >= 5 ? 'Mahasiswa' : 'Peserta Didik').' Baru Tahun '.__session('admission_year');
+		$this->vars['button'] = 'Lihat Status';
 		$this->vars['onclick'] = 'admission_selection_results()';
 		$this->vars['content'] = 'themes/'.theme_folder().'/admission-search-form';
 		$this->load->view('themes/'.theme_folder().'/index', $this->vars);
@@ -97,9 +98,10 @@ class Admission_selection_results extends Public_Controller {
    public function pengumuman()
    {
 	if ($this->validation()) {
-		$birth_date = $this->input->post('birth_date', true);
+		// $birth_date = $this->input->post('birth_date', true);
 		$registration_number = $this->input->post('registration_number', true);
-		if (_isValidDate($birth_date) && strlen($registration_number) == 10 && ctype_digit((string) $registration_number)) {
+		// if (_isValidDate($birth_date) && strlen($registration_number) == 10 && ctype_digit((string) $registration_number)) {
+		if (strlen($registration_number) == 15 && ctype_digit((string) $registration_number)) {
 			$query = $this->m_registrants->selection_result($registration_number, $birth_date);
 			$this->vars['status'] = $query['status'];
 			$this->vars['message'] = $query['message'];
@@ -122,8 +124,8 @@ class Admission_selection_results extends Public_Controller {
 	private function validation() {
 		$this->load->library('form_validation');
 		$val = $this->form_validation;
-		$val->set_rules('registration_number', 'Nomor Pendaftaran', 'trim|required|numeric|max_length[10]|min_length[10]');
-		$val->set_rules('birth_date', 'Tanggal Lahir', 'trim|required|callback_date_format_check');
+		$val->set_rules('registration_number', 'Nomor Pendaftaran', 'trim|required|numeric|max_length[15]|min_length[15]');
+		// $val->set_rules('birth_date', 'Tanggal Lahir', 'trim|required|callback_date_format_check');
 		$val->set_message('required', '{field} harus diisi');
 		$val->set_error_delimiters('<div>&sdot; ', '</div>');
 		return $val->run();

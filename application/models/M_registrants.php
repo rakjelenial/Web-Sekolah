@@ -216,14 +216,15 @@ class M_registrants extends CI_Model {
 	 * @param String $birth_date
 	 * @return Array
 	 */
-	public function selection_result($registration_number, $birth_date) {
+	// public function selection_result($registration_number, $birth_date) {
+	public function selection_result($registration_number) {
 		$query = $this->db
 			->where('registration_number', $registration_number)
-			->where('birth_date', $birth_date)
+			// ->where('birth_date', $birth_date)
 			->get(self::$table);
 		if ($query->num_rows() === 1) {
 			$result = $query->row();
-			if ($result->re_gistration === "false") {
+			if ($result->re_registration === "false") {
 				$response['status'] = 'danger';
 				$response['message'] = 'Anda Tidak Lolos Seleksi Penerimaan Peserta Didik Baru '.__session('school_name');
 			} else if ($result->selection_result === 'unapproved') {
@@ -233,11 +234,16 @@ class M_registrants extends CI_Model {
 				if (__session('major_count') > 0 AND !empty($result->selection_result)) {
 					$response['status'] = 'success';
 					$majors = $this->model->RowObject('id', $result->selection_result, 'majors');
-					$response['message'] = '<p>Anda dengan nomor registrasi '.$registration_number.'</p><p>Lolos Seleksi Penerimaan Peserta Didik Baru dan diterima di ' . __session('_major') . ' <span class="bg-warning">' . $majors->major_name . '</span> ' . __session('school_name').'</p>';
+					$response['message'] = '<p><span class="bg-warning">'.$result->full_name.'</span> dengan nomor registrasi '.$registration_number.'</p><p>Lolos Seleksi Penerimaan Peserta Didik Baru dan diterima di ' . __session('_major') . ' <span class="bg-warning">' . $majors->major_name . '</span> ' . __session('school_name').'<br><br><span class="text-info small">Download Syarat Daftar Ulang</span><br><a href="https://drive.google.com/file/d/14bN76QC_xOfB5sZhMt7DqgZa7MCGX9ll/view?usp=sharing" target="_blank" class="btn btn-info">download</a></p>';
 				} else {
 					$response['status'] = 'warning';
-					// $response['message'] = 'Anda Lolos Seleksi Penerimaan Peserta Didik Baru '.__session('school_name');
-					$response['message'] = 'Pengumuman kelulusan belum diaktifkan, Silahkan cek sesuai dengan jadwal yang sudah di informasikan dengan datang langsung ke sekolah';
+					$response['message'] = 'Pra registrasi Anda berhasil. Silahkan pantau terus web SMKN 1 Kotabaru untuk tahap Registrasi dan Peminatan';
+			
+					// $data_session = array(
+					// 	'registration_number'	=> $registration_number
+					// );
+					// $this->session->set_userdata($data_session);
+					// redirect('registrasi-mandiri-form');
 				}
 			}
 		} else {
@@ -245,6 +251,65 @@ class M_registrants extends CI_Model {
 			$response['message'] = 'Data Anda tidak terdaftar pada database kami';
 		}
 		return $response;
+	}
+
+	public function edit_form($registration_number) {
+		// $this->db->where('registration_number', $registration_number);
+		$this->db->where('registration_number', $this->session->userdata("registration_number"));
+		return $this->db->get('students')->row();
+	}
+
+	public function updateForm($registration_number, $gambar, $gambar1, $gambar2, $gambar3, $gambar4, $gambar5) {
+		$data = array(
+			"photo"			=> $gambar,
+			"bhs_indo"		=> $this->input->post('bhs_indo'),
+			"bhs_inggris"	=> $this->input->post('bhs_inggris'),
+			"mtk"			=> $this->input->post('mtk'),
+			"ipa"			=> $this->input->post('ipa'),
+			"photo1"		=> $gambar1,
+			"bhs_indo2"		=> $this->input->post('bhs_indo2'),
+			"bhs_inggris2"	=> $this->input->post('bhs_inggris2'),
+			"mtk2"			=> $this->input->post('mtk2'),
+			"ipa2"			=> $this->input->post('ipa2'),
+			"photo2"		=> $gambar2,
+			"bhs_indo3"		=> $this->input->post('bhs_indo3'),
+			"bhs_inggris3"	=> $this->input->post('bhs_inggris3'),
+			"mtk3"			=> $this->input->post('mtk3'),
+			"ipa3"			=> $this->input->post('ipa3'),
+			"photo3"		=> $gambar3,
+			"photo_kk"		=> $gambar4,
+			"photo_akta"	=> $gambar5,
+		);
+		$this->db->where('registration_number', $registration_number);
+		$this->db->update('students', $data);
+		redirect('peminatan');
+		// redirect('registrasi-mandiri-form');
+	}
+
+	public function DeleteFoto($registration_number) {
+		$this->db->where('registration_number', $registration_number);
+		return $this->db->get('students')->row();
+	}
+
+	public function soalTes() {
+		return $this->db->get('soal')->result();
+	}
+
+	public function jawabanTes($registration_number) {
+		$id 	= $_POST['id'];
+		$jawaban= $_POST['jawaban'];
+
+		$filesCount = count($id); 
+		for($i = 0; $i < $filesCount; $i++){ 
+			$data = array(
+				"registration_number"	=> $registration_number,
+				"soal_id"				=> $id[$i],
+				"jawaban"				=> $jawaban[$i]
+			);
+		// echo json_encode($data);
+		$this->db->insert('jawabantes', $data);
+		}
+		redirect('finishJawab');
 	}
 
 	/**
