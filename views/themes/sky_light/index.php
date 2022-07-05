@@ -23,14 +23,14 @@
 	<meta name="copyright" content="<?=__session('school_name')?>">
 	<meta name="language" content="Indonesia">
 	<meta name="robots" content="index,follow" />
-	<meta name="revised" content="Sunday, July 18th, 2010, 5:15 pm" />
+	<meta name="revised" content="Sunday, July 18th, 2022, 5:15 pm" />
 	<meta name="Classification" content="Education">
-	<meta name="author" content="Anton Sofyan, 4ntonsofyan@gmail.com">
-	<meta name="designer" content="Anton Sofyan, 4ntonsofyan@gmail.com">
-	<meta name="reply-to" content="4ntonsofyan@gmail.com">
-	<meta name="owner" content="Anton Sofyan">
-	<meta name="url" content="https://www.sekolahku.web.id">
-	<meta name="identifier-URL" content="https://www.sekolahku.web.id">
+	<meta name="author" content="Hendri Arifin, arifin.hendri465@gmail.com">
+	<meta name="designer" content="Hendri Arifin, arifin.hendri465@gmail.com">
+	<meta name="reply-to" content="arifin.hendri465@gmail.com">
+	<meta name="owner" content="Hendri Arifin">
+	<meta name="url" content="https://www.smkn1kotabaru.sch.id">
+	<meta name="identifier-URL" content="https://www.smkn1kotabaru.sch.id">
 	<meta name="category" content="Admission, Education">
 	<meta name="coverage" content="Worldwide">
 	<meta name="distribution" content="Global">
@@ -81,26 +81,29 @@
 </head>
 <body oncontextmenu='return false;' onselectstart='return false;' style='-moz-user-select: none; cursor: default;'>
 	<header>
-		<div class="container-fluid top-bar">
+		<!-- <div class="container-fluid top-bar"> -->
+		<div class="container-fluid pt-0 py-2">
 			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-md-5 col-sm-12 col-xs-12">
+				<div class="d-flex align-items-center">
+					<!-- <div class="col-md-5 col-sm-12 col-xs-12"> -->
+					<!-- <div class="col-md-12 col-sm-12 col-xs-12"> -->
 						<div class="top-header">
-							<img src="<?=base_url('media_library/images/' . __session('logo'))?>" width="70" height="70" class="mt-2 mr-4 mb-3">
-							<ul class="list-unstyled top-left">
-								<li><h5 class="font-weight-bold brand"><?=strtoupper(__session('school_name'))?></h5></li>
+							<img src="<?=base_url('media_library/images/' . __session('logo'))?>" width="70" height="70" class="mr-4">
+							<ul class="list-unstyled top-left mb-0">
+								<!-- <li><h5 class="font-weight-bold brand"><?=strtoupper(__session('school_name'))?></h5></li> -->
+								<li><h1 class="font-weight-bold brand mb-0"><?=strtoupper(__session('school_name'))?></h1></li>
 								<li><small><?=__session('tagline')?></small></li>
 							</ul>
 						</div>
-					</div>
-					<div class="col-md-7 col-sm-12 col-xs-12">
+					<!-- </div> -->
+					<!-- <div class="col-md-7 col-sm-12 col-xs-12">
 						<ul class="list-inline float-right top-right">
 							<li class="list-inline-item pl-3 pr-0"><i class="fa fa-envelope"></i> </i> <?=__session('email');?></li>
 							<li class="list-inline-item pl-3 pr-0"><i class="fa fa-phone"></i> <?=__session('phone');?></li>
-							<!-- <li class="list-inline-item pl-3 pr-0"><a href="<?=site_url('feed')?>"><i class="fa fa-rss"></i> RSS</a></li> -->
+							<li class="list-inline-item pl-3 pr-0"><a href="<?=site_url('feed')?>"><i class="fa fa-rss"></i> RSS</a></li>
 							<li class="list-inline-item pl-3 pr-0"><a href="#search_form"><i class="fa fa-search"></i> Pencarian</a></li>
 						</ul>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -136,23 +139,40 @@
 		<?php if ( ! $this->uri->segment(1)) { ?>
 			<!-- IMAGE SLIDERS -->
 			<?php $query = get_image_sliders(); if ($query->num_rows() > 0) { ?>
-				<div class="container p-0 <?php $quotes = get_quotes(); echo $quotes->num_rows() == 0 ? 'mb-3' : ''?>">
-					<div id="slide-indicators" class="carousel slide" data-ride="carousel">
-						<ol class="carousel-indicators mt-3 mb-3">
-							<?php $idx = 0; foreach($query->result() as $row) { ?>
-								<li data-target="#slide-indicators" data-slide-to="<?=$idx?>" <?=$idx == 0 ? 'class="active"' : ''?>></li>
-							<?php $idx++; } ?>
-						</ol>
-						<div class="carousel slide" data-ride="carousel">
-							<div class="carousel-inner pt-0">
-								<?php $idx = 0; foreach($query->result() as $row) { ?>
-									<div class="carousel-item <?=$idx == 0 ? 'active' : ''?>">
-										<img src="<?=base_url('media_library/image_sliders/'.$row->image);?>" class="img-fluid w-100">
-										<div class="carousel-caption d-none d-md-block">
-											<p class="text-center mb-3"><?=$row->caption;?></p>
-										</div>
+				<div class="container p-0 mb-3 <?php $quotes = get_quotes(); echo $quotes->num_rows() == 0 ? 'mb-3' : ''?>">
+					<div class="d-flex justify-content-between">		
+						<div class="col-8 p-0">
+							<div id="slide-indicators" class="carousel slide" data-ride="carousel">
+								<ol class="carousel-indicators mt-3 mb-3">
+									<?php $idx = 0; foreach($query->result() as $row) { ?>
+										<li data-target="#slide-indicators" data-slide-to="<?=$idx?>" <?=$idx == 0 ? 'class="active"' : ''?>></li>
+									<?php $idx++; } ?>
+								</ol>
+								<div class="carousel slide" data-ride="carousel">
+									<div class="carousel-inner pt-0 rounded-lg">
+										<?php $idx = 0; foreach($query->result() as $row) { ?>
+											<div class="carousel-item <?=$idx == 0 ? 'active' : ''?>">
+												<img src="<?=base_url('media_library/image_sliders/'.$row->image);?>" class="img-fluid w-100">
+												<!-- <div class="carousel-caption d-none d-md-block">
+													<p class="text-center mb-3"><?=$row->caption;?></p>
+												</div> -->
+											</div>
+										<?php $idx++; } ?>
 									</div>
-								<?php $idx++; } ?>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="col-4 p-0 ml-2" style="background-color: #ef4e17"> -->
+						<div class="col-4 p-0 ml-2">
+							<div class="d-flex flex-column">
+								<div class="h-50 w-100 p-1 mb-2 rounded-lg" style="background-image: linear-gradient(to right, #a1d0eb, #ef4e17)">
+									<h5 class="text-center mb-3">VISI</h5>
+									<p class="text-center text-capitalize fs-5">terwujudnya sistem perencanaan pembangunan kabupaten kotabaru yang efektif, murah dan cepat untuk meningkatkan perekonomian menjadi lebih baik</p>
+								</div>
+								<div class="h-50 w-100 p-1 rounded-lg" style="background-image: linear-gradient(to right, #a1d0eb, #e0d0d0)">
+									<h5 class="text-center mb-3">MISI</h5>
+									<p class="text-center text-capitalize fs-5 mb-2">terwujudnya sistem perencanaan pembangunan kabupaten kotabaru yang efektif, murah dan cepat untuk meningkatkan perekonomian menjadi lebih baik</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -161,7 +181,7 @@
 			<!-- /IMAGE SLIDERS -->
 
 			<!-- QUOTE -->
-			<?php $query = get_quotes(); if ($query->num_rows() > 0) { ?>
+			<!-- <?php $query = get_quotes(); if ($query->num_rows() > 0) { ?>
 				<div class="container p-0 mb-3">
 					<div class="quote">
 						<div class="quote-title"><i class="fa fa-comments"></i> KUTIPAN</div>
@@ -172,7 +192,7 @@
 						</ul>
 					</div>
 				</div>
-			<?php } ?>
+			<?php } ?> -->
 			<!--  /QUOTE -->
 		<?php } ?>
 
@@ -188,8 +208,8 @@
 		<div class="container-fluid primary-footer">
 			<div class="container">
 				<div class="row">
-					<!-- <div class="col-md-4 col-xs-12 text-md-left mb-2 mt-2"> -->
-					<div class="col-md-6 col-xs-12 text-md-left mb-2 mt-2">
+					<div class="col-md-4 col-xs-12 text-md-left mb-2 mt-2">
+					<!-- <div class="col-md-6 col-xs-12 text-md-left mb-2 mt-2"> -->
 						<h6 class="page-title">Hubungi Kami</h6>
 						<p><?=__session('school_name')?> &sdot; <?=__session('tagline')?></p>
 						<dl class="row">
@@ -201,8 +221,8 @@
 							<dd class="col-lg-8 col-md-8 col-sm-12"><?=__session('email')?></dd>
 						</dl>
 					</div>
-					<!-- <div class="col-md-4 col-xs-12 text-md-left mb-2 mt-2"> -->
-					<div class="col-md-6 col-xs-12 text-md-left mb-2 mt-2">
+					<div class="col-md-4 col-xs-12 text-md-left mb-2 mt-2">
+					<!-- <div class="col-md-6 col-xs-12 text-md-left mb-2 mt-2"> -->
 						<h6 class="page-title">Tags</h6>
 						<div class="tag-content-block tag">
 							<?php $query = get_tags(10); if ($query->num_rows() > 0) { ?>
@@ -212,7 +232,7 @@
 							<?php } ?>
 						</div>
 					</div>
-					<!-- <div class="col-md-4 col-xs-12 text-md-left mb-2 mt-2">
+					<div class="col-md-4 col-xs-12 text-md-left mb-2 mt-2">
 						<h6 class="page-title">Ikuti Kami</h6>
 						<ul class="list-unstyled">
 							<?php if (NULL !== __session('facebook') && __session('facebook')) { ?>
@@ -228,7 +248,7 @@
 								<li class="float-left"><a href="<?=__session('youtube')?>" title="Instagram"><i class="fa fa-youtube social-icon youtube" aria-hidden="true"></i></a></li>
 							<?php } ?>
 						</ul>
-					</div> -->
+					</div>
 				</div>
 			</div>
 		</div>
@@ -238,8 +258,8 @@
 					<div class="col-md-6 col-xs-12 text-md-left text-center">
 						<?=copyright(2019, base_url(), __session('school_name'))?>
 					</div>
-					<div class="col-md-6 col-xs-12 text-md-right text-center" style="color: #0F6FC7; text-decoration: none">
-						Powered by <a href="http://sekolahku.web.id" style="color: #0F6FC7; text-decoration: none">sekolahku.web.id</a>
+					<div class="col-md-6 col-xs-12 text-md-right text-center">
+						Powered by <a href="https://tukarjual.com">TukarJual</a>
 					</div>
 				</div>
 			</div>

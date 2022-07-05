@@ -1,6 +1,6 @@
 body {
    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-   background-color: #eaf3ff;
+   /* background-color: #eaf3ff; */
 }
 body a {
    color: #202020;
@@ -30,8 +30,10 @@ body a:hover {
 .menu-bar {
    text-transform: uppercase;
    font-weight: bold;
-   background-color: #0f6fc7;
-   border-bottom: 1px solid #014585;
+   /* background-color: #0f6fc7; */
+   background-color: #ef4e17;
+   /* border-bottom: 1px solid #014585; */
+   border-bottom: 1px solid #fbbc05;
 }
 .sticky.is-sticky {
     position: fixed;
@@ -42,7 +44,8 @@ body a:hover {
     width: 100%;
 }
 .sm-clean {
-   background: #0f6fc7;
+   /* background: #0f6fc7; */
+   background: #ef4e17;
 }
 .sm-clean ul {
    background: #014585;
@@ -84,6 +87,7 @@ body a:hover {
    font-weight: bold;
    text-transform: uppercase;
    color: #fbbc05;
+   /* color: #ef4e17; */
 }
 
 /* PAGE TITLE */
@@ -301,6 +305,12 @@ footer .page-title {
 .action-button:hover {
    background-color: #014585;
    color: #fff;
+}
+
+@media screen and (max-width: 450px){
+   .kop-surat {
+      display: none!important;
+   }
 }
 
 /* Responsive */

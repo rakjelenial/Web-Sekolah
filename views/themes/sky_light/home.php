@@ -60,4 +60,4 @@
 	<?php } ?>
 </div>
 
-<?php $this->load->view('themes/sky_light/sidebar')?>
+<?php //$this->load->view('themes/sky_light/sidebar')?>
