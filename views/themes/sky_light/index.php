@@ -51,16 +51,19 @@
 	<meta name="csrf-token" content="<?=__session('csrf_token')?>">
 	<link rel="icon" href="<?=base_url('media_library/images/'.__session('favicon'));?>">
 	<link rel="alternate" type="application/rss+xml" title="<?=__session('school_name');?> Feed" href="<?=base_url('feed')?>" />
-	<?=link_tag('assets/plugins/bootstrap-4/bootstrap.min.css')?>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+	<?//=link_tag('assets/plugins/bootstrap-4/bootstrap.min.css')?>
+	<?//=link_tag('node_modules/bootstrap/dist/css/bootstrap.min.css')?>
 	<?=link_tag('assets/css/font-awesome.min.css')?>
 	<?=link_tag('assets/plugins/toastr/toastr.css')?>
 	<?=link_tag('assets/plugins/datetimepicker/datetimepicker.css');?>
-	<?=link_tag('assets/plugins/jquery.smartmenus/jquery.smartmenus.bootstrap-4.css')?>
-	<?=link_tag('assets/plugins/jquery.smartmenus/sm-core.css')?>
-	<?=link_tag('assets/plugins/jquery.smartmenus/sm-clean.css')?>
+	<?//=link_tag('assets/plugins/jquery.smartmenus/jquery.smartmenus.bootstrap-4.css')?>
+	<?//=link_tag('assets/plugins/jquery.smartmenus/sm-core.css')?>
+	<?//=link_tag('assets/plugins/jquery.smartmenus/sm-clean.css')?>
 	<?=link_tag('assets/plugins/magnific-popup/magnific-popup.css')?>
 	<?=link_tag('assets/css/loading.css')?>
 	<?=link_tag('views/themes/sky_light/style.css')?>
+	<?=link_tag('views/themes/sky_light/custom.css')?>
 	<script type="text/javascript">
 	const _BASE_URL = '<?=base_url();?>';
 	const _CURRENT_URL = '<?=current_url();?>';
@@ -80,21 +83,21 @@
 	<script src="<?=base_url('assets/js/frontend.min.js')?>"></script>
 </head>
 <body oncontextmenu='return false;' onselectstart='return false;' style='-moz-user-select: none; cursor: default;'>
+	<div class="container">
 	<header>
 		<!-- <div class="container-fluid top-bar"> -->
-		<div class="container-fluid pt-0 py-2">
-			<div class="container">
-				<div class="d-flex align-items-center">
+			<div class="container px-3 py-1">
+				<!-- <div class="d-flex align-items-center"> -->
 					<!-- <div class="col-md-5 col-sm-12 col-xs-12"> -->
 					<!-- <div class="col-md-12 col-sm-12 col-xs-12"> -->
-						<div class="top-header">
-							<img src="<?=base_url('media_library/images/' . __session('logo'))?>" width="70" height="70" class="mr-4">
+						<!-- <div class="top-header"> -->
+							<!-- <img src="<?=base_url('media_library/images/' . __session('logo'))?>" width="70" height="70" class="mr-4"> -->
 							<ul class="list-unstyled top-left mb-0">
 								<!-- <li><h5 class="font-weight-bold brand"><?=strtoupper(__session('school_name'))?></h5></li> -->
-								<li><h1 class="font-weight-bold brand mb-0"><?=strtoupper(__session('school_name'))?></h1></li>
-								<li><small><?=__session('tagline')?></small></li>
+								<li><h2 class="font-weight-bold brand mb-0 text-start"><?=strtoupper(__session('school_name'))?></h2></li>
+								<!-- <li><small><?=__session('tagline')?></small></li> -->
 							</ul>
-						</div>
+						<!-- </div> -->
 					<!-- </div> -->
 					<!-- <div class="col-md-7 col-sm-12 col-xs-12">
 						<ul class="list-inline float-right top-right">
@@ -104,34 +107,39 @@
 							<li class="list-inline-item pl-3 pr-0"><a href="#search_form"><i class="fa fa-search"></i> Pencarian</a></li>
 						</ul>
 					</div> -->
-				</div>
+				<!-- </div> -->
 			</div>
-		</div>
+		<!-- </div> -->
 		<!--  NAVIGATION MENU -->
 		<div class="container-fluid menu-bar mb-3" data-toggle="sticky-menu">
-			<div class="container p-0">
-				<nav class="navbar navbar-expand-lg p-0">
-					<a class="navbar-brand" href="#"></a>
+			<div class="container py-2 px-2">
+				<div class="text-nowrap">
+				<!-- <nav class="navbar navbar-expand-lg p-0"> -->
+					<!-- <a class="navbar-brand" href="#"></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="fa fa-align-justify text-white"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarNavDropdown">
-						<ul id="main-menu" class="sm sm-clean">
-							<li><a href="<?=base_url()?>"><i class="fa fa-home"></i></a></li>
+					</button> -->
+					<!-- <div class="collapse navbar-collapse" id="navbarNavDropdown"> -->
+						<!-- <ul id="main-menu" class="sm sm-clean p-0"> -->
+						<!-- <ul class="list-group list-group-horizontal"> -->
+							<!-- <li class="list-group-item"> -->
+								<a href="<?=base_url()?>"><i class="fa fa-home text-white small"></i></a>
+							<!-- </li> -->
 							<?php
 							$menus = get_menus();
 							foreach ($menus as $menu) {
-								echo '<li>';
+								// echo '<li class="list-group-item">';
 								$url = $menu['menu_url'] == '#' ? $menu['menu_url'] : base_url() . $menu['menu_url'];
 								if ($menu['menu_type'] == 'links') $url = $menu['menu_url'];
-								echo '<a href="'. $url .'" target="'. $menu['menu_target'] .'">' . strtoupper($menu['menu_title']) . '</a>';
+								echo '<a href="'. $url .'" target="'. $menu['menu_target'] .'" class="text-decoration-none text-white small px-2">' . strtoupper($menu['menu_title']) . '</a>';
 								$sub_nav = recursive_list($menu['children']);
 								if ($sub_nav) echo '<ul>' . $sub_nav . '</ul>';
-								echo '</li>';
+								// echo '</li>';
 							}?>
-						</ul>
-					</div>
-				</nav>
+						<!-- </ul> -->
+					<!-- </div> -->
+				<!-- </nav> -->
+				</div>
 			</div>
 		</div>
 
@@ -139,9 +147,9 @@
 		<?php if ( ! $this->uri->segment(1)) { ?>
 			<!-- IMAGE SLIDERS -->
 			<?php $query = get_image_sliders(); if ($query->num_rows() > 0) { ?>
-				<div class="container p-0 mb-3 <?php $quotes = get_quotes(); echo $quotes->num_rows() == 0 ? 'mb-3' : ''?>">
+				<div class="container px-3 mb-3 <?php $quotes = get_quotes(); echo $quotes->num_rows() == 0 ? 'mb-3' : ''?>">
 					<div class="d-flex justify-content-between">		
-						<div class="col-8 p-0">
+						<!-- <div class="col-8 p-0"> -->
 							<div id="slide-indicators" class="carousel slide" data-ride="carousel">
 								<ol class="carousel-indicators mt-3 mb-3">
 									<?php $idx = 0; foreach($query->result() as $row) { ?>
@@ -149,7 +157,7 @@
 									<?php $idx++; } ?>
 								</ol>
 								<div class="carousel slide" data-ride="carousel">
-									<div class="carousel-inner pt-0 rounded-lg">
+									<div class="carousel-inner pt-0 rounded-3">
 										<?php $idx = 0; foreach($query->result() as $row) { ?>
 											<div class="carousel-item <?=$idx == 0 ? 'active' : ''?>">
 												<img src="<?=base_url('media_library/image_sliders/'.$row->image);?>" class="img-fluid w-100">
@@ -161,8 +169,8 @@
 									</div>
 								</div>
 							</div>
-						</div>
-						<!-- <div class="col-4 p-0 ml-2" style="background-color: #ef4e17"> -->
+						<!-- </div> -->
+						<!-- <div class="col-4 p-0 ml-2" style="background-color: #ef4e17">
 						<div class="col-4 p-0 ml-2">
 							<div class="d-flex flex-column">
 								<div class="h-50 w-100 p-1 mb-2 rounded-lg" style="background-image: linear-gradient(to right, #a1d0eb, #ef4e17)">
@@ -174,7 +182,7 @@
 									<p class="text-center text-capitalize fs-5 mb-2">terwujudnya sistem perencanaan pembangunan kabupaten kotabaru yang efektif, murah dan cepat untuk meningkatkan perekonomian menjadi lebih baik</p>
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			<?php } ?>
@@ -195,10 +203,56 @@
 			<?php } ?> -->
 			<!--  /QUOTE -->
 		<?php } ?>
-
 	</header>
+	<main class="bg-white p-3 my-2">
+        <div class="d-flex flex-wrap justify-content-between">
+            <div class="col-4 p-1">
+                <img src="https://dbdzm869oupei.cloudfront.net/img/vinylrugs/preview/38592.png" class="img-fluid">
+            </div>
+            <div class="col-4 p-1">
+                <img src="https://dbdzm869oupei.cloudfront.net/img/vinylrugs/preview/38592.png" class="img-fluid">
+            </div>
+            <div class="col-4 p-1">
+                <img src="https://dbdzm869oupei.cloudfront.net/img/vinylrugs/preview/38592.png" class="img-fluid">
+            </div>
+            <div class="col-4 p-1">
+                <img src="https://dbdzm869oupei.cloudfront.net/img/vinylrugs/preview/38592.png" class="img-fluid">
+            </div>
+            <div class="col-4 p-1">
+                <img src="https://dbdzm869oupei.cloudfront.net/img/vinylrugs/preview/38592.png" class="img-fluid">
+            </div>
+            <div class="col-4 p-1">
+                <img src="https://dbdzm869oupei.cloudfront.net/img/vinylrugs/preview/38592.png" class="img-fluid">
+            </div>
+        </div>
+    </main>
+	<main class="p-3 my-2">
+        <h5>Guru SMKN 1 Kotabaru</h5>
+        <div class="d-flex">
+            <div class="col-4">
+                <div class="card">
+                    <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_480,ar_5:7/v1634025439/0180d071d9e3bd18b55dcc4924f48437.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_480,ar_5:7/v1634025439/a9e36e666c24649ccb9a234f3de7af4bddde0c8158b5161ac44de9a0e6018f6a.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_480,ar_5:7/v1634025439/c0cedaa80899021c1a0da45c74002c51b2f0db6f739b83c671f754bd77a87375.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_480,ar_5:7/v1634025439/8b55570d5e6b566271c809f0da6a4b96e8b673ae1fa7fd88835169a5262301b3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
 	<section class="content">
-		<div class="container p-0">
+		<div class="container px-3">
 			<div class="row">
 				<?php $this->load->view($content)?>
 			</div>
@@ -206,7 +260,7 @@
 	</section>
 	<footer>
 		<div class="container-fluid primary-footer">
-			<div class="container">
+			<div class="container px-3">
 				<div class="row">
 					<div class="col-md-4 col-xs-12 text-md-left mb-2 mt-2">
 					<!-- <div class="col-md-6 col-xs-12 text-md-left mb-2 mt-2"> -->
@@ -272,5 +326,6 @@
 		</form>
 	</div>
 	<a href="javascript:" id="return-to-top" class="rounded-lg"><i class="fa fa-angle-double-up"></i></a>
+	</div>
 </body>
 </html>
