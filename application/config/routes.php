@@ -99,6 +99,8 @@ $route['formulir-penerimaan-mahasiswa-baru'] = 'public/admission_form';
 $route['hasil-seleksi-penerimaan-mahasiswa-baru'] = 'public/admission_selection_results';
 $route['cetak-formulir-penerimaan-mahasiswa-baru'] = 'public/print_admission_form';
 $route['download-formulir-penerimaan-mahasiswa-baru'] = 'public/blank_registration_form';
+// Jurusan
+$route['rekayasa-perangkat-lunak'] = 'jurusan/jurusan';
 
 $route['default_controller'] = 'home';
 $route['404_override'] = '';

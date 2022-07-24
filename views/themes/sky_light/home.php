@@ -37,13 +37,13 @@
 				<span class="text-white fw-bold small">Akuntansi</span>
 			</div>
 		</router-link>
-		<router-link :to="{ name: 'aspiration' }" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
+		<a href="rekayasa-perangkat-lunak" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
 			<div class="rounded-3 p-1 bg-gradient" style="background-color: #000000">
 				<img src="./assets/img/rpl.webp" class="img-fluid rounded-3" style="width: 32px"><br>
-				<span class="text-white fw-bold small">RPL & Game</span>
+				<span class="text-white fw-bold small">PPL & Game</span>
 			</div>
-		</router-link>
-		<a href="#" target="_blank" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
+		</a>
+		<a href="tata-boga" target="_blank" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
 			<div class="rounded-3 p-1 bg-gradient" style="background-color: #a0a0a0">
 				<img src="./assets/img/tbg.webp" class="img-fluid rounded-3" style="width: 32px"><br>
 				<span class="text-white fw-bold small">Tata Boga</span>
@@ -54,9 +54,10 @@
 <main class="bg-white p-3 my-2">
 	<h5 class="border-start border-5 border-warning px-2 mb-3">Program Sekolah</h5>
 	<ul class="list-group">
+		<li class="list-group-item border-0 border-bottom"># Penggunaan LMS untuk KBM</li>
 		<li class="list-group-item border-0 border-bottom"># Pelatihan koding untuk guru</li>
-		<li class="list-group-item border-0 border-bottom"># Transformasi sistem ke teknologi digital</li>
-		<li class="list-group-item border-0 border-bottom"># Penentuan minat bakat siswa</li>
+		<li class="list-group-item border-0 border-bottom"># Transformasi sistem teknologi digital</li>
+		<li class="list-group-item border-0"># Penentuan minat bakat siswa</li>
 	</ul>
 </main>
 <main class="p-3 my-2">

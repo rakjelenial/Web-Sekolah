@@ -394,4 +394,12 @@
   max-width: 460px;
 }
 
+.jurusan-rpl {
+  background-image: url("https://ppdbmusaka.com/assets/images/mbr-1-1920x1280.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  font-family: "Jost", sans-serif;
+}
+
 /*# sourceMappingURL=custom.css.map */

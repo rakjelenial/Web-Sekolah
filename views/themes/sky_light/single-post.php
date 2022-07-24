@@ -41,7 +41,7 @@ function get_post_comments() {
 }
 </script>
 <!-- CONTENT -->
-<div class="bg-white p-3">
+<div class="bg-white p-3 mt-2">
 	<div class="card border-0 mb-3">
 		<?php if ($post_type == 'post' && file_exists('./media_library/posts/large/'.$query->post_image)) { ?>
 			<img src="<?=base_url('media_library/posts/large/'.$query->post_image)?>" class="card-img-top rounded-3 w-100">
