@@ -395,7 +395,23 @@
 }
 
 .jurusan-rpl {
-  background-image: url("https://ppdbmusaka.com/assets/images/mbr-1-1920x1280.jpg");
+  background-image: url("../../../assets/img/bg-rpl.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  font-family: "Jost", sans-serif;
+}
+
+.jurusan-tkj {
+  background-image: url("../../../assets/img/bg-tkj.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  font-family: "Jost", sans-serif;
+}
+
+.jurusan-mm {
+  background-image: url("../../../assets/img/bgdkv.webp");
   background-repeat: no-repeat;
   background-size: cover;
   height: auto;

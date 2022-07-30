@@ -85,6 +85,8 @@ class M_alumni extends CI_Model {
 			id
 			, identity_number
 			, full_name
+			, street_address
+			, reason
 			, IF(gender = 'M', 'Laki-laki', 'Perempuan') as gender
 			, birth_place
 			, LEFT(start_date, 4) AS start_date

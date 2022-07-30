@@ -1,9 +1,9 @@
-<div class="jurusan-rpl p-3 mt-2">
+<div class="jurusan-tkj p-3 mt-2">
     <div class="p-3 border border-white rounded-3" style="color: #190404">
     <!-- <div class="p-3 border border-white rounded-3 text-white"> -->
-        <h3 class="fw-bold">PPLG</h3>
-        <h3 class="fw-bold">Pengembangan Perangkat Lunak dan GIM</h3>
-        <p>Orang kira aku hacker, duduk seharian di depan komputer, padahal aku sedang membuat game android, aplikasi website dan sistem permintaan pelanggan. Setelah banyak yang tahu, mereka bilang aku ahli IT / Programmer yang bisa menyelesaikan masalah dengan teknologi</p>
+        <h3 class="fw-bold">TJKT</h3>
+        <h3 class="fw-bold">Teknik Jaringan Komputer dan Telekomunikasi</h3>
+        <p>Aku sering di anggap orang serba bisa, mereka bilang " Kamu kan Orang IT " padahal ya emang jago sih, terutama hardware komputer dan jaringan</p>
     </div>
 </div>
 <div class="p-3 my-2 bg-white">
@@ -45,53 +45,36 @@
         <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingOne">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                Kemampuan Apa yang akan dimiliki Lulusan PPLG
+                Accordion Item #1
             </button>
             </h2>
             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
             <div class="accordion-body">
-                Lulusan PPLG memiliki kemampuan di bidang Programer, baik Program Komputer ( JAVA, Bahasa C, Python ) Program Android ( Membuat aplikasi dan GAME android ) Programer WEB ( HTML, PHP )
+                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
             </div>
         </div>
         <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                Kalau lulus bisa kerja apa ?
+                Accordion Item #2
             </button>
             </h2>
             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
             <div class="accordion-body">
-                Lulusan PPLG bisa kerja disegala bidang. Bisa menjadi Programer di Perusahaan, kantor, membuka jasa freelance dibidang IT, membuat StartUp baru ( Aplikasi anrdroid ) , Berwirausaha dengan menerapkan IT dibidangnya. Peluang kedepan akan banyak dibutuhkan tenaga IT karena perkembangan IT tidak pernah berhenti.
+                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
             </div>
         </div>
         <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingThree">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                Apa bisa dari SMK kuliah ?
+                Accordion Item #3
             </button>
             </h2>
             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
             <div class="accordion-body">
-                Sangat bisa, kemampuan siswa SMK dalam kuliah dipandang setara dengan Program IPA di SMA, sehingga bisa mendaftar kuliah di Universitas Negeri / Swasta , jika cross jurusan bisa mendaftar dengan metode IPC. Banyak lulusan dari program RPL melanjutkan kuliah di Jurusan Teknologi
-            </div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                Sarana Laboratorium Komputer PPLG
-            </button>
-            </h2>
-            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-            <div class="accordion-body">
-                <ol type="1">
-                    <li>Setiap Siswa/Siswi 1 Komputer</li>
-                    <li>Alat Praktik</li>
-                    <li>Ruang AC</li>
-                    <li>WIFI</li>
-                </ol>
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
             </div>
         </div>

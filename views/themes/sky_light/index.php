@@ -65,7 +65,7 @@
 	<?=link_tag('assets/plugins/magnific-popup/magnific-popup.css')?>
 	<?=link_tag('assets/css/loading.css')?>
 	<?=link_tag('views/themes/sky_light/style.css')?>
-	<?=link_tag('views/themes/sky_light/custom.css')?>
+	<?=link_tag('views/themes/sky_light/custom.css?v=0.1')?>
 	<script type="text/javascript">
 	const _BASE_URL = '<?=base_url();?>';
 	const _CURRENT_URL = '<?=current_url();?>';
@@ -94,17 +94,18 @@
 		<!--  NAVIGATION MENU -->
 		<div class="bg-success px-3 py-2 d-flex fw-bold text-nowrap overflow-auto sticky-top">
 			<!-- <div class="overflow-auto"> -->
-				<a href="<?=base_url()?>" class="text-decoration-none text-white small mx-2"><i class="fa fa-home text-white small"></i></a>
+				<a href="<?=base_url()?>" class="text-decoration-none text-white small px-2"><i class="fa fa-home text-white small"></i></a>
 				<?php $menus = get_menus();
 				foreach ($menus as $menu) {
 					// echo '<li class="list-group-item">';
 					$url = $menu['menu_url'] == '#' ? $menu['menu_url'] : base_url() . $menu['menu_url'];
 					if ($menu['menu_type'] == 'links') $url = $menu['menu_url'];
-					echo '<a href="'. $url .'" target="'. $menu['menu_target'] .'" class="text-decoration-none text-white small mx-2">' . strtoupper($menu['menu_title']) . '</a>';
+					echo '<a href="'. $url .'" target="'. $menu['menu_target'] .'" class="text-decoration-none text-white small px-2">' . strtoupper($menu['menu_title']) . '</a>';
 					// $sub_nav = recursive_list($menu['children']);
 					// if ($sub_nav) echo '<ul>' . $sub_nav . '</ul>';
 					// echo '</li>';
 				} ?>
+				<!-- <a href="<?=base_url()?>data-alumni" class="text-decoration-none text-white small px-2">DATA ALUMNI</a> -->
 			<!-- </div> -->
 		</div>
 

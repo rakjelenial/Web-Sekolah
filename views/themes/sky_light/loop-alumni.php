@@ -66,54 +66,56 @@ function get_alumni() {
 	}
 }
 </script>
-<div class="col-lg-12 col-md-12 col-sm-12 ">
-	<h5 class="page-title mb-3"><?=$page_title?></h5>
-	<div class="row">
-		<?php foreach($query->result() as $row) { ?>
-			<div class="col-md-6 mb-4 profile-alumni">
-				<div class="card h-100 border border-secondary rounded-0">
-					<div class="row no-gutters">
-						<div class="col-md-4">
-							<?php
-							$photo = 'no-image.jpg';
-							if ($row->photo && file_exists($_SERVER['DOCUMENT_ROOT'] . '/media_library/students/'.$row->photo)) {
-								$photo = $row->photo;
-							}
-							echo '<img src="' . base_url('media_library/students/'.$photo).'" class="card-img border border-secondary rounded-0 m-2">';
-							?>
-						</div>
-						<div class="col-md-8">
-							<div class="card-body pt-2 pb-2">
-								<dl class="row">
-									<dt class="col-sm-5">Nama Lengkap</dt>
-									<dd class="col-sm-7"><?=$row->full_name?></dd>
-
-									<dt class="col-sm-5"><?=__session('_identity_number')?></dt>
-									<dd class="col-sm-7"><?=$row->identity_number?></dd>
-
-									<dt class="col-sm-5">Jenis Kelamin</dt>
-									<dd class="col-sm-7"><?=$row->gender?></dd>
-
-									<dt class="col-sm-5">Tempat Lahir</dt>
-									<dd class="col-sm-7"><?=$row->birth_place?></dd>
-
-									<dt class="col-sm-5">Tanggal Lahir</dt>
-									<dd class="col-sm-7"><?=indo_date($row->birth_date)?></dd>
-
-									<dt class="col-sm-5">Tahum Masuk</dt>
-									<dd class="col-sm-7"><?=$row->start_date?></dd>
-
-									<dt class="col-sm-5">Tahum Keluar</dt>
-									<dd class="col-sm-7"><?=$row->end_date?></dd>
-								</dl>
-							</div>
-						</div>
-					</div>
-				</div>
+<!-- <h5 class="page-title mb-3"><?=$page_title?></h5> -->
+<div class="bg-white p-3 my-2">
+	<div class="d-flex mb-3">
+		<input type="text" name="" class="form-control form-control-sm" placeholder="Type search here">
+		<button class="btn btn-sm btn-outline-success" style="margin-left: 10px">Login</button>
+	</div>
+	<?php foreach($query->result() as $row) { ?>
+		<div class="alert alert-success d-flex" role="alert">
+			<?php
+			$photo = 'no-image.jpg';
+			if ($row->photo && file_exists($_SERVER['DOCUMENT_ROOT'] . '/media_library/students/'.$row->photo)) {
+				$photo = $row->photo;
+			}
+			// echo '<img src="' . base_url('media_library/students/'.$photo).'" class="card-img border border-secondary rounded-0 m-2">';
+			echo '<img src="' . base_url('assets/img/person.png').'" width="60px">';
+			?>
+			<div class="mx-3 d-flex flex-column">
+				<label class="fw-bold"><?=$row->full_name?></label>
+				<label><?=$row->reason?></label>
+				<label><?=$row->street_address?></label>
 			</div>
-		<?php } ?>
-	</div>
-	<div class="justify-content-between align-items-center float-right mb-3 w-100 more-alumni">
-		<button type="button" onclick="get_alumni()" class="btn action-button rounded-0 float-right"><i class="fa fa-refresh"></i> Tampilkan Lebih Banyak</button>
-	</div>
+			<!-- <div class="col-md-8">
+				<div class="card-body pt-2 pb-2">
+					<dl class="row">
+						<dt class="col-sm-5">Nama Lengkap</dt>
+						<dd class="col-sm-7"><?=$row->full_name?></dd>
+
+						<dt class="col-sm-5"><?=__session('_identity_number')?></dt>
+						<dd class="col-sm-7"><?=$row->identity_number?></dd>
+
+						<dt class="col-sm-5">Jenis Kelamin</dt>
+						<dd class="col-sm-7"><?=$row->gender?></dd>
+
+						<dt class="col-sm-5">Tempat Lahir</dt>
+						<dd class="col-sm-7"><?=$row->birth_place?></dd>
+
+						<dt class="col-sm-5">Tanggal Lahir</dt>
+						<dd class="col-sm-7"><?=indo_date($row->birth_date)?></dd>
+
+						<dt class="col-sm-5">Tahum Masuk</dt>
+						<dd class="col-sm-7"><?=$row->start_date?></dd>
+
+						<dt class="col-sm-5">Tahum Keluar</dt>
+						<dd class="col-sm-7"><?=$row->end_date?></dd>
+					</dl>
+				</div>
+			</div> -->
+		</div>
+	<?php } ?>
+</div>
+<div class="justify-content-between align-items-center float-right mb-3 w-100 more-alumni">
+	<button type="button" onclick="get_alumni()" class="btn action-button rounded-0 float-right"><i class="fa fa-refresh"></i> Tampilkan Lebih Banyak</button>
 </div>

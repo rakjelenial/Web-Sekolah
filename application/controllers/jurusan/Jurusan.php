@@ -19,4 +19,19 @@ class Jurusan extends Public_Controller {
 		$this->vars['content'] = 'themes/'.theme_folder().'/jurusan/rpl';
 		$this->load->view('themes/'.theme_folder().'/index', $this->vars);
 	}
+
+	public function alumni() {
+		$this->vars['content'] = 'themes/'.theme_folder().'/jurusan/alumni';
+		$this->load->view('themes/'.theme_folder().'/index', $this->vars);
+	}
+
+	public function tkj() {
+		$this->vars['content'] = 'themes/'.theme_folder().'/jurusan/tkj';
+		$this->load->view('themes/'.theme_folder().'/index', $this->vars);
+	}
+
+	public function mm() {
+		$this->vars['content'] = 'themes/'.theme_folder().'/jurusan/mm';
+		$this->load->view('themes/'.theme_folder().'/index', $this->vars);
+	}
 }

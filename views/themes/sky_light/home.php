@@ -1,50 +1,51 @@
 <!-- CONTENT -->
 <main class="bg-white p-3 my-2">
 	<div class="d-flex flex-wrap justify-content-start">
-		<router-link :to="{ name: 'news' }" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
-			<div class="rounded-3 p-1 bg-gradient" style="background-color: #0012ff">
+		<a href="multimedia" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
+			<div class="rounded-3 p-1 bg-gradient" style="background-color: #1770aa">
 				<img src="./assets/img/dkv.webp" class="img-fluid rounded-3" style="width: 32px"><br>
 				<span class="text-white fw-bold small">Multimedia</span>
 			</div>
-		</router-link>
+		</a>
 		<router-link :to="{ name: 'news' }" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
-			<div class="rounded-3 p-1 bg-gradient" style="background-color: #9000ff">
+			<div class="rounded-3 p-1 bg-gradient" style="background-color: #c10fc3">
 				<img src="./assets/img/otkp.webp" class="img-fluid rounded-3" style="width: 32px"><br>
 				<span class="text-white fw-bold small">Perkantoran</span>
 			</div>
 		</router-link>
 		<router-link :to="{ name: 'news' }" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
-			<div class="rounded-3 p-1 bg-gradient" style="background-color: #fa00c2">
+			<div class="rounded-3 p-1 bg-gradient" style="background-color: #FFB5E8">
 				<img src="./assets/img/tbs.webp" class="img-fluid rounded-3" style="width: 32px"><br>
 				<span class="text-white fw-bold small">Tata Busana</span>
 			</div>
 		</router-link>
-		<router-link :to="{ name: 'news' }" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
-			<div class="rounded-3 p-1 bg-gradient" style="background-color: #ff0000">
+		<a href="teknik-komputer-jaringan" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
+			<div class="rounded-3 p-1 bg-gradient" style="background-color: #dd1641">
 				<img src="./assets/img/tkj.webp" class="img-fluid rounded-3" style="width: 32px"><br>
+				<!-- <span class="text-white fw-bold" style="font-size: 10px">Komputer & Jaringan</span> -->
 				<span class="text-white fw-bold small">Jaringan</span>
 			</div>
-		</router-link>
+		</a>
 		<router-link :to="{ name: 'news' }" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
-			<div class="rounded-3 p-1 bg-gradient" style="background-color: #ffba00">
+			<div class="rounded-3 p-1 bg-gradient" style="background-color: #f18c3c">
 				<img src="./assets/img/pemasaran.webp" class="img-fluid rounded-3" style="width: 32px"><br>
 				<span class="text-white fw-bold small">Pemasaran</span>
 			</div>
 		</router-link>
 		<router-link :to="{ name: 'news' }" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
-			<div class="rounded-3 p-1 bg-gradient" style="background-color: #08cb08">
+			<div class="rounded-3 p-1 bg-gradient" style="background-color: #36b74b">
 				<img src="./assets/img/akl.webp" class="img-fluid rounded-3" style="width: 32px"><br>
 				<span class="text-white fw-bold small">Akuntansi</span>
 			</div>
 		</router-link>
 		<a href="rekayasa-perangkat-lunak" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
-			<div class="rounded-3 p-1 bg-gradient" style="background-color: #000000">
+			<div class="rounded-3 p-1 bg-gradient" style="background-color: #f1cd3c">
 				<img src="./assets/img/rpl.webp" class="img-fluid rounded-3" style="width: 32px"><br>
 				<span class="text-white fw-bold small">PPL & Game</span>
 			</div>
 		</a>
 		<a href="tata-boga" target="_blank" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
-			<div class="rounded-3 p-1 bg-gradient" style="background-color: #a0a0a0">
+			<div class="rounded-3 p-1 bg-gradient" style="background-color: #DCD3FF">
 				<img src="./assets/img/tbg.webp" class="img-fluid rounded-3" style="width: 32px"><br>
 				<span class="text-white fw-bold small">Tata Boga</span>
 			</div>
@@ -75,16 +76,37 @@
 	<h5 class="border-start border-5 border-warning px-2 mb-3">Guru SMKN 1 Kotabaru</h5>
 	<div class="owl-carousel">
 		<div class="" style="width: 140px">
-			<img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_480,ar_5:7/v1634025439/0180f08fe40f6f2879bd9b543362ef2d.jpg" class="rounded-3">
+			<img src="./assets/img/fgkep.jpg" class="rounded-3">
 		</div>
 		<div class="" style="width: 140px">
-			<img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_480,ar_5:7/v1634025439/a9e36e666c24649ccb9a234f3de7af4bddde0c8158b5161ac44de9a0e6018f6a.jpg" class="rounded-3">
+			<img src="./assets/img/fgbm.jpg" class="rounded-3">
 		</div>
 		<div class="" style="width: 140px">
-			<img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_480,ar_5:7/v1634025439/c0cedaa80899021c1a0da45c74002c51b2f0db6f739b83c671f754bd77a87375.jpg" class="rounded-3">
+			<img src="./assets/img/fgotkp.jpg" class="rounded-3">
 		</div>
 		<div class="" style="width: 140px">
-			<img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_480,ar_5:7/v1634025439/8b55570d5e6b566271c809f0da6a4b96e8b673ae1fa7fd88835169a5262301b3.jpg" class="rounded-3">
+			<img src="./assets/img/fgpm.jpg" class="rounded-3">
+		</div>
+		<div class="" style="width: 140px">
+			<img src="./assets/img/fgprw.jpg" class="rounded-3">
+		</div>
+		<div class="" style="width: 140px">
+			<img src="./assets/img/fgtbg.jpg" class="rounded-3">
+		</div>
+		<div class="" style="width: 140px">
+			<img src="./assets/img/fgtbs.webp" class="rounded-3">
+		</div>
+		<div class="" style="width: 140px">
+			<img src="./assets/img/fgtkj.jpg" class="rounded-3">
+		</div>
+		<div class="" style="width: 140px">
+			<img src="./assets/img/fgdkv.jpg" class="rounded-3">
+		</div>
+		<div class="" style="width: 140px">
+			<img src="./assets/img/fgak.jpg" class="rounded-3">
+		</div>
+		<div class="" style="width: 140px">
+			<img src="./assets/img/fgrpl.webp" class="rounded-3">
 		</div>
 	</div>
 </main>

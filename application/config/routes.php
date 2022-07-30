@@ -100,7 +100,10 @@ $route['hasil-seleksi-penerimaan-mahasiswa-baru'] = 'public/admission_selection_
 $route['cetak-formulir-penerimaan-mahasiswa-baru'] = 'public/print_admission_form';
 $route['download-formulir-penerimaan-mahasiswa-baru'] = 'public/blank_registration_form';
 // Jurusan
+$route['data-alumni'] = 'jurusan/jurusan/alumni'; //tidak jadi di pakai
 $route['rekayasa-perangkat-lunak'] = 'jurusan/jurusan';
+$route['teknik-komputer-jaringan'] = 'jurusan/jurusan/tkj';
+$route['multimedia'] = 'jurusan/jurusan/mm';
 
 $route['default_controller'] = 'home';
 $route['404_override'] = '';
