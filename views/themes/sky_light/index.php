@@ -65,7 +65,7 @@
 	<?=link_tag('assets/plugins/magnific-popup/magnific-popup.css')?>
 	<?=link_tag('assets/css/loading.css')?>
 	<?=link_tag('views/themes/sky_light/style.css')?>
-	<?=link_tag('views/themes/sky_light/custom.css')?>
+	<?=link_tag('views/themes/sky_light/custom.css?v=0.1')?>
 	<script type="text/javascript">
 	const _BASE_URL = '<?=base_url();?>';
 	const _CURRENT_URL = '<?=current_url();?>';
@@ -86,7 +86,7 @@
 </head>
 <body oncontextmenu='return false;' onselectstart='return false;' style='-moz-user-select: none; cursor: default;' class="bg-light">
 	<div class="container p-0">
-		<a href="/" class="bg-white px-3 py-2 d-flex text-decoration-none">
+		<a href="<?=base_url()?>" class="bg-white px-3 py-2 d-flex text-decoration-none">
 			<img src="<?=base_url('media_library/images/' . __session('logo'))?>" style="width: 27px; margin-right: 10px">
 			<h3 class="font-weight-bold brand mb-0 text-start"><?=strtoupper(__session('school_name'))?></h3>
 			<!-- <small><?=__session('tagline')?></small> -->
@@ -94,17 +94,18 @@
 		<!--  NAVIGATION MENU -->
 		<div class="bg-success px-3 py-2 d-flex fw-bold text-nowrap overflow-auto sticky-top">
 			<!-- <div class="overflow-auto"> -->
-				<!-- <a href="<?=base_url()?>"><i class="fa fa-home text-white small"></i></a> -->
+				<a href="<?=base_url()?>" class="text-decoration-none text-white small px-2"><i class="fa fa-home text-white small"></i></a>
 				<?php $menus = get_menus();
 				foreach ($menus as $menu) {
 					// echo '<li class="list-group-item">';
 					$url = $menu['menu_url'] == '#' ? $menu['menu_url'] : base_url() . $menu['menu_url'];
 					if ($menu['menu_type'] == 'links') $url = $menu['menu_url'];
-					echo '<a href="'. $url .'" target="'. $menu['menu_target'] .'" class="text-decoration-none text-white small mx-2">' . strtoupper($menu['menu_title']) . '</a>';
+					echo '<a href="'. $url .'" target="'. $menu['menu_target'] .'" class="text-decoration-none text-white small px-2">' . strtoupper($menu['menu_title']) . '</a>';
 					// $sub_nav = recursive_list($menu['children']);
 					// if ($sub_nav) echo '<ul>' . $sub_nav . '</ul>';
 					// echo '</li>';
 				} ?>
+				<!-- <a href="<?=base_url()?>data-alumni" class="text-decoration-none text-white small px-2">DATA ALUMNI</a> -->
 			<!-- </div> -->
 		</div>
 
@@ -113,7 +114,7 @@
 			<!-- IMAGE SLIDERS -->
 			<?php $query = get_image_sliders(); if ($query->num_rows() > 0) { ?>
 				<div class="bg-white p-3 my-2 <?php $quotes = get_quotes(); echo $quotes->num_rows() == 0 ? 'mb-3' : ''?>">
-					<h5 class="border-start border-5 border-warning px-2">Prestasi & Karya Siswa</h5>
+					<h5 class="border-start border-5 border-warning px-2 mb-3">Prestasi & Karya Siswa</h5>
 					<div class="owl-carousel">		
 						<!-- <ol class="carousel-indicators mt-3 mb-3">
 							<?php $idx = 0; foreach($query->result() as $row) { ?>
@@ -141,147 +142,54 @@
 			<?php } ?> -->
 			<!--  /QUOTE -->
 		<?php } ?>
-	<main class="bg-white p-3 my-2">
-        <div class="d-flex flex-wrap justify-content-start">
-            <router-link :to="{ name: 'news' }" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
-                <div class="rounded-3 p-1" style="background-color: #0012ff">
-                    <img src="./assets/img/tbg.png" class="img-fluid rounded-3" style="width: 32px"><br>
-                    <span class="text-white fw-bold small">Multimedia</span>
-                </div>
-            </router-link>
-            <router-link :to="{ name: 'news' }" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
-                <div class="rounded-3 p-1" style="background-color: #9000ff">
-                    <img src="./assets/img/tbg.png" class="img-fluid rounded-3" style="width: 32px"><br>
-                    <span class="text-white fw-bold small">Perkantoran</span>
-                </div>
-            </router-link>
-            <router-link :to="{ name: 'news' }" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
-                <div class="rounded-3 p-1" style="background-color: #fa00c2">
-                    <img src="./assets/img/tbg.png" class="img-fluid rounded-3" style="width: 32px"><br>
-                    <span class="text-white fw-bold small">Tata Busana</span>
-                </div>
-            </router-link>
-            <router-link :to="{ name: 'news' }" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
-                <div class="rounded-3 p-1" style="background-color: #ff0000">
-                    <img src="./assets/img/tbg.png" class="img-fluid rounded-3" style="width: 32px"><br>
-                    <span class="text-white fw-bold small">Jaringan</span>
-                </div>
-            </router-link>
-            <router-link :to="{ name: 'news' }" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
-                <div class="rounded-3 p-1" style="background-color: #ffba00">
-                    <img src="./assets/img/tbg.png" class="img-fluid rounded-3" style="width: 32px"><br>
-                    <span class="text-white fw-bold small">Pemasaran</span>
-                </div>
-            </router-link>
-            <router-link :to="{ name: 'news' }" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
-                <div class="rounded-3 p-1" style="background-color: #08cb08">
-                    <img src="./assets/img/tbg.png" class="img-fluid rounded-3" style="width: 32px"><br>
-                    <span class="text-white fw-bold small">Akuntansi</span>
-                </div>
-            </router-link>
-			<router-link :to="{ name: 'aspiration' }" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
-                <div class="rounded-3 p-1" style="background-color: #000000">
-                    <img src="https://code.google.com/images/developers.png" class="img-fluid rounded-3" style="width: 32px"><br>
-                    <span class="text-white fw-bold small">RPL & Game</span>
-                </div>
-            </router-link>
-            <a href="http://jdih.kotabarukab.go.id/data/www/index.php" target="_blank" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
-                <div class="rounded-3 p-1" style="background-color: #a0a0a0">
-                    <img src="./assets/img/tbg.png" class="img-fluid rounded-3" style="width: 32px"><br>
-                    <span class="text-white fw-bold small">Tata Boga</span>
-                </div>
-            </a>
-        </div>
-    </main>
-    <main class="bg-white p-3 my-2">
-        <h5 class="border-start border-5 border-warning px-2">Program Sekolah</h5>
-        <ul class="list-group">
-            <li class="list-group-item border-0 border-bottom"># Pelatihan koding untuk guru</li>
-            <li class="list-group-item border-0 border-bottom"># Transformasi sistem ke teknologi digital</li>
-            <li class="list-group-item border-0 border-bottom"># Penentuan minat bakat siswa</li>
-        </ul>
-    </main>
-	<main class="p-3 my-2">
-		<div class="d-flex align-items-center bg-warning bg-opacity-75 p-3 rounded-3 bg-gradient text-success mb-3 shadow">
-			<div class="col-8">
-				<h3 class="fw-bold">SMK VOKASI</h3>
-				<p class="m-0">Indocement | Hotel Eboni | Computer Media Utama | Grand Surya</p>
-			</div>
-			<div class="col content-items-center">
-				<img src="https://1.bp.blogspot.com/-xB0Y4USBQPQ/X7OYUx4nFWI/AAAAAAAAApc/4hSSO752W3E7X3NjEt-NqOedW6aVGIwpgCLcBGAsYHQ/s2527/LOGO%2BVOKASI.png" alt="Vokasi SMKN 1 Kotabaru" class="img-fluid">
-			</div>
-		</div>
-	</main>
-	<main class="p-3 my-2">
-        <h5 class="border-start border-5 border-warning px-2">Guru SMKN 1 Kotabaru</h5>
-        <div class="owl-carousel">
-            <div class="" style="width: 140px">
-                <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_480,ar_5:7/v1634025439/0180f08fe40f6f2879bd9b543362ef2d.jpg" class="rounded-3">
-            </div>
-            <div class="" style="width: 140px">
-                <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_480,ar_5:7/v1634025439/a9e36e666c24649ccb9a234f3de7af4bddde0c8158b5161ac44de9a0e6018f6a.jpg" class="rounded-3">
-            </div>
-            <div class="" style="width: 140px">
-                <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_480,ar_5:7/v1634025439/c0cedaa80899021c1a0da45c74002c51b2f0db6f739b83c671f754bd77a87375.jpg" class="rounded-3">
-            </div>
-            <div class="" style="width: 140px">
-                <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_480,ar_5:7/v1634025439/8b55570d5e6b566271c809f0da6a4b96e8b673ae1fa7fd88835169a5262301b3.jpg" class="rounded-3">
-            </div>
-        </div>
-    </main>
-	<section class="content">
-		<div class="container px-3">
+		<?php $this->load->view($content) ?>
+		<div class="container px-3 bg-success bg-gradient text-white">
 			<div class="row">
-				<?php $this->load->view($content)?>
-			</div>
-		</div>
-	</section>
-	<div class="container px-3 bg-success bg-gradient text-white">
-		<div class="row">
-			<div class="col-12 mt-2">
-				<h6 class="border-bottom border-warning border-2 pb-2 fw-bold">Hubungi Kami</h6>
-				<label class="fw-bold">
-					<?=__session('school_name')?>
-					<!-- &sdot; <?=__session('tagline')?> -->
-					</label>
-				<dl class="row">
-					<dt class="col-lg-4 col-md-4 col-sm-12"><span class="fa fa-map-marker"></span> Alamat</dt>
-					<dd class="col-lg-8 col-md-8 col-sm-12"><?=__session('street_address')?></dd>
-					<!-- <dt class="col-lg-4 col-md-4 col-sm-12"><span class="fa fa-phone"></span> Telepon</dt>
-					<dd class="col-lg-8 col-md-8 col-sm-12"><?=__session('phone')?></dd> -->
-					<dt class="col-lg-4 col-md-4 col-sm-12"><span class="fa fa-envelope"></span> Email</dt>
-					<dd class="col-lg-8 col-md-8 col-sm-12"><?=__session('email')?></dd>
-				</dl>
-			</div>
-			<div class="col-12 my-2">
-				<h6 class="border-bottom border-warning border-2 pb-2 fw-bold">Tags</h6>
-				<div class="tag-content-block tag">
-					<?php $query = get_tags(10); if ($query->num_rows() > 0) { ?>
-						<?php foreach ($query->result() as $row) { ?>
-							<a href="<?=site_url('tag/'.$row->slug)?>"><?=$row->tag?></a>
+				<div class="col-12 mt-2">
+					<h6 class="border-bottom border-warning border-2 pb-2 fw-bold">Hubungi Kami</h6>
+					<label class="fw-bold">
+						<?=__session('school_name')?>
+						<!-- &sdot; <?=__session('tagline')?> -->
+						</label>
+					<dl class="row">
+						<dt class="col-lg-4 col-md-4 col-sm-12"><span class="fa fa-map-marker"></span> Alamat</dt>
+						<dd class="col-lg-8 col-md-8 col-sm-12"><?=__session('street_address')?></dd>
+						<!-- <dt class="col-lg-4 col-md-4 col-sm-12"><span class="fa fa-phone"></span> Telepon</dt>
+						<dd class="col-lg-8 col-md-8 col-sm-12"><?=__session('phone')?></dd> -->
+						<dt class="col-lg-4 col-md-4 col-sm-12"><span class="fa fa-envelope"></span> Email</dt>
+						<dd class="col-lg-8 col-md-8 col-sm-12"><?=__session('email')?></dd>
+					</dl>
+				</div>
+				<div class="col-12 my-2">
+					<h6 class="border-bottom border-warning border-2 pb-2 fw-bold">Link Terkait</h6>
+					<div class="tag-content-block tag">
+						<a href="https://btikp.kalselprov.go.id" target="_blank" class="bg-white text-success">BTIKP Kalsel</a>
+						<!-- <?php $query = get_tags(10); if ($query->num_rows() > 0) { ?>
+							<?php foreach ($query->result() as $row) { ?>
+								<a href="<?=site_url('tag/'.$row->slug)?>"><?=$row->tag?></a>
+							<?php } ?>
+						<?php } ?> -->
+					</div>
+				</div>
+				<div class="col-12 mt-2">
+					<h6 class="border-bottom border-warning border-2 pb-2 fw-bold">Ikuti Kami</h6>
+					<ul class="list-unstyled d-flex">
+						<?php if (NULL !== __session('facebook') && __session('facebook')) { ?>
+							<li class="float-left"><a href="<?=__session('facebook')?>" title="Facebook"><i class="fa fa-facebook social-icon facebook" aria-hidden="true"></i></a></li>
 						<?php } ?>
-					<?php } ?>
+						<?php if (NULL !== __session('twitter') && __session('twitter')) { ?>
+							<li class="float-left"><a href="<?=__session('facebook')?>" title="Twitter"><i class="fa fa-twitter social-icon twitter" aria-hidden="true"></i></a></li>
+						<?php } ?>
+						<?php if (NULL !== __session('instagram') && __session('instagram')) { ?>
+							<li class="float-left"><a href="<?=__session('instagram')?>" title="Instagram"><i class="fa fa-instagram social-icon instagram" aria-hidden="true"></i></a></li>
+						<?php } ?>
+						<?php if (NULL !== __session('youtube') && __session('youtube')) { ?>
+							<li class="float-left"><a href="<?=__session('youtube')?>" title="Instagram"><i class="fa fa-youtube social-icon youtube" aria-hidden="true"></i></a></li>
+						<?php } ?>
+					</ul>
 				</div>
 			</div>
-			<div class="col-12 mt-2">
-				<h6 class="border-bottom border-warning border-2 pb-2 fw-bold">Ikuti Kami</h6>
-				<ul class="list-unstyled d-flex">
-					<?php if (NULL !== __session('facebook') && __session('facebook')) { ?>
-						<li class="float-left"><a href="<?=__session('facebook')?>" title="Facebook"><i class="fa fa-facebook social-icon facebook" aria-hidden="true"></i></a></li>
-					<?php } ?>
-					<?php if (NULL !== __session('twitter') && __session('twitter')) { ?>
-						<li class="float-left"><a href="<?=__session('facebook')?>" title="Twitter"><i class="fa fa-twitter social-icon twitter" aria-hidden="true"></i></a></li>
-					<?php } ?>
-					<?php if (NULL !== __session('instagram') && __session('instagram')) { ?>
-						<li class="float-left"><a href="<?=__session('instagram')?>" title="Instagram"><i class="fa fa-instagram social-icon instagram" aria-hidden="true"></i></a></li>
-					<?php } ?>
-					<?php if (NULL !== __session('youtube') && __session('youtube')) { ?>
-						<li class="float-left"><a href="<?=__session('youtube')?>" title="Instagram"><i class="fa fa-youtube social-icon youtube" aria-hidden="true"></i></a></li>
-					<?php } ?>
-				</ul>
-			</div>
 		</div>
-	</div>
 		<!-- <div class="container-fluid secondary-footer">
 			<div class="col-md-6 col-xs-12 text-md-left text-center">
 				<?=copyright(2019, base_url(), __session('school_name'))?>
@@ -298,6 +206,8 @@
 	</div> -->
 	<a href="javascript:" id="return-to-top" class="rounded-lg"><i class="fa fa-angle-double-up"></i></a>
 	</div>
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 	<script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script>
 	<script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
 	<script type="text/javascript">
