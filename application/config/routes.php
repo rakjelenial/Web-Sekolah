@@ -49,6 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
+$route['ppdb2020'] = 'public/ppdb2020';
 $route['hubungi-kami'] = 'public/contact_us';
 $route['hubungi-kami/save'] = 'public/contact_us/save';
 $route['read/(:num)/(:any)'] = 'public/readmore';
@@ -94,6 +95,21 @@ $route['formulir-penerimaan-peserta-didik-baru'] = 'public/admission_form';
 $route['hasil-seleksi-penerimaan-peserta-didik-baru'] = 'public/admission_selection_results';
 $route['cetak-formulir-penerimaan-peserta-didik-baru'] = 'public/print_admission_form';
 $route['download-formulir-penerimaan-peserta-didik-baru'] = 'public/blank_registration_form';
+
+$route['registrasi-mandiri-online'] = 'public/registrasi_mandiri_online';
+$route['registrasi-form'] 			= 'public/registrasi_mandiri_online/pendaftaran';
+$route['registrasi-mandiri-form'] 	= 'public/registrasi_mandiri_form';
+$route['update-form'] 				= 'public/registrasi_mandiri_form/updateForm';
+$route['peminatan'] 				= 'public/peminatan_form';
+$route['jawabanTes'] 				= 'public/peminatan_form/jawabanTes';
+$route['finishJawab'] 				= 'public/peminatan_form/finishJawab';
+
+$route['daftar-ulang-mandiri-online'] = 'public/daftar_ulang_mandiri_online';
+$route['daftarUlang'] = 'public/daftar_ulang_mandiri_online/daftarUlang';
+
+$route['pengumuman-kelulusan'] = 'public/pengumuman_kelulusan';
+$route['kelulusan'] = 'public/pengumuman_kelulusan/kelulusan';
+
 // PMB
 $route['formulir-penerimaan-mahasiswa-baru'] = 'public/admission_form';
 $route['hasil-seleksi-penerimaan-mahasiswa-baru'] = 'public/admission_selection_results';
