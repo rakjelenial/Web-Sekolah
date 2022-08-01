@@ -23,10 +23,11 @@ function initMap() {
 	});
 }
 </script>
-<div class="col-lg-8 col-md-8 col-sm-12 ">
-	<h5 class="page-title mb-3"><?=$page_title?></h5>
-	<div id="map" class="w-100 border border-secondary"></div>
-	<div class="card rounded-0 border border-secondary mb-3">
+<!-- <div class="col-lg-8 col-md-8 col-sm-12 "> -->
+	<!-- <h5 class="page-title mb-3"><?=$page_title?></h5> -->
+	<!-- <div id="map" class="w-100 border border-secondary"></div> -->
+	<div id="map" class="w-100"></div>
+	<!-- <div class="card rounded-0 border border-secondary mb-3">
 		<div class="card-body">
 			<div class="form-group row mb-2">
 				<label for="comment_author" class="col-sm-3 control-label">Nama Lengkap <span style="color: red">*</span></label>
@@ -68,6 +69,6 @@ function initMap() {
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
-<?php $this->load->view('themes/sky_light/sidebar')?>
+	</div> -->
+<!-- </div> -->
+<?php //$this->load->view('themes/sky_light/sidebar')?>

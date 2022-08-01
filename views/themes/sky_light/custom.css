@@ -418,4 +418,44 @@
   font-family: "Jost", sans-serif;
 }
 
+.jurusan-otkp {
+  background-image: url("../../../assets/img/bgotkp.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  font-family: "Jost", sans-serif;
+}
+
+.jurusan-tbs {
+  background-image: url("../../../assets/img/bgtbs.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  font-family: "Jost", sans-serif;
+}
+
+.jurusan-bdp {
+  background-image: url("../../../assets/img/bgpm.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  font-family: "Jost", sans-serif;
+}
+
+.jurusan-akl {
+  background-image: url("../../../assets/img/bgakl.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  font-family: "Jost", sans-serif;
+}
+
+.jurusan-tbg {
+  background-image: url("../../../assets/img/bgtbg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  font-family: "Jost", sans-serif;
+}
+
 /*# sourceMappingURL=custom.css.map */

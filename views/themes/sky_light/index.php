@@ -65,7 +65,7 @@
 	<?=link_tag('assets/plugins/magnific-popup/magnific-popup.css')?>
 	<?=link_tag('assets/css/loading.css')?>
 	<?=link_tag('views/themes/sky_light/style.css')?>
-	<?=link_tag('views/themes/sky_light/custom.css?v=0.1')?>
+	<?=link_tag('views/themes/sky_light/custom.css?v=0.2')?>
 	<script type="text/javascript">
 	const _BASE_URL = '<?=base_url();?>';
 	const _CURRENT_URL = '<?=current_url();?>';

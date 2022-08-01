@@ -116,6 +116,6 @@ function get_alumni() {
 		</div>
 	<?php } ?>
 </div>
-<div class="justify-content-between align-items-center float-right mb-3 w-100 more-alumni">
-	<button type="button" onclick="get_alumni()" class="btn action-button rounded-0 float-right"><i class="fa fa-refresh"></i> Tampilkan Lebih Banyak</button>
+<div class="px-3 d-flex justify-content-end align-items-center mb-3 w-100 more-alumni">
+	<button type="button" onclick="get_alumni()" class="btn btn-sm btn-outline-warning"><i class="fa fa-refresh"></i> Tampilkan Lebih Banyak</button>
 </div>

@@ -1,19 +1,20 @@
-<div class="jurusan-rpl p-3 mt-2">
-    <div class="p-3 border border-white rounded-3 text-white">
-        <h3 class="fw-bold">PPLG</h3>
-        <h3 class="fw-bold" style="padding-bottom: 150px">Pengembangan Perangkat Lunak dan GIM</h3>
+<div class="jurusan-akl p-3 mt-2">
+    <div class="p-3 border border-white rounded-3 text-end" style="color: #36b74b">
+    <!-- <div class="p-3 border border-white rounded-3 text-white"> -->
+        <h3 class="fw-bold">AKL</h3>
+        <h3 class="fw-bold" style="padding-bottom: 150px">Akuntansi & Keuangan Lembaga</h3>
     </div>
 </div>
 <div class="p-3 my-2 bg-white">
-    <p class="text-center">Orang kira aku hacker, duduk seharian di depan komputer, padahal aku sedang membuat game android, aplikasi website dan sistem permintaan pelanggan. Setelah banyak yang tahu, mereka bilang aku ahli IT / Programmer yang bisa menyelesaikan masalah dengan teknologi</p>
+    <p class="text-center">Profesi sebagai seorang akuntan atau pengelola keuangan adalah profesi yang akan selalu dibutuhkan tanpa memandang tren. Sampai kapanpun, setiap perusahaan akan membutuhkan orang yang bekerja di bagian akuntansi. Ini membuat prospek karir para lulusan akuntansi akan selalu terbuka lebar.</p>
     <div class="card border-start border-dark border-5">
         <div class="card-body">
-            <h4>Sekilas Program Keahlian PPLG</h4>
-            <p>PPLG ( Pengembangan Perangkat Lunak dan GIM ) merupakan jurusan yang sebelumnya bernama RPL ( Rekayasa Perangkat Lunak ). Perubahan ini dikarenakan ditunjuknya SMKN 1 Kotabaru menjadi sekolah Pusat Keunggulan sehingga Kurikulum kelas X mengikuti peraturan yang ada. PPLG berfokus pada keahlian siswa/siswi dalam hal software/program WEB, komputer dan android, selain itu siswa/siswi juga diberikan ilmu umum tentang hardware, multimedia, kewirausahaan.</p>
+            <h4>Sekilas Program Keahlian AKL</h4>
+            <p>Lulusan akuntansi lebih teliti dalam bekerja dibandingkan lulusan lain karena telah dilatih untuk selalu bekerja dengan hati-hati karena berurusan dengan lulusan keuangan dan akuntansi lebih leluasa dalam dunia kerja dan kesempatan kerja yang lebih luas dibandingkan jurusan lainnya.</p>
         </div>
     </div>
 </div>
-<div class="p-3 mb-2">
+<!-- <div class="p-3 mb-2">
 	<h5 class="border-start border-5 border-warning px-2 mb-3">Kegiatan Jurusan</h5>
     <div class="row g-1">
         <div class="col mb-1">
@@ -44,55 +45,38 @@
         <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingOne">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                Kemampuan Apa yang akan dimiliki Lulusan PPLG
+                Accordion Item #1
             </button>
             </h2>
             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
             <div class="accordion-body">
-                Lulusan PPLG memiliki kemampuan di bidang Programer, baik Program Komputer ( JAVA, Bahasa C, Python ) Program Android ( Membuat aplikasi dan GAME android ) Programer WEB ( HTML, PHP )
+                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
             </div>
         </div>
         <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                Kalau lulus bisa kerja apa ?
+                Accordion Item #2
             </button>
             </h2>
             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
             <div class="accordion-body">
-                Lulusan PPLG bisa kerja disegala bidang. Bisa menjadi Programer di Perusahaan, kantor, membuka jasa freelance dibidang IT, membuat StartUp baru ( Aplikasi anrdroid ) , Berwirausaha dengan menerapkan IT dibidangnya. Peluang kedepan akan banyak dibutuhkan tenaga IT karena perkembangan IT tidak pernah berhenti.
+                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
             </div>
         </div>
         <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingThree">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                Apa bisa dari SMK kuliah ?
+                Accordion Item #3
             </button>
             </h2>
             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
             <div class="accordion-body">
-                Sangat bisa, kemampuan siswa SMK dalam kuliah dipandang setara dengan Program IPA di SMA, sehingga bisa mendaftar kuliah di Universitas Negeri / Swasta , jika cross jurusan bisa mendaftar dengan metode IPC. Banyak lulusan dari program RPL melanjutkan kuliah di Jurusan Teknologi
-            </div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                Sarana Laboratorium Komputer PPLG
-            </button>
-            </h2>
-            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-            <div class="accordion-body">
-                <ol type="1">
-                    <li>Setiap Siswa/Siswi 1 Komputer</li>
-                    <li>Alat Praktik</li>
-                    <li>Ruang AC</li>
-                    <li>WIFI</li>
-                </ol>
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
             </div>
         </div>
     </div>
-</div>
+</div> -->

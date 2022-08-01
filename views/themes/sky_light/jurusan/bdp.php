@@ -1,19 +1,20 @@
-<div class="jurusan-mm p-3 mt-2">
-    <div class="p-3 border border-white rounded-3" style="color: #1770aa">
-        <h3 class="fw-bold" style="padding-top: 150px">DKV</h3>
-        <h3 class="fw-bold">Desain Komunikasi Visual</h3>
+<div class="jurusan-bdp p-3 mt-2">
+    <!-- <div class="p-3 border border-white rounded-3" style="color: #190404"> -->
+    <div class="p-3 border border-white rounded-3 text-white">
+        <h3 class="fw-bold">BDP</h3>
+        <h3 class="fw-bold" style="padding-bottom: 150px">Bisnis Daring & Pemasaran</h3>
     </div>
 </div>
 <div class="p-3 my-2 bg-white">
-    <p class="text-center">Sebenarnya ada banyak karya DKV yang kita nikmati dalam kehidupan sehari-hari. Did you even realize it, Sobat? Iklan di media elektronik maupun cetak merupakan salah satu contoh Desain Komunikasi Visual. Poster, katalog, animasi, brosur, hingga kemasan produk juga merupakan contoh Desain Komunikasi Visual yang dapat dengan mudah kita jumpai</p>
+    <p class="text-center">Dengan era serba digital seperti saat ini, transaksi jual beli pun dilakukan secara online. Barang yang dijual pun beragam, mulai dari makanan, fashion, elektronik, kosmetik dan masih banyak.</p>
     <div class="card border-start border-dark border-5">
         <div class="card-body">
-            <h4>Sekilas Program Keahlian DKV</h4>
-            <p>Sebagai siswa DKV, Sobat  bakal menguasai banyak software, seperti Adobe Illustrator, Adobe Premier, Adobe Photoshop, Adobe InDesign, SketchUp, CorelDraw, dan lain-lain. Dan jika dunia desain memang menjadi minatmu, yakin deh, Sobat takkan kehilangan semangat untuk bekerja di bidang yang penuh tantangan ini.</p>
+            <h4>Sekilas Program Keahlian BDP</h4>
+            <p>Tentunya para lulusan SMK Jurusan Bisnis Daring dan Pemasaran akan sangat dibutuhkan. Bahkan jika tidak ingin bekerja di perusahaan tertentu, mereka bisa ber wiraswasta.</p>
         </div>
     </div>
 </div>
-<div class="p-3 mb-2">
+<!-- <div class="p-3 mb-2">
 	<h5 class="border-start border-5 border-warning px-2 mb-3">Kegiatan Jurusan</h5>
     <div class="row g-1">
         <div class="col mb-1">
@@ -44,55 +45,38 @@
         <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingOne">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                Skill lulusan DKV
+                Accordion Item #1
             </button>
             </h2>
             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
             <div class="accordion-body">
-                Melalu jurusan dkv kamu akan mendapatkan skill seni dan desain, kamu juga akan mengerti tentang fotografi dan cinematografi, kamu juga akan bisa membuat animasi dan game.
+                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
             </div>
         </div>
         <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                Pekerjaan jika lulus
+                Accordion Item #2
             </button>
             </h2>
             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
             <div class="accordion-body">
-                Setelah lulus kamu bisa menjadi ilustrator, fotografer, videografer, animator, art director, animator, Aparatur sipil negara, bahkan kamu bisa membuka wirausaha mandiri dengan skill kamu.
+                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
             </div>
         </div>
         <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                    Lanjut kuliah dijurusan apa?
-                </button>
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                Accordion Item #3
+            </button>
             </h2>
             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-                <div class="accordion-body">
-                    Jika kamu ingit melanjut kuliah kamu bisa memilih semua jurusan karena lulusan DKV setara dengan jurusan IPA pada SMA
-                </div>
+            <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                    Sarana Lab dan Komputer
-                </button>
-            </h2>
-            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-                <div class="accordion-body">
-                    <ol type="1">
-                        <li>PC editing dengan spesifikasi mumpuni</li>
-                        <li>Kamera Foto dan Video</li>
-                        <li>Ruang AC</li>
-                        <li>WIFI</li>
-                    </ol>
-                </div>
             </div>
         </div>
     </div>
-</div>
+</div> -->

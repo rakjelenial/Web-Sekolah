@@ -7,18 +7,18 @@
 				<span class="text-white fw-bold small">Multimedia</span>
 			</div>
 		</a>
-		<router-link :to="{ name: 'news' }" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
+		<a href="perkantoran" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
 			<div class="rounded-3 p-1 bg-gradient" style="background-color: #c10fc3">
 				<img src="./assets/img/otkp.webp" class="img-fluid rounded-3" style="width: 32px"><br>
 				<span class="text-white fw-bold small">Perkantoran</span>
 			</div>
-		</router-link>
-		<router-link :to="{ name: 'news' }" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
+		</a>
+		<a href="tata-busana" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
 			<div class="rounded-3 p-1 bg-gradient" style="background-color: #FFB5E8">
 				<img src="./assets/img/tbs.webp" class="img-fluid rounded-3" style="width: 32px"><br>
 				<span class="text-white fw-bold small">Tata Busana</span>
 			</div>
-		</router-link>
+		</a>
 		<a href="teknik-komputer-jaringan" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
 			<div class="rounded-3 p-1 bg-gradient" style="background-color: #dd1641">
 				<img src="./assets/img/tkj.webp" class="img-fluid rounded-3" style="width: 32px"><br>
@@ -26,25 +26,25 @@
 				<span class="text-white fw-bold small">Jaringan</span>
 			</div>
 		</a>
-		<router-link :to="{ name: 'news' }" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
+		<a href="pemasaran" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
 			<div class="rounded-3 p-1 bg-gradient" style="background-color: #f18c3c">
 				<img src="./assets/img/pemasaran.webp" class="img-fluid rounded-3" style="width: 32px"><br>
 				<span class="text-white fw-bold small">Pemasaran</span>
 			</div>
-		</router-link>
-		<router-link :to="{ name: 'news' }" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
+		</a>
+		<a href="akuntansi" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
 			<div class="rounded-3 p-1 bg-gradient" style="background-color: #36b74b">
 				<img src="./assets/img/akl.webp" class="img-fluid rounded-3" style="width: 32px"><br>
 				<span class="text-white fw-bold small">Akuntansi</span>
 			</div>
-		</router-link>
+		</a>
 		<a href="rekayasa-perangkat-lunak" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
 			<div class="rounded-3 p-1 bg-gradient" style="background-color: #f1cd3c">
 				<img src="./assets/img/rpl.webp" class="img-fluid rounded-3" style="width: 32px"><br>
 				<span class="text-white fw-bold small">PPL & Game</span>
 			</div>
 		</a>
-		<a href="tata-boga" target="_blank" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
+		<a href="tata-boga" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
 			<div class="rounded-3 p-1 bg-gradient" style="background-color: #DCD3FF">
 				<img src="./assets/img/tbg.webp" class="img-fluid rounded-3" style="width: 32px"><br>
 				<span class="text-white fw-bold small">Tata Boga</span>
@@ -116,21 +116,25 @@
 		<h5 class="border-start border-5 border-warning px-2 mb-3">Tulisan Terbaru</h5>
 		<?php foreach($query->result() as $row) { ?>
 			<div class="card mb-3 border-0 border-0 border-bottom rounded-0 pb-2">
-				<div class="row g-0">
-					<div class="col-3 d-flex">
-						<img src="<?=base_url('media_library/posts/medium/'.$row->post_image)?>" class="img-fluid h-100 rounded-start" style="padding-right: 5px" alt="<?=$row->post_title?>">
-					</div>
-					<div class="col-9">
-						<div class="card-body p-0">
-							<h5 class="card-title mb-0"><a href="<?=site_url('read/'.$row->id.'/'.$row->post_slug)?>" class="text-decoration-none"><?=substr($row->post_title, 0, 25)?>...</a></h5>
-							<p class="card-text"><?=substr(strip_tags($row->post_content), 0, 50)?>...</p>
-							<!-- <div class="d-flex justify-content-between align-items-center mt-1">
-								<small class="text-muted"><?=date('d/m/Y H:i', strtotime($row->created_at))?> WIB - <?=$row->post_author?></small>
-								<a href="<?=site_url('read/'.$row->id.'/'.$row->post_slug)?>" class="btn btn-sm action-button rounded-0"><i class="fa fa-search"></i></a>
-							</div> -->
+				<a href="<?=site_url('read/'.$row->id.'/'.$row->post_slug)?>" class="text-decoration-none">
+					<div class="row g-0">
+						<div class="col-3 d-flex">
+							<img src="<?=base_url('media_library/posts/medium/'.$row->post_image)?>" class="img-fluid h-100 rounded-start" style="padding-right: 5px" alt="<?=$row->post_title?>">
+						</div>
+						<div class="col-9">
+							<div class="card-body p-0">
+								<!-- <h5 class="card-title mb-0"><?=substr($row->post_title, 0, 25)?>...</h5> -->
+								<h5 class="card-title mb-0"><?=$row->post_title?></h5>
+								<!-- <p class="card-text"><?=substr(strip_tags($row->post_content), 0, 50)?>...</p> -->
+								<!-- <div class="d-flex justify-content-between align-items-center mt-1"> -->
+									<!-- <small class="text-muted"><?=date('d/m/Y H:i', strtotime($row->created_at))?> WIB - <?=$row->post_author?></small> -->
+									<small class="text-muted"><i class="fa fa-calendar" style="padding-right: 5px"></i><?=date('d/m/Y', strtotime($row->created_at))?></small>
+									<!-- <a href="<?=site_url('read/'.$row->id.'/'.$row->post_slug)?>" class="btn btn-sm action-button rounded-0"><i class="fa fa-search"></i></a> -->
+								<!-- </div> -->
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 		<?php } ?>
 	<?php } ?>

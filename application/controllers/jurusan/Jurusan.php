@@ -20,8 +20,8 @@ class Jurusan extends Public_Controller {
 		$this->load->view('themes/'.theme_folder().'/index', $this->vars);
 	}
 
-	public function alumni() {
-		$this->vars['content'] = 'themes/'.theme_folder().'/jurusan/alumni';
+	public function otkp() {
+		$this->vars['content'] = 'themes/'.theme_folder().'/jurusan/otkp';
 		$this->load->view('themes/'.theme_folder().'/index', $this->vars);
 	}
 
@@ -32,6 +32,26 @@ class Jurusan extends Public_Controller {
 
 	public function mm() {
 		$this->vars['content'] = 'themes/'.theme_folder().'/jurusan/mm';
+		$this->load->view('themes/'.theme_folder().'/index', $this->vars);
+	}
+
+	public function bdp() {
+		$this->vars['content'] = 'themes/'.theme_folder().'/jurusan/bdp';
+		$this->load->view('themes/'.theme_folder().'/index', $this->vars);
+	}
+
+	public function akl() {
+		$this->vars['content'] = 'themes/'.theme_folder().'/jurusan/akl';
+		$this->load->view('themes/'.theme_folder().'/index', $this->vars);
+	}
+
+	public function tbs() {
+		$this->vars['content'] = 'themes/'.theme_folder().'/jurusan/tbs';
+		$this->load->view('themes/'.theme_folder().'/index', $this->vars);
+	}
+
+	public function tbg() {
+		$this->vars['content'] = 'themes/'.theme_folder().'/jurusan/tbg';
 		$this->load->view('themes/'.theme_folder().'/index', $this->vars);
 	}
 }
