@@ -1,16 +1,16 @@
 <div class="jurusan-otkp p-3 mt-2">
     <!-- <div class="p-3 border border-white rounded-3" style="color: #190404"> -->
     <div class="p-3 border border-white rounded-3 text-white">
-        <h3 class="fw-bold" style="padding-top: 150px">OTKP</h3>
-        <h3 class="fw-bold">Otomatisasi dan Tata Kelola Perkantoran</h3>
+        <h3 class="fw-bold" style="padding-top: 150px">MPLB</h3>
+        <h3 class="fw-bold">Manajemen Perkantoran dan Layanan Bisnis</h3>
     </div>
 </div>
 <div class="p-3 my-2 bg-white">
-    <p class="text-center">Administrasi perkantoran merupakan salah satu jurusan yang akan membekali peserta didik memiliki keahlian perencanaan keuangan, mulai dari anggaran, pembayaran, dan pendataan pada suatu perusahaan ataupun kantor. Perkembangan industri dan bisnis sekarang ini memang sedang pesat, untuk itu pastinya butuh tenaga ahli sebagai pelaksana administrasi yang mempunyai kompetensi dan keterampilan di bidang tersebut.</p>
+    <p class="text-center">Manajemen perkantoran dan Layanan Bisnis merupakan salah satu jurusan yang akan membekali peserta didik memiliki keahlian perencanaan keuangan, mulai dari anggaran, pembayaran, dan pendataan pada suatu perusahaan ataupun kantor. Perkembangan industri dan bisnis sekarang ini memang sedang pesat, untuk itu pastinya butuh tenaga ahli sebagai pelaksana administrasi yang mempunyai kompetensi dan keterampilan di bidang tersebut.</p>
     <div class="card border-start border-dark border-5">
         <div class="card-body">
-            <h4>Sekilas Program Keahlian OTKP</h4>
-            <p>Keunggulan Jurusan Administrasi Perkantoran di SMK dan Universitas Tiba saatnya memasuki pembahasan inti yang akan memberikan penjelasan tentang keunggulan yang bisa Anda dapatkan jika mengambil jurusan administrasi perkantoran. Untuk jenjang SMK yang sudah kita pahami bahwa jenjang sekolah ini lebih banyak praktik daripada teorinya. Ketika Anda masuk SMK jurusan administrasi perkantoran</p>
+            <h4>Sekilas Program Keahlian MPLB</h4>
+            <p>Keunggulan Jurusan Manajemen Perkantoran dan Layanan Bisnis di SMK dan Universitas Tiba saatnya memasuki pembahasan inti yang akan memberikan penjelasan tentang keunggulan yang bisa Anda dapatkan jika mengambil jurusan administrasi perkantoran. Untuk jenjang SMK yang sudah kita pahami bahwa jenjang sekolah ini lebih banyak praktik daripada teorinya. Ketika Anda masuk SMK jurusan administrasi perkantoran</p>
         </div>
     </div>
 </div>

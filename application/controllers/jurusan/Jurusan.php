@@ -54,4 +54,14 @@ class Jurusan extends Public_Controller {
 		$this->vars['content'] = 'themes/'.theme_folder().'/jurusan/tbg';
 		$this->load->view('themes/'.theme_folder().'/index', $this->vars);
 	}
+
+	public function siswa() {
+		$this->vars['content'] = 'themes/'.theme_folder().'/jurusan/siswa';
+		$this->load->view('themes/'.theme_folder().'/index', $this->vars);
+	}
+
+	public function kepala() {
+		$this->vars['content'] = 'themes/'.theme_folder().'/jurusan/kepala';
+		$this->load->view('themes/'.theme_folder().'/index', $this->vars);
+	}
 }

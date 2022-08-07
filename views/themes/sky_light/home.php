@@ -1,29 +1,68 @@
 <!-- CONTENT -->
+<div class="p-3 row g-2">
+	<div class="col-2 text-center">
+		<a href="jumlah-siswa" class="border shadow-sm text-decoration-none rounded-3 p-1 d-flex flex-column">
+			<img src="./assets/img/siswa.png" class="img-fluid">
+			<label style="font-size: 10px">Jumlah Siswa</label>
+		</a>
+	</div>
+	<div class="col-2 text-center">
+		<a href="#" class="border shadow-sm text-decoration-none rounded-3 p-1 d-flex flex-column">
+			<img src="./assets/img/akreditasi.png" class="img-fluid">
+			<label style="font-size: 10px">Akreditasi Sekolah</label>
+		</a>
+	</div>
+	<div class="col-2 text-center">
+		<a href="#" class="border shadow-sm text-decoration-none rounded-3 p-1 d-flex flex-column">
+			<img src="./assets/img/sarana.png" class="img-fluid">
+			<label style="font-size: 10px">Sarana Sekolah</label>
+		</a>
+	</div>
+	<div class="col-2 text-center">
+		<a href="#" class="border shadow-sm text-decoration-none rounded-3 p-1 d-flex flex-column">
+			<img src="./assets/img/kalendar.png" class="img-fluid">
+			<label style="font-size: 10px">Kalender Akademik</label>
+		</a>
+	</div>
+	<div class="col-2 text-center">
+		<a href="#" class="border shadow-sm text-decoration-none rounded-3 p-1 d-flex flex-column">
+			<img src="./assets/img/ekstrakurikuler.png" class="img-fluid">
+			<label style="font-size: 10px">Ekstra kurikuler</label>
+		</a>
+	</div>
+	<div class="col-2 text-center">
+		<a href="direktori-alumni" class="border shadow-sm text-decoration-none rounded-3 p-1 d-flex flex-column">
+			<img src="./assets/img/alumni.png" class="img-fluid">
+			<label style="font-size: 10px">Data Alumni</label>
+		</a>
+	</div>
+</div>
 <main class="bg-white p-3 my-2">
+	<h5 class="border-start border-5 border-warning px-2 mb-3">Jurusan Sekolah</h5>
 	<div class="d-flex flex-wrap justify-content-start">
 		<a href="multimedia" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
 			<div class="rounded-3 p-1 bg-gradient" style="background-color: #1770aa">
 				<img src="./assets/img/dkv.webp" class="img-fluid rounded-3" style="width: 32px"><br>
-				<span class="text-white fw-bold small">Multimedia</span>
+				<span class="text-white fw-bold small">DKV</span>
 			</div>
 		</a>
 		<a href="perkantoran" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
 			<div class="rounded-3 p-1 bg-gradient" style="background-color: #c10fc3">
 				<img src="./assets/img/otkp.webp" class="img-fluid rounded-3" style="width: 32px"><br>
-				<span class="text-white fw-bold small">Perkantoran</span>
+				<span class="text-white fw-bold small">MPLB</span>
 			</div>
 		</a>
 		<a href="tata-busana" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
 			<div class="rounded-3 p-1 bg-gradient" style="background-color: #FFB5E8">
 				<img src="./assets/img/tbs.webp" class="img-fluid rounded-3" style="width: 32px"><br>
-				<span class="text-white fw-bold small">Tata Busana</span>
+				<span class="text-white fw-bold small">Busana</span>
 			</div>
 		</a>
 		<a href="teknik-komputer-jaringan" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
 			<div class="rounded-3 p-1 bg-gradient" style="background-color: #dd1641">
 				<img src="./assets/img/tkj.webp" class="img-fluid rounded-3" style="width: 32px"><br>
 				<!-- <span class="text-white fw-bold" style="font-size: 10px">Komputer & Jaringan</span> -->
-				<span class="text-white fw-bold small">Jaringan</span>
+				<span class="text-white fw-bold small">TKJT</span>
 			</div>
 		</a>
 		<a href="pemasaran" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
@@ -35,7 +74,7 @@
 		<a href="akuntansi" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
 			<div class="rounded-3 p-1 bg-gradient" style="background-color: #36b74b">
 				<img src="./assets/img/akl.webp" class="img-fluid rounded-3" style="width: 32px"><br>
-				<span class="text-white fw-bold small">Akuntansi</span>
+				<span class="text-white fw-bold small">AKL</span>
 			</div>
 		</a>
 		<a href="rekayasa-perangkat-lunak" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
@@ -47,7 +86,7 @@
 		<a href="tata-boga" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
 			<div class="rounded-3 p-1 bg-gradient" style="background-color: #DCD3FF">
 				<img src="./assets/img/tbg.webp" class="img-fluid rounded-3" style="width: 32px"><br>
-				<span class="text-white fw-bold small">Tata Boga</span>
+				<span class="text-white fw-bold small">Kuliner</span>
 			</div>
 		</a>
 	</div>
@@ -73,40 +112,51 @@
 	</div>
 </main>
 <main class="p-3 my-2">
-	<h5 class="border-start border-5 border-warning px-2 mb-3">Guru SMKN 1 Kotabaru</h5>
+	<h5 class="border-start border-5 border-warning px-2 mb-3">Tenaga Pendidik</h5>
 	<div class="owl-carousel">
-		<div class="" style="width: 140px">
+		<div class="text-center text-light" style="width: 140px">
 			<img src="./assets/img/fgkep.jpg" class="rounded-3">
+			<p class="pendidik fw-bold small" style="margin-top: -20px">Pak Ramlie</p>
 		</div>
-		<div class="" style="width: 140px">
+		<div class="text-center text-light" style="width: 140px">
 			<img src="./assets/img/fgbm.jpg" class="rounded-3">
+			<p class="pendidik fw-bold small" style="margin-top: -20px">Bu Pipit</p>
 		</div>
-		<div class="" style="width: 140px">
+		<div class="text-center text-light" style="width: 140px">
 			<img src="./assets/img/fgotkp.jpg" class="rounded-3">
+			<p class="pendidik fw-bold small" style="margin-top: -20px">Bu Charis</p>
 		</div>
-		<div class="" style="width: 140px">
+		<div class="text-center text-light" style="width: 140px">
 			<img src="./assets/img/fgpm.jpg" class="rounded-3">
+			<p class="pendidik fw-bold small" style="margin-top: -20px">Bu Jumai</p>
 		</div>
-		<div class="" style="width: 140px">
+		<div class="text-center text-light" style="width: 140px">
 			<img src="./assets/img/fgprw.jpg" class="rounded-3">
+			<p class="pendidik fw-bold small" style="margin-top: -20px">Bu Wahidah</p>
 		</div>
-		<div class="" style="width: 140px">
+		<div class="text-center text-light" style="width: 140px">
 			<img src="./assets/img/fgtbg.jpg" class="rounded-3">
+			<p class="pendidik fw-bold small" style="margin-top: -20px">Bu Aini</p>
 		</div>
-		<div class="" style="width: 140px">
+		<div class="text-center text-light" style="width: 140px">
 			<img src="./assets/img/fgtbs.webp" class="rounded-3">
+			<p class="pendidik fw-bold small" style="margin-top: -20px">Bu Mariani</p>
 		</div>
-		<div class="" style="width: 140px">
+		<div class="text-center text-light" style="width: 140px">
 			<img src="./assets/img/fgtkj.jpg" class="rounded-3">
+			<p class="pendidik fw-bold small" style="margin-top: -20px">Pak Fajrin</p>
 		</div>
-		<div class="" style="width: 140px">
+		<div class="text-center text-light" style="width: 140px">
 			<img src="./assets/img/fgdkv.jpg" class="rounded-3">
+			<p class="pendidik fw-bold small" style="margin-top: -20px">Bu Muli</p>
 		</div>
-		<div class="" style="width: 140px">
+		<div class="text-center text-light" style="width: 140px">
 			<img src="./assets/img/fgak.jpg" class="rounded-3">
+			<p class="pendidik fw-bold small" style="margin-top: -20px">Bu Sisca</p>
 		</div>
-		<div class="" style="width: 140px">
+		<div class="text-center text-light" style="width: 140px">
 			<img src="./assets/img/fgrpl.webp" class="rounded-3">
+			<p class="pendidik fw-bold small" style="margin-top: -20px">Bu Gusti</p>
 		</div>
 	</div>
 </main>

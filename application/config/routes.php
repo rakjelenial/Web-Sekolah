@@ -124,6 +124,8 @@ $route['akuntansi']                 = 'jurusan/jurusan/akl';
 $route['pemasaran']                 = 'jurusan/jurusan/bdp';
 $route['tata-busana']               = 'jurusan/jurusan/tbs';
 $route['tata-boga']                 = 'jurusan/jurusan/tbg';
+$route['jumlah-siswa']              = 'jurusan/jurusan/siswa';
+$route['kepala-sekolah']            = 'jurusan/jurusan/kepala';
 
 $route['default_controller'] = 'home';
 $route['404_override'] = '';
