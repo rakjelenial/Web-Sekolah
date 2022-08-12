@@ -124,8 +124,12 @@ $route['akuntansi']                 = 'jurusan/jurusan/akl';
 $route['pemasaran']                 = 'jurusan/jurusan/bdp';
 $route['tata-busana']               = 'jurusan/jurusan/tbs';
 $route['tata-boga']                 = 'jurusan/jurusan/tbg';
-$route['jumlah-siswa']              = 'jurusan/jurusan/siswa';
+$route['siswa']                     = 'jurusan/jurusan/siswa';
 $route['kepala-sekolah']            = 'jurusan/jurusan/kepala';
+$route['akreditasi']                = 'jurusan/jurusan/akreditasi';
+$route['sarana-sekolah']            = 'jurusan/jurusan/sarana';
+$route['ekstrakurikuler']           = 'jurusan/jurusan/eskul';
+$route['kalendar']                  = 'jurusan/jurusan/kalendar';
 
 $route['default_controller'] = 'home';
 $route['404_override'] = '';

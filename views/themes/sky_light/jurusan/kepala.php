@@ -38,7 +38,7 @@
 		<h5 class="border-start border-5 border-warning px-2 mb-3">Paling Dikomentari</h5>
 		<div class="list-group mt-3 mb-3">
 			<?php foreach($query->result() as $row) { ?>
-				<a href="<?=site_url('read/'.$row->id.'/'.$row->post_slug)?>" class="list-group-item list-group-item-action rounded-0">
+				<a href="<?=site_url('read/'.$row->id.'/'.$row->post_slug)?>" class="list-group-item list-group-item-action border-0 border-bottom px-0">
 					<div class="d-flex w-100 justify-content-between">
 						<h6 class="card-text font-weight-bold"><?=$row->post_title?></h6>
 					</div>

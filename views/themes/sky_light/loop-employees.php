@@ -58,51 +58,29 @@ function get_employees() {
 	}
 }
 </script>
-<div class="col-lg-12 col-md-12 col-sm-12 ">
-	<h5 class="page-title mb-3"><?=$page_title?></h5>
-	<div class="row">
+<div class="bg-white p-3 my-2">
+	<!-- <h5 class="page-title mb-3"><?=$page_title?></h5> -->
+    <h5 class="border-start border-5 border-warning px-2 mb-3">Guru Pengajar</h5>
 		<?php foreach($query->result() as $row) { ?>
-			<div class="col-md-6 mb-4 profile-alumni">
-				<div class="card h-100 border border-secondary rounded-0">
-					<div class="row no-gutters">
-						<div class="col-md-4">
-							<?php
-							$photo = 'no-image.jpg';
-							if ($row->photo && file_exists($_SERVER['DOCUMENT_ROOT'] . '/media_library/employees/'.$row->photo)) {
-								$photo = $row->photo;
-							}
-							echo '<img src="' . base_url('media_library/employees/'.$photo).'" class="card-img border border-secondary rounded-0 m-2">';
-							?>
-						</div>
-						<div class="col-md-8">
-							<div class="card-body pt-2 pb-2">
-								<dl class="row">
-									<dt class="col-sm-5">Nama Lengkap</dt>
-									<dd class="col-sm-7"><?=$row->full_name?></dd>
+			<div class="card border border-secondary rounded-3 mb-3 shadow-sm">
+				<div class="card-body pt-2 pb-2">
+					<dl class="row mb-0">
+						<dt class="col-5">Nama Lengkap</dt>
+						<dd class="col-7 px-0"><?=$row->full_name?></dd>
 
-									<dt class="col-sm-5">NIK</dt>
-									<dd class="col-sm-7"><?=$row->nik?></dd>
+						<dt class="col-5">NIP</dt>
+						<dd class="col-7 px-0"><?=$row->nip?></dd>
 
-									<dt class="col-sm-5">Jenis Kelamin</dt>
-									<dd class="col-sm-7"><?=$row->gender?></dd>
+						<dt class="col-5">Jenis Kelamin</dt>
+						<dd class="col-7 px-0"><?=$row->gender?></dd>
 
-									<dt class="col-sm-5">Tempat Lahir</dt>
-									<dd class="col-sm-7"><?=$row->birth_place?></dd>
-
-									<dt class="col-sm-5">Tanggal Lahir</dt>
-									<dd class="col-sm-7"><?=indo_date($row->birth_date)?></dd>
-
-									<dt class="col-sm-5">Jenis GTK</dt>
-									<dd class="col-sm-7"><?=$row->employment_type?></dd>
-								</dl>
-							</div>
-						</div>
-					</div>
+						<dt class="col-5">Jabatan</dt>
+						<dd class="col-7 px-0"><?=$row->mother_name?></dd>
+					</dl>
 				</div>
 			</div>
 		<?php } ?>
-	</div>
-	<div class="justify-content-between align-items-center float-right mb-3 w-100 more-employees">
-		<button type="button" onclick="get_employees()" class="btn action-button rounded-0 float-right"><i class="fa fa-refresh"></i> Tampilkan Lebih Banyak</button>
+	<div class="px-3 d-flex justify-content-end align-items-center mb-3 w-100 more-employees">
+		<button type="button" onclick="get_employees()" class="btn btn-sm btn-outline-warning"><i class="fa fa-refresh"></i> Tampilkan Lebih Banyak</button>
 	</div>
 </div>

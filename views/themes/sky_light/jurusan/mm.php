@@ -16,26 +16,16 @@
 <div class="p-3 mb-2">
 	<h5 class="border-start border-5 border-warning px-2 mb-3">Kegiatan Jurusan</h5>
     <div class="row g-1">
-        <div class="col mb-1">
-            <img src="https://ppdbmusaka.com/assets/images/mbr-1-1920x1280.jpg" class="img-fluid">
-        </div>
-        <div class="col">
-            <img src="https://ppdbmusaka.com/assets/images/mbr-1-1920x1280.jpg" class="img-fluid">
-        </div>
-        <div class="col">
-            <img src="https://ppdbmusaka.com/assets/images/mbr-1-1920x1280.jpg" class="img-fluid">
-        </div>
-    </div>
-    <div class="row g-1">
-        <div class="col">
-            <img src="https://ppdbmusaka.com/assets/images/mbr-1-1920x1280.jpg" class="img-fluid">
-        </div>
-        <div class="col">
-            <img src="https://ppdbmusaka.com/assets/images/mbr-1-1920x1280.jpg" class="img-fluid">
-        </div>
-        <div class="col">
-            <img src="https://ppdbmusaka.com/assets/images/mbr-1-1920x1280.jpg" class="img-fluid">
-        </div>
+        <?php
+            foreach (new DirectoryIterator('media_library/images/kegiatan/mm') as $file) {
+                if($file->isDot()) continue;
+                echo '<div class="col-4 mb-1">';
+                echo '<a href="media_library/images/kegiatan/mm/'.$file->getFilename().'" target="_blank" class="text-decoration-none">';
+                echo '<img src="media_library/images/kegiatan/mm/'.$file->getFilename().'" class="img-fluid">';
+                echo '</a>';
+                echo '</div>';
+            }
+        ?>
     </div>
 </div>
 <div class="bg-white pt-3">

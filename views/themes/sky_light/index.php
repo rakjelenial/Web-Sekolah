@@ -166,6 +166,8 @@
 					<h6 class="border-bottom border-warning border-2 pb-2 fw-bold">Link Terkait</h6>
 					<div class="tag-content-block tag">
 						<a href="https://btikp.kalselprov.go.id" target="_blank" class="bg-white text-success">BTIKP Kalsel</a>
+						<a href="https://sekolah.data.kemdikbud.go.id/index.php/Chome/profil/0EF2B473-ECFD-435A-A2F0-354BABA95B71" target="_blank">Dapodik</a>
+						<a href="https://gtk.belajar.kemdikbud.go.id/" target="_blank">GTK Kemdikbud</a>
 						<!-- <?php $query = get_tags(10); if ($query->num_rows() > 0) { ?>
 							<?php foreach ($query->result() as $row) { ?>
 								<a href="<?=site_url('tag/'.$row->slug)?>"><?=$row->tag?></a>
@@ -206,13 +208,13 @@
 			<button type="submit" class="btn btn-lg btn btn-outline-light rounded-0"><i class="fa fa-search"></i> CARI</button>
 		</form>
 	</div> -->
-	<a href="javascript:" id="return-to-top" class="rounded-lg"><i class="fa fa-angle-double-up"></i></a>
+	<!-- <a href="javascript:" id="return-to-top" class="rounded-lg"><i class="fa fa-angle-double-up"></i></a> -->
 	</div>
-	<!-- JavaScript Bundle with Popper -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 	<script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script>
 	<script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
-	<!-- <script src="./assets/js/main.js"></script> -->
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+	<script src="./assets/js/main.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$(".owl-carousel").owlCarousel({
@@ -222,6 +224,8 @@
 				items       : 5
 			});
 		});
+		// $(".owl-dots").addClass("disabled");
+		Notification.requestPermission(status => console.log(status))
 	</script>
 </body>
 </html>

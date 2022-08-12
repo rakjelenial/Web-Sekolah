@@ -64,4 +64,24 @@ class Jurusan extends Public_Controller {
 		$this->vars['content'] = 'themes/'.theme_folder().'/jurusan/kepala';
 		$this->load->view('themes/'.theme_folder().'/index', $this->vars);
 	}
+
+	public function akreditasi() {
+		$this->vars['content'] = 'themes/'.theme_folder().'/jurusan/akreditasi';
+		$this->load->view('themes/'.theme_folder().'/index', $this->vars);
+	}
+
+	public function sarana() {
+		$this->vars['content'] = 'themes/'.theme_folder().'/jurusan/sarana';
+		$this->load->view('themes/'.theme_folder().'/index', $this->vars);
+	}
+
+	public function eskul() {
+		$this->vars['content'] = 'themes/'.theme_folder().'/jurusan/eskul';
+		$this->load->view('themes/'.theme_folder().'/index', $this->vars);
+	}
+
+	public function kalendar() {
+		$this->vars['content'] = 'themes/'.theme_folder().'/jurusan/kalendar';
+		$this->load->view('themes/'.theme_folder().'/index', $this->vars);
+	}
 }

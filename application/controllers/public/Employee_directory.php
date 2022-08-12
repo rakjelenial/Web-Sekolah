@@ -20,7 +20,7 @@ class Employee_directory extends Public_Controller {
 	 * Limit per page
 	 * @var Integer
 	 */
-	public static $per_page = 20;
+	public static $per_page = 70;
 
 	/**
 	 * Class Constructor

@@ -458,4 +458,18 @@
   font-family: "Jost", sans-serif;
 }
 
+.pendidik {
+  position: absolute;
+  z-index: 99;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 90%;
+}
+
+.over {
+  overflow: hidden;
+}
+
 /*# sourceMappingURL=custom.css.map */

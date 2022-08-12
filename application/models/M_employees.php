@@ -220,6 +220,8 @@ class M_employees extends CI_Model {
 			x1.id
 		  , x1.nik
 		  , x1.full_name
+		  , x1.mother_name
+		  , x1.nip
 		  , IF(x1.gender = 'M', 'Laki-laki', 'Perempuan') as gender
 		  , x1.birth_place
 		  , x1.birth_date
@@ -228,7 +230,8 @@ class M_employees extends CI_Model {
 		");
 		$this->db->join('options x2', 'x1.employment_type_id = x2.id', 'LEFT');
 		$this->db->where('x1.is_deleted', 'false');
-		$this->db->order_by('x1.full_name', 'ASC');
+		// $this->db->order_by('x1.full_name', 'ASC');
+		$this->db->order_by('x1.birth_place', 'ASC');
 		if ( $limit > 0 ) $this->db->limit($limit, $offset);
 		return $this->db->get(self::$table . ' x1');
 	}
