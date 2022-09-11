@@ -180,11 +180,11 @@
 						<i class="fa fa-address-book-o"></i> <span><?=__session('school_level') >= 5 ? 'PMB' : 'PPDB'?> <?=NULL !== __session('admission_year') ? __session('admission_year') : date('Y');?> </span> <i class="fa fa-angle-left pull-right"></i>
 					</a>
 					<ul class="treeview-menu">
-						<!-- <li <?=isset($admission_settings) ? 'class="active"':'';?>><a href="<?=site_url('admission/admission_settings');?>"><i class="fa fa-sign-out"></i> Pengaturan</a></li> -->
+						<li <?=isset($admission_settings) ? 'class="active"':'';?>><a href="<?=site_url('admission/admission_settings');?>"><i class="fa fa-sign-out"></i> Pengaturan</a></li>
 						<li <?=isset($registrants) ? 'class="active"':'';?>><a href="<?=site_url('admission/registrants');?>"><i class="fa fa-sign-out"></i> Calon <?=__session('_student')?> Baru</a></li>
-						<!-- <li <?=isset($admission_phases) ? 'class="active"':'';?>><a href="<?=site_url('admission/admission_phases');?>"><i class="fa fa-sign-out"></i> Gelombang Pendaftaran</a></li> -->
+						<li <?=isset($admission_phases) ? 'class="active"':'';?>><a href="<?=site_url('admission/admission_phases');?>"><i class="fa fa-sign-out"></i> Gelombang Pendaftaran</a></li>
 						<li <?=isset($admission_quotas) ? 'class="active"':'';?>><a href="<?=site_url('admission/admission_quotas');?>"><i class="fa fa-sign-out"></i> Kuota Penerimaan</a></li>
-						<!-- <li <?=isset($admission_types) ? 'class="active"':'';?>><a href="<?=site_url('admission/admission_types');?>"><i class="fa fa-sign-out"></i> Jalur Pendaftaran</a></li> -->
+						<li <?=isset($admission_types) ? 'class="active"':'';?>><a href="<?=site_url('admission/admission_types');?>"><i class="fa fa-sign-out"></i> Jalur Pendaftaran</a></li>
 						<li <?=isset($selection_process) ? 'class="active"':'';?>><a href="<?=site_url('admission/selection_process');?>"><i class="fa fa-sign-out"></i> Proses Seleksi</a></li>
 						<li <?=isset($registrants_approved) ? 'class="active"':'';?>><a href="<?=site_url('admission/registrants_approved');?>"><i class="fa fa-sign-out"></i> Pendaftar Diterima</a></li>
 						<li <?=isset($registrants_unapproved) ? 'class="active"':'';?>><a href="<?=site_url('admission/registrants_unapproved');?>"><i class="fa fa-sign-out"></i> Pendaftar Tidak Diterima</a></li>
@@ -270,14 +270,14 @@
 						<i class="fa fa-wrench"></i> <span>PENGATURAN</span> <i class="fa fa-angle-left pull-right"></i>
 					</a>
 					<ul class="treeview-menu">
-						<!-- <li <?=isset($discussion_settings) ? 'class="active"':'';?>><a href="<?=site_url('settings/discussion');?>"><i class="fa fa-sign-out"></i> Diskusi</a></li> -->
-						<!-- <li <?=isset($mail_server_settings) ? 'class="active"':'';?>><a href="<?=site_url('settings/mail_server');?>"><i class="fa fa-sign-out"></i> Email Server</a></li> -->
-						<!-- <li <?=isset($social_account_settings) ? 'class="active"':'';?>><a href="<?=site_url('settings/social_account');?>"><i class="fa fa-sign-out"></i> Jejaring Sosial</a></li> -->
-						<!-- <li <?=isset($media_settings) ? 'class="active"':'';?>><a href="<?=site_url('settings/media');?>"><i class="fa fa-sign-out"></i> Media</a></li> -->
-						<!-- <li <?=isset($writing_settings) ? 'class="active"':'';?>><a href="<?=site_url('settings/writing');?>"><i class="fa fa-sign-out"></i> Menulis</a></li> -->
-						<!-- <li <?=isset($reading_settings) ? 'class="active"':'';?>><a href="<?=site_url('settings/reading');?>"><i class="fa fa-sign-out"></i> Membaca</a></li> -->
+						<li <?=isset($discussion_settings) ? 'class="active"':'';?>><a href="<?=site_url('settings/discussion');?>"><i class="fa fa-sign-out"></i> Diskusi</a></li>
+						<li <?=isset($mail_server_settings) ? 'class="active"':'';?>><a href="<?=site_url('settings/mail_server');?>"><i class="fa fa-sign-out"></i> Email Server</a></li>
+						<li <?=isset($social_account_settings) ? 'class="active"':'';?>><a href="<?=site_url('settings/social_account');?>"><i class="fa fa-sign-out"></i> Jejaring Sosial</a></li>
+						<li <?=isset($media_settings) ? 'class="active"':'';?>><a href="<?=site_url('settings/media');?>"><i class="fa fa-sign-out"></i> Media</a></li>
+						<li <?=isset($writing_settings) ? 'class="active"':'';?>><a href="<?=site_url('settings/writing');?>"><i class="fa fa-sign-out"></i> Menulis</a></li>
+						<li <?=isset($reading_settings) ? 'class="active"':'';?>><a href="<?=site_url('settings/reading');?>"><i class="fa fa-sign-out"></i> Membaca</a></li>
 						<li <?=isset($school_profile_settings) ? 'class="active"':'';?>><a href="<?=site_url('settings/school_profile');?>"><i class="fa fa-sign-out"></i> Profil <?=__session('school_level') >= 5 ? 'Kampus' : 'Sekolah'?></a></li>
-						<!-- <li <?=isset($general_settings) ? 'class="active"':'';?>><a href="<?=site_url('settings/general');?>"><i class="fa fa-sign-out"></i> Umum</a></li> -->
+						<li <?=isset($general_settings) ? 'class="active"':'';?>><a href="<?=site_url('settings/general');?>"><i class="fa fa-sign-out"></i> Umum</a></li>
 					</ul>
 				</li>
 			<?php } ?>

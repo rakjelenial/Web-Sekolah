@@ -38,7 +38,7 @@
 	</div>
 </div>
 <main class="bg-white p-3 my-2">
-	<h5 class="border-start border-5 border-warning px-2 mb-3">Jurusan Sekolah</h5>
+	<h5 class="border-start border-5 border-warning px-2 mb-3">Program Keahlian</h5>
 	<div class="d-flex flex-wrap justify-content-start">
 		<a href="multimedia" class="col-4 p-1 mb-2 align-middle text-center text-decoration-none" style="height: 65px">
 			<div class="rounded-3 p-1 bg-gradient" style="background-color: #1770aa">

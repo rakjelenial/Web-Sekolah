@@ -29,7 +29,7 @@
     </div>
 </div>
 <div class="bg-white pt-3">
-	<h5 class="border-start border-5 border-warning px-2 mb-3 mx-3">Pertanyaan Seputar PPLG</h5>
+	<h5 class="border-start border-5 border-warning px-2 mb-3 mx-3">Pertanyaan Seputar DKV</h5>
     <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
         <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingOne">

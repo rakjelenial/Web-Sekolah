@@ -142,14 +142,23 @@ function get_post_comments() {
 				<?php foreach($query->result() as $row) { ?>
 					<!-- <div class="card rounded-3 border border-secondary mb-3"> -->
 					<div class="card mb-3 border-0 border-0 border-bottom rounded-0 pb-2">
-						<div class="card-body p-0">
-							<h5 class="card-title mb-0"><a href="<?=site_url('read/'.$row->id.'/'.$row->post_slug)?>" class="text-decoration-none"><?=$row->post_title?></a></h5>
-							<p class="card-text"><?=substr(strip_tags($row->post_content), 0, 85)?></p>
-							<!-- <div class="d-flex justify-content-between align-items-center mt-1">
-								<small class="text-muted fst-italic"><?=date('d/m/Y H:i', strtotime($row->created_at))?> WIB - <?=$row->post_author?></small>
-								<a href="<?=site_url('read/'.$row->id.'/'.$row->post_slug)?>" class="btn btn-sm action-button rounded-0"><i class="fa fa-search"></i></a>
-							</div> -->
+						<?php if ($post_type == 'post') { ?>
+						<div class="row g-0">
+							<div class="col-3 d-flex">
+								<img src="<?=base_url('media_library/posts/medium/'.$row->post_image)?>" class="img-fluid h-100 rounded-start" style="padding-right: 5px" alt="<?=$row->post_title?>">
+							</div>
+							<div class="col-9"><?php } ?>
+								<div class="card-body p-0">
+									<h5 class="card-title mb-0"><a href="<?=site_url('read/'.$row->id.'/'.$row->post_slug)?>" class="text-decoration-none"><?=$row->post_title?></a></h5>
+									<p class="card-text"><?=substr(strip_tags($row->post_content), 0, 85)?>...</p>
+									<!-- <div class="d-flex justify-content-between align-items-center mt-1">
+										<small class="text-muted fst-italic"><?=date('d/m/Y H:i', strtotime($row->created_at))?> WIB - <?=$row->post_author?></small>
+										<a href="<?=site_url('read/'.$row->id.'/'.$row->post_slug)?>" class="btn btn-sm action-button rounded-0"><i class="fa fa-search"></i></a>
+									</div> -->
+								</div><?php if ($post_type == 'post') { ?>
+							</div>
 						</div>
+						<?php } ?>
 					</div>
 				<?php } ?>
 			<?php } ?>
