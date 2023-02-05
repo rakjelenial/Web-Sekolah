@@ -43,6 +43,10 @@ class M_registrants extends CI_Model {
 		$year = __session('admission_year');
 		$this->admission_year = (NULL !== $year && $year > 0) ? $year : date('Y');
 	}
+	
+	public function all() {
+		return $this->db->get('students')->result();
+	}
 
 	/**
 	 * Display a listing of the resource.
