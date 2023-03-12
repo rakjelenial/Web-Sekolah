@@ -48,7 +48,8 @@ class Admission_form extends Public_Controller {
 		$this->load->helper('form');
 		$this->load->model(['m_majors', 'm_settings']);
 		$this->vars['recaptcha_site_key'] = __session('recaptcha_site_key');
-		$this->vars['page_title'] = 'Formulir Penerimaan '. (__session('school_level') >= 5 ? 'Mahasiswa' : 'Peserta Didik').' Baru Tahun '.__session('admission_year');
+		// $this->vars['page_title'] = 'Formulir Penerimaan '. (__session('school_level') >= 5 ? 'Mahasiswa' : 'Peserta Didik').' Baru Tahun '.__session('admission_year');
+		$this->vars['page_title'] = 'Daftar '. (__session('school_level') >= 5 ? 'Mahasiswa' : 'Peserta Didik').' Tahun '.__session('admission_year');
 		$this->vars['religions'] = ['' => 'Pilih :'] + get_options('religions', FALSE);
 		$this->vars['special_needs'] = get_options('special_needs', FALSE);
 		$this->vars['residences'] = ['' => 'Pilih :'] + get_options('residences', FALSE);
@@ -123,7 +124,8 @@ class Admission_form extends Public_Controller {
 					$this->vars['status'] = $query ? 'success' : 'error';
 				}
 				if (!isset($this->vars['message'])) {
-					$this->vars['message'] = $query ? 'created' : 'not_created';
+					// $this->vars['message'] = $query ? 'created' : 'not_created';
+					$this->vars['message'] = $query ? 'created' : 'NIK Anda sudah terdaftar';
 				}
 				$file_name = 'formulir-penerimaan-'. (__session('school_level') >= 5 ? 'mahasiswa' : 'peserta-didik').'-baru-tahun-'.__session('admission_year');
 				$file_name .= '-'.$fill_data['birth_date'].'-'.$fill_data['registration_number'].'.pdf';
@@ -211,13 +213,19 @@ class Admission_form extends Public_Controller {
 		$data['first_choice_id'] = $this->input->post('first_choice_id', true) ? (int) $this->input->post('first_choice_id', true) : 0;
 		$data['second_choice_id'] = $this->input->post('second_choice_id', true) ? (int) $this->input->post('second_choice_id', true) : 0;
 		$data['nisn'] = $this->input->post('nisn', true) ? $this->input->post('nisn', true) : NULL;
+		$data['nkk'] = $this->input->post('nkk', true) ? $this->input->post('nkk', true) : NULL;
 		$data['nik'] = $this->input->post('nik', true) ? $this->input->post('nik', true) : NULL;
+		$data['no_akta'] = $this->input->post('no_akta', true) ? $this->input->post('no_akta', true) : NULL;
+		$data['nik_father'] = $this->input->post('nik_father', true) ? $this->input->post('nik_father', true) : NULL;
+		$data['nik_mother'] = $this->input->post('nik_mother', true) ? $this->input->post('nik_mother', true) : NULL;
+		$data['nik_guardian'] = $this->input->post('nik_guardian', true) ? $this->input->post('nik_guardian', true) : NULL;
 		$data['prev_exam_number'] = $this->input->post('prev_exam_number', true) ? $this->input->post('prev_exam_number', true) : NULL;
 		$data['achievement'] = $this->input->post('achievement', true) ? $this->input->post('achievement', true) : NULL;
 		$data['paud'] = $this->input->post('paud', true) ? $this->input->post('paud', true) : NULL;
 		$data['tk'] = $this->input->post('tk', true) ? $this->input->post('tk', true) : NULL;
 		$data['skhun'] = $this->input->post('skhun', true) ? $this->input->post('skhun', true) : NULL;
 		$data['prev_school_name'] = $this->input->post('prev_school_name', true) ? $this->input->post('prev_school_name', true) : NULL;
+		$data['tahun_lulus'] = $this->input->post('tahun_lulus', true) ? $this->input->post('tahun_lulus', true) : NULL;
 		$data['prev_school_address'] = $this->input->post('prev_school_address', true) ? $this->input->post('prev_school_address', true) : NULL;
 		$data['prev_diploma_number'] = $this->input->post('prev_diploma_number', true) ? $this->input->post('prev_diploma_number', true) : NULL;
 		$data['hobby'] = $this->input->post('hobby', true) ? $this->input->post('hobby', true) : NULL;
@@ -236,6 +244,9 @@ class Admission_form extends Public_Controller {
 		$data['transportation_id'] = $this->input->post('transportation_id', true) ? $this->input->post('transportation_id', true) : NULL;
 		$data['phone'] = $this->input->post('phone', true) ? $this->input->post('phone', true) : NULL;
 		$data['mobile_phone'] = $this->input->post('mobile_phone', true) ? $this->input->post('mobile_phone', true) : NULL;
+		$data['phone_father'] = $this->input->post('phone_father', true) ? $this->input->post('phone_father', true) : NULL;
+		$data['phone_mother'] = $this->input->post('phone_mother', true) ? $this->input->post('phone_mother', true) : NULL;
+		$data['phone_guardian'] = $this->input->post('phone_guardian', true) ? $this->input->post('phone_guardian', true) : NULL;
 		$data['email'] = $this->input->post('email', true) ? $this->input->post('email', true) : NULL;
 		$data['sktm'] = $this->input->post('sktm', true) ? $this->input->post('sktm', true) : NULL;
 		$data['kks'] = $this->input->post('kks', true) ? $this->input->post('kks', true) : NULL;
@@ -261,16 +272,19 @@ class Admission_form extends Public_Controller {
 		$data['guardian_education_id'] = $this->input->post('guardian_education_id', true) ? (int) $this->input->post('guardian_education_id', true) : 0;
 		$data['guardian_employment_id'] = $this->input->post('guardian_employment_id', true) ? (int) $this->input->post('guardian_employment_id', true) : 0;
 		$data['guardian_monthly_income_id'] = $this->input->post('guardian_monthly_income_id', true) ? (int) $this->input->post('guardian_monthly_income_id', true) : 0;
+		$data['address_parent'] = $this->input->post('address_parent', true) ? $this->input->post('address_parent', true) : NULL;
 		$data['mileage'] = $this->input->post('mileage', true) ? $this->input->post('mileage', true) : NULL;
 		$data['traveling_time'] = $this->input->post('traveling_time', true) ? $this->input->post('traveling_time', true) : NULL;
 		$data['height'] = $this->input->post('height', true) ? $this->input->post('height', true) : NULL;
 		$data['weight'] = $this->input->post('weight', true) ? $this->input->post('weight', true) : NULL;
+		$data['lingkar_kpl'] = $this->input->post('lingkar_kpl', true) ? $this->input->post('lingkar_kpl', true) : NULL;
 
-		$data['bhs_indo'] = $this->input->post('bhs_indo', true) ? $this->input->post('bhs_indo', true) : NULL;
-		$data['bhs_inggris'] = $this->input->post('bhs_inggris', true) ? $this->input->post('bhs_inggris', true) : NULL;
-		$data['mtk'] = $this->input->post('mtk', true) ? $this->input->post('mtk', true) : NULL;
-		$data['ipa'] = $this->input->post('ipa', true) ? $this->input->post('ipa', true) : NULL;
+		// $data['bhs_indo'] = $this->input->post('bhs_indo', true) ? $this->input->post('bhs_indo', true) : NULL;
+		// $data['bhs_inggris'] = $this->input->post('bhs_inggris', true) ? $this->input->post('bhs_inggris', true) : NULL;
+		// $data['mtk'] = $this->input->post('mtk', true) ? $this->input->post('mtk', true) : NULL;
+		// $data['ipa'] = $this->input->post('ipa', true) ? $this->input->post('ipa', true) : NULL;
 		$data['sibling_number'] = $this->input->post('sibling_number', true) ? (int) $this->input->post('sibling_number', true) : 0;
+		$data['anak_ke'] = $this->input->post('anak_ke', true) ? (int) $this->input->post('anak_ke', true) : 0;
 		return $data;
 	}
 
@@ -312,11 +326,15 @@ class Admission_form extends Public_Controller {
 		$val->set_rules('gender', 'Jenis Kelamin', 'trim|required');
 		$val->set_rules('skhun', 'Nomor Seri SKHUN Sebelumnya', 'trim');
 		$val->set_rules('prev_diploma_number', 'Nomor Seri Ijazah Sebelumnya', 'trim');
-		$val->set_rules('nisn', 'NISN', 'trim');
-		$val->set_rules('nik', 'NIK', 'trim');
+		$val->set_rules('nisn', 'NISN', 'trim|required');
+		$val->set_rules('nkk', 'No. Kartu Keluarga', 'trim|required');
+		$val->set_rules('nik', 'NIK', 'trim|required');
+		$val->set_rules('no_akta', 'No. Akta Kelahiran', 'trim|required');
 		$val->set_rules('birth_place', 'Tempat Lahir', 'trim|required');
 		$val->set_rules('birth_date', 'Tanggal Lahir', 'trim|required');
 		$val->set_rules('religion_id', 'Agama', 'trim|required|numeric');
+		$val->set_rules('prev_school_name', 'Nama Asal Sekolah', 'trim|required');
+		$val->set_rules('tahun_lulus', 'Tahun Lulus Sekolah Sebelumnya', 'trim|required');
 		// $val->set_rules('special_need_id', 'Kebutuhan Khusus', 'trim|numeric');
 		$val->set_rules('street_address', 'Alamat Jalan', 'trim|required');
 		$val->set_rules('rt', 'RT', 'trim');
@@ -330,7 +348,10 @@ class Admission_form extends Public_Controller {
 		// $val->set_rules('transportation_id', 'Moda Transportasi', 'trim|numeric');
 		// $val->set_rules('phone', 'Nomor Telepon', 'trim');
 		$val->set_rules('mobile_phone', 'Nomor HP', 'trim|required');
-		// $val->set_rules('email', 'E-mail Pribadi', 'trim|valid_email|callback_email_exists');
+		$val->set_rules('phone_father', 'Nomor HP Ayah', 'trim|required');
+		$val->set_rules('phone_mother', 'Nomor HP Ibu', 'trim|required');
+		$val->set_rules('phone_guardian', 'Nomor HP Wali', 'trim');
+		$val->set_rules('email', 'E-mail Pribadi', 'trim|valid_email|callback_email_exists');
 		// $val->set_rules('sktm', 'No. Surat Keterangan Tidak Mampu (SKTM)', 'trim');
 		// $val->set_rules('kks', 'No. Kartu Keluarga Sejahtera (KKS)', 'trim');
 		// $val->set_rules('kps', 'No. Kartu Pra Sejahtera (KPS)', 'trim');
@@ -340,6 +361,7 @@ class Admission_form extends Public_Controller {
 		// $val->set_rules('country', 'Nama Negara', 'trim');
 
 		$val->set_rules('father_name', 'Nama Ayah Kandung', 'trim|required');
+		$val->set_rules('nik_father', 'NIK Ayah', 'trim|required');
 		$val->set_rules('father_birth_year', 'Tahun Lahir Ayah', 'trim|numeric|required|min_length[4]|max_length[4]');
 		$val->set_rules('father_education_id', 'Pendidikan Ayah', 'trim|numeric');
 		$val->set_rules('father_employment_id', 'Pekerjaan Ayah', 'trim|numeric');
@@ -347,23 +369,28 @@ class Admission_form extends Public_Controller {
 		// $val->set_rules('father_special_need_id', 'Kebutuhan Khusus Ayah', 'trim|numeric');
 
 		$val->set_rules('mother_name', 'Nama Ibu Kandung', 'trim|required');
-		$val->set_rules('mother_birth_year', 'Tahun Lahir Ibu', 'trim|numeric|min_length[4]|max_length[4]');
+		$val->set_rules('nik_mother', 'NIK Ibu', 'trim|required');
+		$val->set_rules('mother_birth_year', 'Tahun Lahir Ibu', 'trim|numeric|required|min_length[4]|max_length[4]');
 		$val->set_rules('mother_education_id', 'Pendidikan Ibu', 'trim|numeric');
 		$val->set_rules('mother_employment_id', 'Pekerjaan Ibu', 'trim|numeric');
 		$val->set_rules('mother_monthly_income_id', 'Penghasilan Bulanan Ibu', 'trim|numeric');
 		// $val->set_rules('mother_special_need_id', 'Kebutuhan Khusus Ibu', 'trim|numeric');
 
 		$val->set_rules('guardian_name', 'Nama Wali', 'trim');
+		$val->set_rules('nik_guardian', 'NIK', 'trim');
 		$val->set_rules('guardian_birth_year', 'Tahun Lahir Wali', 'trim|numeric|min_length[4]|max_length[4]');
 		$val->set_rules('guardian_education_id', 'Pendidikan Wali', 'trim|numeric');
 		$val->set_rules('guardian_employment_id', 'Pekerjaan Wali', 'trim|numeric');
 		$val->set_rules('guardian_monthly_income_id', 'Penghasilan Bulanan Wali', 'trim|numeric');
+		$val->set_rules('address_parent', 'Alamat Lengkap Orang Tua / Wali', 'trim|required');
 
-		// $val->set_rules('mileage', 'Jarak Tempat Tinggal ke Sekolah', 'trim|numeric|min_length[1]|max_length[5]');
-		// $val->set_rules('traveling_time', 'Waktu Tempuh ke Sekolah', 'trim|numeric|min_length[1]|max_length[5]');
-		// $val->set_rules('height', 'Tinggi Badan', 'trim|numeric|min_length[2]|max_length[5]');
-		// $val->set_rules('weight', 'Berat Badan', 'trim|numeric|min_length[2]|max_length[5]');
-		// $val->set_rules('sibling_number', 'Jumlah Saudara Kandung', 'trim|numeric|max_length[2]');
+		$val->set_rules('mileage', 'Jarak Tempat Tinggal ke Sekolah', 'trim|numeric|min_length[1]|max_length[5]');
+		$val->set_rules('traveling_time', 'Waktu Tempuh ke Sekolah', 'trim|numeric|min_length[1]|max_length[5]');
+		$val->set_rules('height', 'Tinggi Badan', 'trim|numeric|required|min_length[2]|max_length[5]');
+		$val->set_rules('weight', 'Berat Badan', 'trim|numeric|required|min_length[2]|max_length[5]');
+		$val->set_rules('lingkar_kpl', 'Lingkar Kepala', 'trim|required|numeric|min_length[2]|max_length[5]');
+		$val->set_rules('sibling_number', 'Jumlah Saudara Kandung', 'trim|numeric|max_length[2]');
+		$val->set_rules('anak_ke', 'Jumlah Saudara Kandung', 'trim|numeric|max_length[2]');
 		$val->set_rules('bhs_indo', 'Nilai Bahasa Indonesia', 'trim|numeric|min_length[2]|max_length[6]');
 		$val->set_rules('bhs_inggris', 'Nilai Bahasa Inggris', 'trim|numeric|min_length[2]|max_length[6]');
 		$val->set_rules('mtk', 'Nilai Matematika', 'trim|numeric|min_length[2]|max_length[6]');

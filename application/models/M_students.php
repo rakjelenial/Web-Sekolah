@@ -237,12 +237,16 @@ class M_students extends CI_Model {
 				, x1.citizenship
 				, x1.country
 				, x1.father_name
+				, x1.nik_father
+				, x1.phone_father
 				, x1.father_birth_year
 				, x11.option_name AS father_education
 				, x12.option_name AS father_employment
 				, x13.option_name AS father_monthly_income
 				, x14.option_name AS father_special_need
 				, x1.mother_name
+				, x1.nik_mother
+				, x1.phone_mother
 				, x1.mother_birth_year
 				, x15.option_name AS mother_education
 				, x16.option_name AS mother_employment

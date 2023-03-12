@@ -47,6 +47,38 @@ class M_registrants extends CI_Model {
 	public function all() {
 		return $this->db->get('students')->result();
 	}
+	
+	public function bank_member() {
+	   // return $this->db->get_where('students', array('bank_status' => 'member'))->result();
+	    
+	    $this->db->select('students.id, full_name, nisn, bank_status, majors.major_name');
+        $this->db->from('students');
+        $this->db->join('majors', 'students.major_id = majors.id', 'left');
+        $this->db->where('bank_status', 'member');
+	    return $this->db->get()->result();
+	}
+	
+	public function bank_not_member() {
+	    return $this->db->get_where('students', array('bank_status' => 'not_member'))->result();
+	}
+	
+	public function member_selected($id) {
+	    $this->db->select('students.id, full_name, nisn, bank_status, majors.major_name');
+        $this->db->from('students');
+        $this->db->join('majors', 'students.major_id = majors.id', 'left');
+        $this->db->where('students.id', $id);
+	    return $this->db->get()->row();
+	}
+	
+	public function add_member($id) {
+	    $data = [
+			"bank_status" => 'member'
+		];
+		$this->db->where("id", $id);
+		$this->db->update('students', $data);
+		$this->output->set_status_header(200);
+        $this->output->set_output(json_encode(array('message' => 'Member added successfully')));
+	}
 
 	/**
 	 * Display a listing of the resource.

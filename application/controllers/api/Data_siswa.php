@@ -8,6 +8,7 @@ class Data_siswa extends Public_Controller {
 	 */
 	public function __construct() {
 		parent::__construct();
+        $this->load->library('CORS');
 		$this->load->model(['m_registrants', 'm_majors']);
 		$this->pk = M_registrants::$pk;
 		$this->table = M_registrants::$table;
@@ -29,6 +30,43 @@ class Data_siswa extends Public_Controller {
 		
 		$data = $this->m_registrants->all();
 		echo json_encode($data);
+// 		header("Access-Control-Allow-Origin: *");
+//         header("Access-Control-Allow-Methods: GET");
+//         header("Access-Control-Allow-Methods: GET, OPTIONS");
+		
+		
+		
+// 		$this->response($data, 200);
+		
+// 		$data = array(
+//             'full_name' => 'Hello, API'
+//         );
+        
+        // $this->output
+        //      ->set_content_type('application/json')
+        //      ->set_output(json_encode($data));
+// 		$this->output
+// 			->set_content_type('application/json', 'utf-8')
+// 			->set_output(json_encode($data, JSON_HEX_APOS | JSON_HEX_QUOT));
+	}
+	
+	public function bank_member(){
+		$data = $this->m_registrants->bank_member();
+		echo json_encode($data);
+	}
+	
+	public function bank_not_member(){
+		$data = $this->m_registrants->bank_not_member();
+		echo json_encode($data);
+	}
+	
+	public function member_selected($id) {
+		$data = $this->m_registrants->member_selected($id);
+		echo json_encode($data);
+	}
+	
+	public function add_member($id) {
+		$this->m_registrants->add_member($id);
 	}
 
 	/**
