@@ -66,7 +66,7 @@ class M_registrants extends CI_Model {
 	    $this->db->select('students.id, full_name, nisn, bank_status, majors.major_name');
         $this->db->from('students');
         $this->db->join('majors', 'students.major_id = majors.id', 'left');
-        $this->db->where('students.id', $id);
+        $this->db->where('students.nisn', $id);
 	    return $this->db->get()->row();
 	}
 	
@@ -74,7 +74,7 @@ class M_registrants extends CI_Model {
 	    $data = [
 			"bank_status" => 'member'
 		];
-		$this->db->where("id", $id);
+		$this->db->where("nisn", $id);
 		$this->db->update('students', $data);
 		$this->output->set_status_header(200);
         $this->output->set_output(json_encode(array('message' => 'Member added successfully')));
