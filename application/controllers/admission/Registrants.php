@@ -184,7 +184,7 @@ class Registrants extends Admin_Controller {
 			'guardian_education_id' => (int) $this->input->post('guardian_education_id', true),
 			'guardian_employment_id' => (int) $this->input->post('guardian_employment_id', true),
 			'guardian_monthly_income_id' => (int) $this->input->post('guardian_monthly_income_id', true),
-			'address_parent' => (int) $this->input->post('address_parent', true),
+			'address_parent' => $this->input->post('address_parent', true),
 			'mileage' => $this->input->post('mileage', true),
 			'traveling_time' => $this->input->post('traveling_time', true),
 			'height' => $this->input->post('height', true),
@@ -211,7 +211,7 @@ class Registrants extends Admin_Controller {
 			// $val->set_rules('second_choice_id', 'Pilihan II', 'trim|required');
 		}
 		$val->set_rules('full_name', 'Nama Lengkap', 'trim|required');
-		//$val->set_rules('email', 'Email', 'trim|required|valid_email|callback_email_exists[' . $id . ']');
+		$val->set_rules('email', 'Email', 'trim|required|valid_email|callback_email_exists[' . $id . ']');
 		$val->set_rules('father_birth_year', 'Tahun Lahir Ayah', 'trim|numeric|min_length[4]|max_length[4]');
 		$val->set_rules('mother_birth_year', 'Tahun Lahir Ibu', 'trim|numeric|min_length[4]|max_length[4]');
 		$val->set_rules('guardian_birth_year', 'Tahun Lahir Wali', 'trim|numeric|min_length[4]|max_length[4]');
