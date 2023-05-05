@@ -3,9 +3,9 @@
 	<div class="card rounded-0 border border-secondary mb-3">
 		<form action="<?= base_url('kelulusan') ?>" method="post">
 			<div class="card-body">
-				<h3>Masukkan nomor NISN untuk melihat status LULUS / TIDAK LULUS</h3>
-				<div class="form-group row mb-2">
-					<label for="registration_number" class="col-sm-2 control-label">Nomor NISN <span style="color: red">*</span></label>
+				<h4>Masukkan nomor NISN untuk melihat status LULUS / TIDAK LULUS</h4>
+				<div class="form-group row my-2">
+					<label for="registration_number" class="col-sm-4 control-label">Nomor NISN <span style="color: red">*</span></label>
 					<div class="col-sm-5">
 						<input type="text" class="form-control form-control-sm rounded-0 border border-secondary" id="registration_number" name="registration_number">
 					</div>

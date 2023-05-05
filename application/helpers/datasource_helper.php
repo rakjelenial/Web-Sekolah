@@ -383,9 +383,12 @@ if (! function_exists('modules')) {
 			$modules['direktori-peserta-didik'] = 'Direktori Peserta Didik';
 			$modules['direktori-guru-dan-tenaga-kependidikan'] = 'Direktori Guru dan Tenaga Kependidikan';
 			$modules['formulir-penerimaan-peserta-didik-baru'] = 'Formulir PPDB';
+			$modules['registrasi-mandiri-online'] = 'Registrasi PPDB';
 			$modules['hasil-seleksi-penerimaan-peserta-didik-baru'] = 'Hasil Seleksi PPDB';
 			$modules['cetak-formulir-penerimaan-peserta-didik-baru'] = 'Cetak Formulir PPDB';
 			$modules['download-formulir-penerimaan-peserta-didik-baru'] = 'Download Formulir PPDB';
+			$modules['daftar-ulang-mandiri-online'] = 'Daftar Ulang Mandiri Online';
+			$modules['pengumuman-kelulusan'] = 'Pengumuman Kelulusan';
 		}
 		return $key == '' ? $modules : $modules[$key];
 	}

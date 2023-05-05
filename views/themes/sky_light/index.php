@@ -84,8 +84,15 @@
 		<script src="https://www.google.com/recaptcha/api.js?hl=id" async defer></script>
 	<?php } ?>
 	<script src="<?=base_url('assets/js/frontend.min.js')?>"></script>
+
+	<!-- jsPDF -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+		integrity="sha256-c9vxcXyAG4paArQG3xk6DjyW/9aHxai2ef9RpMWO44A=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
 </head>
 <body oncontextmenu='return false;' onselectstart='return false;' style='-moz-user-select: none; cursor: default;' class="bg-light">
+<!-- <body class="bg-light"> -->
 	<div class="container p-0">
 		<a href="<?=base_url()?>" class="bg-white px-3 py-2 d-flex text-decoration-none">
 			<img src="<?=base_url('media_library/images/' . __session('logo'))?>" style="width: 27px; margin-right: 10px">
@@ -210,7 +217,7 @@
 	</div> -->
 	<!-- <a href="javascript:" id="return-to-top" class="rounded-lg"><i class="fa fa-angle-double-up"></i></a> -->
 	</div>
-	<script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script>
+	<!-- <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script> -->
 	<script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
 	<!-- JavaScript Bundle with Popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
@@ -226,6 +233,18 @@
 		});
 		// $(".owl-dots").addClass("disabled");
 		Notification.requestPermission(status => console.log(status))
+
+		$('#downloadPDF').click(function () {
+			domtoimage.toPng(document.getElementById('content2'))
+			.then(function (blob) {
+				var pdf = new jsPDF('p', 'pt', [$('#content2').width(), $('#content2').height()]);
+
+				pdf.addImage(blob, 'PNG', 0, 0, $('#content2').width(), $('#content2').height());
+				pdf.save("skl.pdf");
+
+				that.options.api.optionsChanged();
+			});
+		});
 	</script>
 </body>
 </html>

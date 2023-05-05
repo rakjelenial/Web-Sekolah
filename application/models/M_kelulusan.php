@@ -248,7 +248,8 @@ class M_kelulusan extends CI_Model {
 					// $response['message'] = '<p>Anda dengan nomor registrasi '.$registration_number.'</p><p>Lolos Seleksi Penerimaan Peserta Didik Baru dan diterima di ' . __session('_major') . ' <span class="bg-warning">' . $majors->major_name . '</span> ' . __session('school_name').'</p>';
 					$response['message'] = '
 					<div style="max-width: 800px; margin: 0 auto">
-						<div class="kop-surat d-flex justify-content-between text-center pb-1" style="border-bottom: 3px solid">
+					<div id="content2">
+						<div id="content2" class="kop-surat d-flex justify-content-between text-center pb-1" style="border-bottom: 3px solid">
 							<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Coat_of_arms_of_South_Kalimantan.svg/800px-Coat_of_arms_of_South_Kalimantan.svg.png" style="width:90px">
 							<div style="font-size: 18px" class="d-flex flex-column">
 								<span style="font-size: 18px;line-height: 0.8">PEMERINTAH PROVINSI KALIMANTAN SELATAN</span>
@@ -258,64 +259,62 @@ class M_kelulusan extends CI_Model {
 								<span style="font-size: 13px;line-height: 0.8">Jalan Berangas Km 4 No. 35 Telp/Fax: 0518-25330, Kotabaru - Prov. Kalsel 72112</span>
 								<span style="font-size: 13px">email: smknegeri1kotabaru@gmail.com web: smkn1kotabaru.sch.id</span>
 							</div>
-							<img src="https://scontent.fbdj4-1.fna.fbcdn.net/v/t1.18169-9/431590_168574486588306_853826933_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGKFV3-Euh4ihrhBJC8WAACU54FnubKMs9TngWe5soyz_mAuOoahicRzm3BtibW18tJZOTox-c9hzm3Lox7Jf8D&_nc_ohc=ZJMWVx_PLV8AX8SlStV&_nc_ht=scontent.fbdj4-1.fna&oh=00_AT8uvOzTyQWhlNVF8lpxqkpyZsaH5-ODkLOF_rCcChvsHA&oe=62BC4A08" style="width:90px">
+							<img src="https://smkn1kotabaru.sch.id/media_library/images/c6ab60e235b679b8b7f9ac1743593c59.png" style="width:90px">
 						</div>
-					<h4 class="pt-4 mb-0 font-weight-bold"><u>SURAT KETERANGAN LULUS</u></h4>
-					<p style="font-size: 18px" class="font-weight-bold">Nomor : 421.7/ 176  -SMKN 1 KTB/DISDIKBUD/2022</p>
-					<p class="text-left" style="font-size: 18px">Kepala ' . __session('school_name').' selaku Ketua Penyelenggara Ujian Sekolah Tahun 2021/2022 berdasarkan:</p>
-					<ol class="text-left pl-3" style="font-size: 18px">
-						<li>Ketuntasan dari seluruh program pembelajaran pada Kurikulum 2013.</li>
-						<li>Kriteria kelulusan dari satuan Pendidikan sesuai dengan peraturan perundang-
-						undangan.</li>
-						<li>Rapat Pleno Dewan Pendidik tentang Kelulusan pada tanggal 31 Mei 2022 menerangkan bahwa:</li>
-					</ol>
-					<table class="table-sm text-left my-5">
-						<tr>
-							<td style="font-size: 18px">Nama</td>
-							<td style="font-size: 18px; padding:0 10px">:</td>
-							<td style="font-size: 18px" class="font-weight-bold">'.$result->nama_lengkap.'</td>
-						</tr>
-						<tr>
-							<td style="font-size: 18px">Tempat dan Tanggal Lahir</td>
-							<td style="font-size: 18px; padding:0 10px">:</td>
-							<td style="font-size: 18px">'.$result->tanggal_lahir.'</td>
-						</tr>
-						<tr>
-							<td style="font-size: 18px">Nomor Induk Siswa</td>
-							<td style="font-size: 18px; padding:0 10px">:</td>
-							<td style="font-size: 18px">'.$result->nis.'</td>
-						</tr>
-						<tr>
-							<td style="font-size: 18px">Nomor Induk Siswa Nasional</td>
-							<td style="font-size: 18px; padding:0 10px">:</td>
-							<td style="font-size: 18px">'.$result->nisn.'</td>
-						</tr>
-						<tr>
-							<td style="font-size: 18px">Kompetensi Keahlian</td>
-							<td style="font-size: 18px; padding:0 10px">:</td>
-							<td style="font-size: 18px">'.$result->jurusan.'</td>
-						</tr>
-						<tr>
-							<td style="font-size: 18px">Dinyatakan</td>
-							<td style="font-size: 18px; padding:0 10px">:</td>
-							<td style="font-size: 18px" class="font-weight-bold"><u>'.$result->status.'</u></td>
-						</tr>
-					</table>
-					<p class="text-left" style="font-size: 18px">Demikian surat keterangan ini dibuat, untuk diketahui dan dipergunakan sebagaimana mestinya.</p>
-					<table class="d-flex mt-5 justify-content-end text-left" style="font-size: 18px">
-						<tr>
-							<td></td>
-							<td>
-							Kotabaru, 3 Juni 2022 <br>
-							Kepala, <br>
-							<img src="./assets/img/stempel.png" style="width: 150px; margin:-35px 0 -30px -50px; position: relative">
-							<img src="./assets/img/tanda-tangan.png" style="width: 170px; margin-left:-70px; position: relative"><br>
-							Drs. Sugiyatno, M.Si <br>
-							NIP 19620720 198703 1 013
-							</td>
-						</tr>
-					</table>
-					</div>';
+						<h4 class="pt-4 mb-0 font-weight-bold text-center"><u>SURAT KETERANGAN LULUS</u></h4>
+						<p style="font-size: 18px" class="font-weight-bold text-center">Nomor : 421.7/204-SMKN 1 KTB/DISDIKBUD/2023</p>
+						<p class="text-left" style="font-size: 18px">Yang bertandatangan di bawah ini Kepala  ' . __session('school_name').', Kabupaten Kotabaru Provinsi Kalimantan Selatan, dengan ini menerangkan:</p>
+						<table class="table-sm text-left my-4">
+							<tr>
+								<td style="font-size: 18px">Nama</td>
+								<td style="font-size: 18px; padding:0 10px">:</td>
+								<td style="font-size: 18px" class="font-weight-bold">'.$result->nama_lengkap.'</td>
+							</tr>
+							<tr>
+								<td style="font-size: 18px">Tempat dan Tanggal Lahir</td>
+								<td style="font-size: 18px; padding:0 10px">:</td>
+								<td style="font-size: 18px">'.$result->tanggal_lahir.'</td>
+							</tr>
+							<tr>
+								<td style="font-size: 18px">Nomor Induk Siswa</td>
+								<td style="font-size: 18px; padding:0 10px">:</td>
+								<td style="font-size: 18px">'.$result->nis.'</td>
+							</tr>
+							<tr>
+								<td style="font-size: 18px">Nomor Induk Siswa Nasional</td>
+								<td style="font-size: 18px; padding:0 10px">:</td>
+								<td style="font-size: 18px">'.$result->nisn.'</td>
+							</tr>
+							<tr>
+								<td style="font-size: 18px">Nama Orangtua</td>
+								<td style="font-size: 18px; padding:0 10px">:</td>
+								<td style="font-size: 18px">'.$result->orangtua.'</td>
+							</tr>
+							<tr>
+								<td style="font-size: 18px">Kompetensi Keahlian</td>
+								<td style="font-size: 18px; padding:0 10px">:</td>
+								<td style="font-size: 18px">'.$result->jurusan.'</td>
+							</tr>
+						</table>
+						<p class="text-left" style="font-size: 18px">berdasarkan kriteria Kelulusan peserta didik yang ditetapkan pada tahun pelajaran 2022/2023, maka yang bersangkutan dinyatakan:</p>
+						<h1 class="text-center font-weight-bold">'.$result->status.'</h1>
+						<p class="text-left" style="font-size: 18px">Demikian surat keterangan ini dibuat, untuk diketahui dan dipergunakan sebagaimana mestinya.</p>
+						<table class="d-flex mt-5 justify-content-end text-left" style="font-size: 18px">
+							<tr>
+								<td></td>
+								<td>
+								Kotabaru, 5 Mei 2023 <br>
+								Kepala, <br>
+								<img src="./assets/img/stempel.png" style="width: 150px; margin:-35px 0 -30px -50px; position: relative z-index: +2">
+								<img src="./assets/img/tanda-tangan.png" style="width: 170px; margin-left:-70px; position: relative;"><br>
+								M. RAMLIE, S. Pd., M.M. <br>
+								NIP 19650520 199103 1 014
+								</td>
+							</tr>
+						</table>
+					</div>
+					</div>
+					<input type="button" value="Download" class="btn btn-sm btn-info" id="downloadPDF">';
 					// <p>Anda dengan nomor registrasi '.$registration_number.'</p><p>Lolos Seleksi Penerimaan Peserta Didik Baru dan diterima di ' . __session('_major') . ' <span class="bg-warning">' . $majors->major_name . '</span> ' . __session('school_name').'</p>
 				} else {
 					// $response['status'] = 'warning';
