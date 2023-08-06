@@ -169,7 +169,10 @@
 <div class="bg-white p-3 my-2">
 	<!-- TULISAN POPULER -->
 	<?php $query = get_latest_posts(5); if ($query->num_rows() > 0) { ?>
-		<h5 class="border-start border-5 border-warning px-2 mb-3">Tulisan Terbaru</h5>
+		<div class="d-flex justify-content-between">
+			<h5 class="border-start border-5 border-warning px-2 mb-3">Tulisan Terbaru</h5>
+			<a href="#search_form" class="fw-bold text-muted text-decoration-none"><i class="fa fa-search"></i> Pencarian</a>
+		</div>
 		<?php foreach($query->result() as $row) { ?>
 			<div class="card mb-3 border-0 border-0 border-bottom rounded-0 pb-2">
 				<a href="<?=site_url('read/'.$row->id.'/'.$row->post_slug)?>" class="text-decoration-none">

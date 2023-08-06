@@ -99,6 +99,7 @@
 			<h3 class="font-weight-bold brand mb-0 text-start"><?=strtoupper(__session('school_name'))?></h3>
 			<!-- <small><?=__session('tagline')?></small> -->
 		</a>
+
 		<!--  NAVIGATION MENU -->
 		<div class="bg-success px-3 py-2 d-flex fw-bold text-nowrap overflow-auto sticky-top">
 			<!-- <div class="overflow-auto"> -->
@@ -209,12 +210,12 @@
 				Powered by <a href="https://tukarjual.com">TukarJual</a>
 			</div>
 		</div> -->
-	<!-- <div id="search_form">
+	<div id="search_form">
 		<form action="<?=site_url('hasil-pencarian')?>" method="POST">
-			<input type="search_form" name="keyword" autocomplete="off" placeholder="Masukan kata kunci pencarian" />
+			<input type="search_form" name="keyword" autocomplete="off" placeholder="Type here" />
 			<button type="submit" class="btn btn-lg btn btn-outline-light rounded-0"><i class="fa fa-search"></i> CARI</button>
 		</form>
-	</div> -->
+	</div>
 	<!-- <a href="javascript:" id="return-to-top" class="rounded-lg"><i class="fa fa-angle-double-up"></i></a> -->
 	</div>
 	<!-- <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script> -->
